@@ -1,0 +1,24 @@
+h1 {
+    color: brown;
+    text-align: center;
+     margin:20px auto ;
+}
+
+p {
+    color: gray;
+    font-size: 22px;
+}
+
+.image {
+    background-image: url("https://assets.tommackie.com/wp-content/uploads/2021/05/25133428/190253-1.jpg");
+    width: 100%;
+    height: 600px;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 25px;
+}
