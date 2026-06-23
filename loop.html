@@ -153,22 +153,248 @@
 
 
     
-    let n=5
-    for (i=1;i<=n;i++)
-    {
-        for(j=1;j<=i;j++) {
-             if (j%2 == 0) {
-    document.write("0") ;
-             }
-             else {
-                document.write("1") ;
-             }
+//     let n=5
+//     for (i=1;i<=n;i++)
+//     {
+//         for(j=1;j<=i;j++) {
+//              if (j%2 == 0) {
+//     document.write("0") ;
+//              }
+//              else {
+//                 document.write("1") ;
+//              }
 
             
+//         }
+//    document.write("<br>")
+
+//     }
+
+// pattern-1
+
+// for (i=1;i<=5;i++) {
+//     for (j=1;j<=i;j++) {
+//         document.write(j)
+//     }
+//     document.write("<br>")
+// }
+
+
+// pattern-2
+
+// for (i=1;i<=5;i++) {
+//     for (j=1;j<=i;j++) {
+//         document.write(i)
+//     }
+//     document.write("<br>")
+// }
+
+
+// pattern-3
+
+// for (i=5;i>=1;i--) {
+//     for (j=1;j<=i;j++) {
+//         document.write(j)
+//     }
+//     document.write("<br>")
+// }
+
+// pattern-4
+
+// for(i=1;i<=5;i++) {
+//     for (j=i;j>=1;j--) {
+//         document.write(j)
+//     }
+//     document.write("<br>")
+// }
+
+// pattern-5
+
+// for(i=5;i>=1;i--) {
+//     for (j=i;j<=5;j++) {
+//         document.write(j)
+//     }
+//     document.write("<br>")
+// }
+
+
+// pattern=6
+// let n=0
+// for(i=1;i<=4;i++) {
+//     for (j=1;j<=i;j++) {
+//         n++
+//         document.write(n)
+//     }
+//     document.write("<br>")
+// }
+
+
+// pattern-7
+
+// for (i=1;i<=5;i++) {
+//     let n=1
+//     for (j=1;j<=i;j++) {
+//         document.write(n)
+//         n=n+2
+//     }
+//     document.write("<br>")
+// }
+
+// pattern 8
+
+// for (i=0;i<=4;i++) {
+//     for (j=0;j<=i;j++) {
+//        if (j===0) {
+//         document.write("0")
+//        }
+//        else if(j===1) {
+//         document.write("1")
+//        }
+//        else {
+//         document.write(j-1)
+//        }
+    
+//     }
+
+//     document.write("<br>")
+// }
+
+
+// pattern 9
+
+// for(i=1;i<=5;i++) {
+//     for (j=1; j<=i;j++) {
+//         if (j%2==1) {
+//             document.write("1")
+//         }
+//         else {
+//             document.write("0")
+//         }
+//     }
+//     document.write("<br>")
+// }
+
+
+// pattern 10
+
+//    let n=1 
+//   for (i=1;i<=5;i++) {
+//     for (j=1;j<=i;j++) {
+//         document.write(n*j)
+//     }
+//     n++
+//     document.write("<br>")
+// }
+
+
+// pattern 11
+
+//   for (i=0;i<=4;i++) {
+//     let n=1 
+//     for (j=0;j<=i;j++) {
+//          n=n+j
+//         document.write(n)
+//     }
+//     document.write("<br>")
+// }
+
+// pattern-12
+// for (i=1;i<=5;i++) {
+//     let n=1
+//     for (j=1;j<=i;j++) {
+//         n=n*i
+//         document.write(n)
+         
+//     }
+//     document.write("<br>")
+// }
+
+// pattern-13
+// let n=1
+// for (i=1;i<=5;i++) {
+//     for (j=1;j<=i;j++) {  
+//       document.write(n*n*n," ") 
+//       n++
+//     }
+     
+//     document.write("<br>")
+// }
+
+// pattern-14
+// let n=1
+// for (i=1;i<=5;i++) {
+//     for (j=1;j<=i;j++) {  
+//       document.write(n," ") 
+//       n=n+2
+//     }  
+//     document.write("<br>")
+// }
+
+// star pattern-1
+// for (i=1;i<=5;i++) {
+//     for (j=1;j<=5;j++) {
+//           if (i==1 || i==5) {
+//            document.write("* ")
+//           }
+//           else if 
+//              (j==1 || j==5 ) {
+//                 document.write("* ")
+//             }
+        
+//             else {
+//                document.write("0 ")
+//             }
+
+           
+//           }
+//          document.write("<br>")
+//     }
+    
+
+// star pattern-2
+// for (i=1;i<=5;i++) {
+//     for (j=1;j<=5;j++) {
+//           if ( i== 1 && j==1 || i==1 && j==5) {
+//            document.write("* ")
+//           }
+//           else if 
+//              (i==2 && j==2 || i==2 && j==4 ) {
+//                 document.write("* ")
+//             }
+        
+//             else if (i==3 && j==3) {
+
+//                document.write("* ")
+//             }
+
+//             else if ( i== 5 && j==1 || i==5 && j==5) {
+//            document.write("* ")
+//           }
+//           else if 
+//              (i==4 && j==2 || i==4 && j==4 ) {
+//                 document.write("* ")
+//             }
+
+//             else {
+//                 document.write("0 ")
+//             }
+
+//           }
+//          document.write("<br>")
+//     }
+
+
+for (i=1;i<=5;i++) {
+    for (j=1;j<=i;j++) {
+        if (i==1 && j==3) {
+            document.write("* ")
         }
-   document.write("<br>")
 
     }
+}
+
+
+
 
 
 
