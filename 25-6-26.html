@@ -1,0 +1,282 @@
+<script>
+//1. tempelete literals
+
+// let a =20;
+// let b =30;
+
+// document.write("A =",a," B= ",b,"<br>")
+// document.write(`A  =  ${a} A = ${b} `)
+
+// tempelete literals use for write value easily without coma
+
+// 2. Popup Box
+
+// alert("Hello CDMI")
+// alert("Have a Nice Day ")
+
+// alert is use for show message when enter that page even though it write anywhere but it will popup as soon as you load page.
+
+// let c = prompt("<br> Enter Number of you Choce")
+// document.write("You Have Chosen Number ",c)
+
+// remember prompt thought take input as number but it always a string so if we want to use as number it has to convert in number first.
+
+// let par= confirm("Are you sure want to exit")
+// // document.write(par)
+
+// if(par) {
+//     document.write("Yes You can Exit")
+// }
+
+// else {
+//     document.write("you chose wrong click")
+// }
+
+// confirm give Booleanvalue so it use as condition true or flase
+
+// 3. switch case
+
+// let a =  parseInt(prompt("Seelct A Number"))
+// let b =  parseInt(prompt("Seelct B Number"))
+
+// document.write(`A + B = ${a+b}`)
+
+// let choice = parseInt(prompt("Chose your option 1. Sum 2. Multiplication"))
+
+// switch (choice) {
+//     case 1: {
+//         document.write(` A+B = ${a+b}`)
+//         break;
+
+//     }
+
+//     case 2: {
+//        document.write(` A*B = ${a*b}`)
+//        break;
+//     }
+
+//     default: {
+//         document.write("You Chose a Wrong Option")
+//     }
+
+// }
+
+// while use switch case at that time use break and default for proper output. if we not use break it give all case output together.
+
+// let monthName= parseInt(prompt("Enter Any Number from 1-12 and it give you month name"))
+
+// switch(monthName) {
+//     case 1: {
+//         document.write("January")
+//         break;
+//     }
+
+//     case 2: {
+//         document.write("February")
+//         break;
+//     }
+
+//     case 3: {
+//         document.write("March")
+//         break;
+//     }
+//     case 4: {
+//         document.write("April")
+//         break;
+//     }
+//     case 5: {
+//         document.write("May")
+//         break;
+//     }
+//     case 6: {
+//         document.write("June")
+//         break;
+//     }
+//     case 7: {
+//         document.write("July")
+//         break;
+//     }
+
+//     case 8: {
+//         document.write("August")
+//         break;
+//     }
+
+//     case 9: {
+//         document.write("September")
+//         break;
+//     }
+//     case 10: {
+//         document.write("Octomber")
+//         break;
+//     }
+//     case 11: {
+//         document.write("November")
+//         break;
+//     }
+//     case 12: {
+//         document.write("December")
+//         break;
+//     }
+//     default: {
+//         document.write("You Enter Wrong Number")
+        
+//     }
+
+// }
+
+// let atm=parseInt(prompt("Welcome to Creative Bank Please Select your Option from below 1.Check balance 2.Deposite 3.Withdraw 4.Exit"))
+
+// switch(atm) {
+//     case 1: {
+//         document.write("Your Balance is XXXXXXX.00 INR")
+//         break;
+//     }
+
+//     case 2: {
+//         document.write("Please Insert Cash(100,200 & 500 notes only Accpted)")
+//         break;
+//     }
+
+//     case 3: {
+//         document.write("Please Enter the Amount")
+//         break;
+//     }
+
+//     case 4: {
+//         document.write("Thank you for visit Creative Bank")
+//         break;
+//     }
+
+//     default: {
+//         document.write("You entered incorrect input please try again")
+//     }
+// }
+
+// let pizza = 200;
+// let burger = 120;
+// let pasta = 180;
+
+// let choice= parseInt(prompt("Select your Food with enter number. 1. pizza = 200 Rs 2.Burger = 120 Rs 3. Pasta = 180Rs"))
+// let q = parseInt(prompt("Enter Quantiy"))
+
+// switch (choice) {
+//     case 1: {
+//         document.write(`Your Bought ${q} Pizza and your bill is ${q*pizza} Rs`)
+//         break;
+//     }
+
+//     case 2: {
+//         document.write(`Your Bought ${q} Burger and your bill is ${q*burger} Rs`)
+//         break;
+//     }
+
+//     case 3: {
+//         document.write(`Your Bought ${q} Pasta and your bill is ${q*pasta} Rs`)
+//         break;
+//     }
+
+//     default: {
+//         document.write("You Chose Wrong Input")
+//     }
+
+// }
+
+// bank task
+// let balance= 10000;
+// let min =10000;
+// let cycle=true;
+// let trans= 0;
+
+// while(cycle) {
+
+
+// let atm=parseInt(prompt("Welcome to Creative Bank Please Select your Option from below 1.Check balance 2.Deposite 3.Withdraw 4.Check Number of Transcation 5.Exit "))
+
+// switch(atm) {
+//     case 1: {
+//         alert(`Your Balance is ${balance} INR`)
+//         break;
+//     }
+
+//     case 2: {
+//         let a=parseInt(prompt("Please Insert Cash(100,200 & 500 notes only Accpted)"))
+//         balance = balance+a
+//         alert(`Your New Balance is ${balance}`)
+//         trans++;
+//         break;
+//     }
+
+//     case 3: {
+//         let b=parseInt(prompt("Please Enter the Amount you want to withdraw"))
+//         if(min<= (balance-b)) {
+//         alert(`Your New Balance is ${balance-b}`)
+//         balance=balance-b
+//         trans++
+//         }
+//         else {
+//             alert("You Have not Minimum Balance for Withdraw")
+//         }
+//         break;
+//     }
+
+//     case 4: {
+//         alert(`Your Number of Transcation is = ${trans}`)
+//         break;
+//     }
+
+
+//     case 5: {
+//         alert("Thank you for visit Creative Bank")
+//         running = false 
+//         break;
+//     }
+
+    
+//     default: {
+//         alert("You entered incorrect input please try again")
+//     }
+// }
+
+// }
+
+let a = parseInt(prompt("Enter Value A"))
+let b = parseInt(prompt("Enter Value B"))
+
+let choice = prompt("Enter sign of your choice to do airthmetic operation between + - * /")
+
+switch(choice) {
+    case "+": {
+        document.write(` A + B = ${a+b}`)
+        break;
+    }
+     case "-": {
+     document.write(` A - B = ${a-b}`)
+      break;
+    }
+      case "*": {
+     document.write(` A * B = ${a*b}`)
+      break;
+    }
+      case "/": {
+     document.write(` A / B = ${a/b}`)
+      break;
+    }
+    default: {
+        document.write("You Entered Wrong Opearation")
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
