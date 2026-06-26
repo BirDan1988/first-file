@@ -240,33 +240,105 @@
 
 // }
 
-let a = parseInt(prompt("Enter Value A"))
-let b = parseInt(prompt("Enter Value B"))
+// by string
 
-let choice = prompt("Enter sign of your choice to do airthmetic operation between + - * /")
 
-switch(choice) {
-    case "+": {
-        document.write(` A + B = ${a+b}`)
-        break;
-    }
-     case "-": {
-     document.write(` A - B = ${a-b}`)
+// let a = parseInt(prompt("Enter Value A"))
+// let b = parseInt(prompt("Enter Value B"))
+
+// let choice = prompt("Enter sign of your choice to do airthmetic operation between + - * /")
+
+// switch(choice) {
+//     case "+": {
+//         document.write(` A + B = ${a+b}`)
+//         break;
+//     }
+//      case "-": {
+//      document.write(` A - B = ${a-b}`)
+//       break;
+//     }
+//       case "*": {
+//      document.write(` A * B = ${a*b}`)
+//       break;
+//     }
+//       case "/": {
+//      document.write(` A / B = ${a/b}`)
+//       break;
+//     }
+//     default: {
+//         document.write("You Entered Wrong Opearation")
+//     }
+
+// }
+
+//  let a = parseInt(prompt("Enter Value A"))
+//  let b = parseInt(prompt("Enter Value B"))
+//  let cycle = true;
+
+ let cycle = true;
+
+ while(cycle) {
+
+   let choice = parseInt(prompt("Enter Number A & B then check arithmetic operation for your choice 1. Addition 2.Subtraction 3.Multiplication 4.division 5. Modulus 6.power 7.Exit"))
+
+   let a = parseInt(prompt("Enter Value A"))
+   let b = parseInt(prompt("Enter Value B"))
+ 
+
+ 
+  
+   switch(choice) {
+    case 1: {
+      
+      alert(`A + B = ${a+b}`)
       break;
     }
-      case "*": {
-     document.write(` A * B = ${a*b}`)
+    case 2: {
+     
+      alert(`A - B = ${a-b}`)
       break;
-    }
-      case "/": {
-     document.write(` A / B = ${a/b}`)
-      break;
-    }
-    default: {
-        document.write("You Entered Wrong Opearation")
-    }
 
-}
+    }
+     case 3: {
+      
+      alert(`A * B = ${a*b}`)
+      break;
+     }
+
+       case 4: {
+      
+      alert(`A * B = ${a/b}`)
+      break;
+       }
+
+         case 5: {
+      
+      alert(`A % B = ${a%b}`)
+      break;
+       }
+
+            case 6: {
+     
+      alert(`A ** B = ${a**b}`)
+      break;
+       }
+
+       case 7: {
+            alert("You Chose Exit.")
+            alert("Thank you for use this program. See you next time.")
+            cycle=false
+            break;
+       }
+
+       default: {
+        alert("You Entered a wrong number  please select from 1 to 7")
+
+       }
+      
+   }
+
+
+ }
 
 
 
