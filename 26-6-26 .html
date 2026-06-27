@@ -92,13 +92,80 @@
 // document.write(a)
 
 
+let fruit= ["Apple","Mango","Banana","Orange"]
+document.write(fruit, "<br>")
+document.write(fruit[0], "<br>")
+document.write(fruit[1], "<br>")
+document.write(fruit[2], "<br>")
+document.write((fruit.length), "<br>")
+
+fruit.push("grapes")
+document.write(fruit, "<br>")
+
+fruit.pop()
+document.write(fruit, "<br>")
+
+fruit.unshift("Kiwi")
+document.write(fruit, "<br>")
+
+fruit.shift("Kiwi")
+document.write(fruit, "<br>")
+
+fruit.splice( 2,1,"Pinapple")
+document.write(fruit[2], "<br>")
+
+let color = ["Red","Green","Blue"]
+document.write(color, "<br>")
+color.splice( 1,2,"Yellow","Black")
+document.write(color, "<br>")
 
 
+// for (i=0;i<fruit.length;i++) {
+//   document.write(fruit[i], "<br>")
+// }
 
+// let numbers = [10,20,30,40,50];
+// let sum = 0;
 
+// for (i=0;i<numbers.length;i++){
+//    sum=sum + numbers[i]
+// }
+// document.write(sum,"<br>")
 
+// let numbers = [12,5,80,34,67];
+// let max = 0;
 
- 
+// for (i=0;i<numbers.length;i++) {
+
+//   if(numbers[i]> max)
+//   max = numbers[i]
+// }
+// document.write(max,"<br>")
+
+// let numbers = [12,5,80,34,67];
+// let max = 12;
+
+// for (i=0;i<numbers.length;i++) {
+
+//   if(numbers[i]< max)
+//   max = numbers[i]
+// }
+// document.write(max,"<br>")
+
+let numbers = [2,5,7,10,14,19];
+let count =0;
+for (i=0;i<numbers.length;i++) {
+      if(numbers[i]%2 === 0)
+      count = count + 1
+}
+document.write(count,"<br>")
+
+let j = [1,2,3,4,5];
+
+for (i=j.length;i>=0;i--){
+  document.write(j[i],"<br>")
+}
+
 
 
   </script>
