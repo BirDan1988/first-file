@@ -92,32 +92,32 @@
 // document.write(a)
 
 
-let fruit= ["Apple","Mango","Banana","Orange"]
-document.write(fruit, "<br>")
-document.write(fruit[0], "<br>")
-document.write(fruit[1], "<br>")
-document.write(fruit[2], "<br>")
-document.write((fruit.length), "<br>")
+// let fruit= ["Apple","Mango","Banana","Orange"]
+// document.write(fruit, "<br>")
+// document.write(fruit[0], "<br>")
+// document.write(fruit[1], "<br>")
+// document.write(fruit[2], "<br>")
+// document.write((fruit.length), "<br>")
 
-fruit.push("grapes")
-document.write(fruit, "<br>")
+// fruit.push("grapes")
+// document.write(fruit, "<br>")
 
-fruit.pop()
-document.write(fruit, "<br>")
+// fruit.pop()
+// document.write(fruit, "<br>")
 
-fruit.unshift("Kiwi")
-document.write(fruit, "<br>")
+// fruit.unshift("Kiwi")
+// document.write(fruit, "<br>")
 
-fruit.shift("Kiwi")
-document.write(fruit, "<br>")
+// fruit.shift("Kiwi")
+// document.write(fruit, "<br>")
 
-fruit.splice( 2,1,"Pinapple")
-document.write(fruit[2], "<br>")
+// fruit.splice( 2,1,"Pinapple")
+// document.write(fruit[2], "<br>")
 
-let color = ["Red","Green","Blue"]
-document.write(color, "<br>")
-color.splice( 1,2,"Yellow","Black")
-document.write(color, "<br>")
+// let color = ["Red","Green","Blue"]
+// document.write(color, "<br>")
+// color.splice( 1,2,"Yellow","Black")
+// document.write(color, "<br>")
 
 
 // for (i=0;i<fruit.length;i++) {
@@ -152,19 +152,81 @@ document.write(color, "<br>")
 // }
 // document.write(max,"<br>")
 
-let numbers = [2,5,7,10,14,19];
-let count =0;
-for (i=0;i<numbers.length;i++) {
-      if(numbers[i]%2 === 0)
-      count = count + 1
-}
-document.write(count,"<br>")
+// let numbers = [2,5,7,10,14,19];
+// let count =0;
+// for (i=0;i<numbers.length;i++) {
+//       if(numbers[i]%2 === 0)
+//       count = count + 1
+// }
+// document.write(count,"<br>")
 
-let j = [1,2,3,4,5];
+// let j = [10,20,30,80,50];
 
-for (i=j.length;i>=0;i--){
-  document.write(j[i],"<br>")
+// for (i=j.length;i>=0;i--){
+//   document.write(j[i],"<br>")
+// }
+
+
+// let a = [2,4,6,8]
+// let b =2
+
+// for (i=0;i<a.length;i++) {
+//   a[i] =a[i]*b 
+// }
+// document.write(a)
+
+// let num = [10,20,30,40,50,60];
+// p = 1
+// v=100
+
+// for (i=num.length;i>p;i--) {
+//     num[i]=num[i-1]
+// }
+// num[p]=v
+// document.write(num,"<br>")
+
+// let num = [10,20,30,40,50,60,80];
+// p = 2
+
+
+// for (i=p;i<num.length;i++) {
+//     num[i]=num[i+1]
+// }
+// num.length = num.length - 1;
+// document.write(num,"<br>")
+
+
+// let a = [10,20,30,40]
+// p =0
+// v= 25
+
+// for(i=a.length;i>p;i--) {
+//          a[i]=a[i-1]    
+// }
+// a[p] =v 
+// document.write(a)
+
+// let a= [10,20,30,40,50]
+// p=2
+// for (i=p;i<a.length-1;i++) {
+//     a[i]=a[i+1]
+// }
+// a.length=a.length-1
+// document.write(a)
+
+let a = [10,20,30,40,50,60]
+let temp =0
+n=0
+for (i=a.length-1;i>n;i--) {
+    temp=a[n]
+    a[n]=a[i]
+    a[i]=temp
+n++
+
 }
+document.write(a)
+
+
 
 
 
