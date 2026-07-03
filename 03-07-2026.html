@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Question random</title>
+</head>
+<body>
+
+    <script>
+// 1)
+
+//  let type ="JavaScript"
+//  let a = type.split("").reverse().join("") 
+//  console.log(a)
+
+// let a = "hello world from javascript"
+// let b = a.split(" ").map(v=>v.charAt(0).toUpperCase()+ v.slice(1)).join(" ")
+
+
+
+// console.log(b)
+
+
+// let a = "surat"
+// let b = a.split("").reverse().join("")
+// console.log(b)
+// console.log(a===b)
+
+// let a = [12, 45, 101, 89, 34]
+
+// let b = a.reduce((a,b)=> 
+// {
+//     return a >b ? a :b
+// }
+// )
+
+// console.log(b)
+
+
+// let a = "hello world"
+// let b = a.replace(/l/g,"f")
+// console.log(b)
+
+// let a =[1,2,3,4]
+// let b = a.v
+
+
+// console.log(b)
+
+// let products = ["Laptop", "Mobile", "Tablet", "Smartwatch", "Camera"];
+
+// let b = products.map(v=>v.toLowerCase()).filter(v=>v.includes("a"))
+
+// console.log(b)
+
+// let numbers = [5, 12, 8, 21, 7, 30];
+// let b = numbers.filter(v=> v >10)
+
+// console.log(b.map(v=>v *2))
+
+// let words = ["apple", "banana", "grape", "mango", "avocado"];
+// let a = words.filter(v=>v.includes("a")).map(v=>v.toUpperCase())
+
+// console.log(a)
+
+// let numbers = [3, 7, 2, 9, 4, 8, 1];
+
+// let a = numbers.filter(v=>v > 3) .reduce((a,b)=>a+b,0)
+
+// console.log(a)
+
+
+// let numbers = [10, 5, 8, 20, 3, 15];
+// let a = numbers.filter(v=>v >10) .reduce((a,b)=> a>b ? a:b)
+
+// console.log(a)
+
+
+// let users = [
+//   { name: "Aman", age: 17 },
+//   { name: "Ravi", age: 22 },
+//   { name: "Neha", age: 19 },
+//   { name: "John", age: 25 }
+// ];
+// let a = age.filter(v=>v >18)
+// console.log(a)
+
+// let products = [
+//   { name: "Laptop", price: 50000 },
+//   { name: "Mobile", price: 20000 },
+//   { name: "Tablet", price: 30000 },
+//   { name: "Smartwatch", price: 5000 },
+//   { name: "Camera", price: 25000 }
+// ];
+
+// let a = products.filter(products=>products.price >20000).map(products=> products.name.toUpperCase()).sort()
+
+// console.log(a)
+
+// let cart = [
+//   { name: "Laptop", price: 50000, quantity: 1 },
+//   { name: "Mobile", price: 20000, quantity: 2 },
+//   { name: "Tablet", price: 30000, quantity: 1 },
+//   { name: "Headphones", price: 2000, quantity: 3 }
+// ];
+
+// let a = cart.map(cart=>cart.reduce(cart.price,cart=>cart.price * cart.quantity))
+
+// console.log(a)
+
+// let numbers = [4, 9, 2, 15, 6, 20];
+
+// let a = numbers.filter(v=>v >5) .map(v=>v*3)
+// console.log(a)
+
+// let numbers = [10, 5, 8, 20, 3, 15];
+
+// let a = numbers.filter(v=>v>5) .reduce((a,b)=> a+b,0)
+// console.log(a)
+
+
+// let numbers = [3, 7, 2, 9, 4, 8, 1];
+
+// let a = numbers.reduce((a,b)=> a>b ? a : b)
+
+// console.log(a)
+
+// let numbers = [3, 7, 2, 9, 4, 8, 1];
+// let r = numbers.sort((a,b)=> a-b)
+// let sl = r[r.length-2]
+// console.log(sl)
+
+let numbers = [1, 5, 1, 10, 4, 12, 5, 12];
+
+let a = numbers.filter((value,index) => {
+    return numbers.indexOf(value)===index;
+})
+
+console.log(a);
+
+
+
+
+    </script>
+    
+</body>
+</html>
