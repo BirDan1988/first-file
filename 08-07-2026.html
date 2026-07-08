@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Method</title>
+</head>
+<body>
+
+<script>
+
+function data() {
+  let i = document.getElementById('title');
+//   i.innerHTML = 'Thank you for click'
+  i.style.color='blue'
+  i.style.fontSize='60px'
+  i.style.fontWeight='700'
+  i.style.backgroundColor='yellow'
+
+}
+
+function reset() {
+    let i = document.getElementById('title');
+    i.style.color='black'
+    i.style.fontSize='36px'
+  i.style.fontWeight='600'
+  i.style.backgroundColor='transparent'
+
+}
+
+function mode() {
+    let i = document.getElementsByTagName('h1')[0];
+    
+
+    if(i.innerText === 'Light-Mode') {
+
+        i.innerText='Dark-Mode'
+       i.style.backgroundColor='black'
+       i.style.color='white'
+    }
+     
+        else  {
+
+        i.innerText='Light-Mode'
+       i.style.backgroundColor='pink'
+       i.style.color='black'
+    }
+    }
+
+    function display(){
+        let i = document.getElementsByTagName('p')[0];
+
+        if (i.style.display==='none') {
+            i.style.display='block';
+        } 
+        else {
+            i.style.display='none';
+        }
+    }
+
+  let  a = 15
+    function max() {
+         
+        let i = document.getElementsByTagName('h1')[0];
+       
+         a =a+5;
+         
+        
+        i.style.fontSize= a + "px";
+
+    }
+
+    function image(){
+        let i = document.getElementsByTagName('img')[0]
+
+        if ( i.src==="https://thumbs.dreamstime.com/b/big-lion-lying-savannah-grass-landscape-characteristic-trees-plain-hills-background-35172905.jpg"){
+        i.src="https://img.magnific.com/free-photo/african-lion-portrait-warm-light_475641-46.jpg?semt=ais_hybrid&w=740&q=80"
+
+        }
+         else {
+            i.src="https://thumbs.dreamstime.com/b/big-lion-lying-savannah-grass-landscape-characteristic-trees-plain-hills-background-35172905.jpg"
+         }
+    }
+
+
+    function info() {
+        
+        let i = document.getElementById('company')
+        let p = document.getElementById('details')
+
+        i.style.color='blue'
+        i.style.fontSize='25px'
+        p.style.color='gray'
+        p.style.fontSize='18px'
+        p.innerText='Our Company is no 1 in searching platform as it give most accurate and quick reply.'
+        
+    }
+
+    function change(){
+        let i = document.getElementById('theme')
+        let p = document.getElementsByTagName('p')[0]
+        let h = document.getElementsByTagName('h1')[0]
+
+
+        i.style.backgroundColor='white'
+       
+        if (i.style.backgroundColor==='white') {
+            p.style.color='white'
+            h.style.color='yellow'
+        }
+
+        else {
+           
+             p.style.color='black'
+            h.style.color='black'
+        }
+
+    }
+
+
+
+
+
+
+
+</script>
+
+
+<!-- <h1>Good Morning</h1>
+<h1>Good Morning</h1>
+<h1>Good Morning</h1>
+<button onclick="document.getElementsByTagName('h1')[0].style.background='red'"> Click Here</button>
+<button onclick="document.getElementsByTagName('h1')[1].innerHTML='<i>You Are Welcom<i>'">Click Here</button>
+
+<h1 class="jungle">Hello Welcome to Jungle</h1>
+<h1 class="jungle">If you want to see Lion</h1>
+<h1 class="jungle">Hello Welcome to Monkey</h1>
+
+
+<button onclick="document.getElementsByClassName('jungle')[1].innerHTML='<b>Lion Is Here</b>'">Lion</button>
+
+
+
+<div id="customer">
+    <h1>Infosys Limited</h1>
+</div>
+
+<button onclick="document.getElementById('customer').innerHTML='<p><b>Its a most popular and old company in this field where they did lots of work and becomes now master so you can connect with them if you would like to grow your product.</b></p>'">Click More</button>
+
+<button onclick="data()"> For Advance</button> -->
+
+<!-- practice task -->
+
+<!-- <h1 id="title">Welcome</h1>
+
+<button onclick=data()>Change Text</button>
+<button onclick=reset()>Reset</button> -->
+<!-- 
+<h1>Light-Mode</h1>
+<button onclick= mode()>Change Mode</button>
+
+
+
+<p>This is a Paragraph</p>
+<button onclick="display()">Click Here</button> -->
+
+<!-- <h1>DOM</h1>
+<button onclick="max()">click</button> -->
+<!-- <img src="https://thumbs.dreamstime.com/b/big-lion-lying-savannah-grass-landscape-characteristic-trees-plain-hills-background-35172905.jpg">
+<button onclick="image()">click here</button> -->
+
+<!-- <div id="company">Google
+    <p id="details">Click here for more</p>
+</div>
+
+<button onclick="info()">Click</button> -->
+<div id="theme">
+<h1>Welcome</h1>
+<p>Thank you for the visit our place</p>
+</div>
+<button onclick="change()">Switch</button>
+
+    
+</body>
+</html>
