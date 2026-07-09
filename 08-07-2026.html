@@ -102,21 +102,162 @@ function mode() {
         let h = document.getElementsByTagName('h1')[0]
 
 
-        i.style.backgroundColor='white'
+            // i.style.backgroundColor='white'
+            // p.style.color='white'
+            // h.style.color='yellow'
        
-        if (i.style.backgroundColor==='white') {
-            p.style.color='white'
-            h.style.color='yellow'
+        if (i.style.backgroundColor==='black') {
+            i.style.backgroundColor='white'
+             p.style.color='black'
+            h.style.color='black'
+            
         }
 
         else {
-           
-             p.style.color='black'
-            h.style.color='black'
+            i.style.backgroundColor='black'
+             p.style.color='white'
+             h.style.color='yellow'
         }
 
     }
 
+    function coltwist() {
+        let i = document.getElementById('ppp')
+
+        if (i.style.color==='red') {
+
+           i.style.color='blue';
+           }
+
+           else {
+              i.style.color='red'
+           } 
+    }
+
+    let size = 16;
+    function inc(){
+        let i = document.getElementsByClassName('inc')[0]
+        
+        let a =4;
+        size=size+a
+        i.style.fontSize = size +"px";
+    }
+    
+    function display() {
+        let i = document.getElementsByTagName('h1')[0]
+
+        if (i.style.display==='none'){
+          i.style.display = 'block'
+          }
+
+          else {
+            i.style.display='none'
+          }
+    }
+
+    function thm() {
+        let i = document.getElementById('1')
+        let j = document.getElementById('2')
+
+        if (i.style.backgroundColor==='black'){
+            i.style.backgroundColor='white'
+            i.style.color='black'
+            j.innerText='Dark-mode'
+            }
+
+            else {
+                i.style.backgroundColor='black';
+                i.style.color='white'
+                j.innerText='Light-mode'
+            }
+    }
+
+    function grn(){
+        let i = document.getElementsByTagName('p')
+
+        for(let j=0;j<i.length;j++) {
+            i[j].style.color='green'
+        }    
+    }
+
+    function greet() {
+        let i = document.getElementById('3')
+        let j = document.getElementById('4')
+
+        i.innerText = "Hello " + j.value + " !";
+    
+    }
+    
+    function age() {
+        let i =document.getElementById(6)
+        let j =document.getElementById(7)
+      
+        if(i.value >=18){
+          j.innerText='You Can Vote'
+        }
+
+        else {
+            j.innerText='You Cant Vote'
+        }
+
+    }
+
+    let sum=0
+
+function plus(){
+    let x=document.getElementById('1')
+    let i =document.getElementById('2')
+    sum= sum+1
+    x.innerText=sum;
+}
+
+function minus(){
+    let x=document.getElementById('1')
+    let i =document.getElementById('3')
+    if (sum >0) {
+        sum = sum-1
+    x.innerText=sum;
+     }
+}
+
+function reset(){
+    let x=document.getElementById('1')
+    let i =document.getElementById('4')
+    sum= 0
+    x.innerText=sum;
+}
+
+
+function add() {
+    let i =document.getElementById('1')
+     let j =document.getElementById('2')
+     let k = document.getElementById('sum')
+     total = Number(i.value) + Number(j.value);
+     k.innerText=total  
+}
+
+function sub() {
+    let i =document.getElementById('1')
+     let j =document.getElementById('2')
+     let k = document.getElementById('sum')
+     total = Number(i.value) - Number(j.value);
+     k.innerText=total  
+}
+
+function mul() {
+    let i =document.getElementById('1')
+     let j =document.getElementById('2')
+     let k = document.getElementById('sum')
+     total = Number(i.value) * Number(j.value);
+     k.innerText=total  
+}
+function div() {
+    let i =document.getElementById('1')
+     let j =document.getElementById('2')
+     let k = document.getElementById('sum')
+     total = Number(i.value) / Number(j.value);
+     k.innerText=total  
+}
 
 
 
@@ -174,11 +315,58 @@ function mode() {
 </div>
 
 <button onclick="info()">Click</button> -->
-<div id="theme">
+<!-- <div id="theme">
 <h1>Welcome</h1>
 <p>Thank you for the visit our place</p>
 </div>
 <button onclick="change()">Switch</button>
+
+
+<h1>hello</h1>
+<button onclick="document.getElementsByTagName('h1')[1].innerText='Welcome to Javascript'">click here</button>
+<p id="ppp">Hello and welcome to Javascript docuement</p>
+<button onclick="coltwist()">Click me</button> -->
+
+<!-- <h1 class="inc">Hello World</h1>
+<button onclick="inc()">Click here</button> -->
+<!-- 
+<h1>hello World</h1>
+<button onclick="display()">click here</button> -->
+
+<!-- <h1 id="1">Hello World</h1>
+<button id="2" onclick="thm()">Dark-Mode</button> -->
+
+<!-- <p>One</p>
+<p>Two</p>
+<p>Three</p>
+
+<button onclick="grn()">Click Here</button> -->
+
+
+
+<!-- <h1 id="3">hello</h1>
+<input id="4" type="text" placeholder="Enter your name">
+<button onclick="greet()">Click me</button> -->
+<!-- 
+<h1 id="5">Welcome to Vote Eligible Checker Tool.</h1>
+<input id="6" type="number" placeholder="Enter Your Age">
+<button onclick="age()">Submit</button>
+<p id="7"></p> -->
+
+<!-- <h1 id="1">0</h1>
+<button id="2" onclick="plus()">+</button>
+<button id="3" onclick="minus()">-</button>
+<button id="4" onclick="reset()">Reset</button> -->
+
+
+<h1>Math Functions</h1>
+Value A:- <input id="1" type="number" placeholder="Enter Number">
+Value B:- <input id="2" type="number" placeholder="Enter Number"><br><br>
+<button id="b1" onclick="add()">+</button>
+<button id="b2" onclick="sub()">-</button>
+<button id="b3" onclick="mul()">*</button>
+<button id="b4" onclick="div()">/</button>
+<h1 id="sum"></h1>
 
     
 </body>

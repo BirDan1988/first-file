@@ -1,0 +1,14 @@
+.image {
+    width: 150px !important;
+    height: 150px !important;
+     object-fit: cover !important;
+}
+
+.main {
+    width: fit-content !important;
+    height:auto !important;
+}
+
+h3 {
+    font-size: 16px !important;
+}
