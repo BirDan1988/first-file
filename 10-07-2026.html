@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+
+    <script>
+function round(){
+    let k=document.getElementsByClassName('square')[0]
+
+let i=document.getElementsByClassName('circle')[0]
+
+    i.style.transition='all 3s ease'
+
+     if(i.style.backgroundColor==='blue' || i.style.backgroundColor===''){     
+        i.style.backgroundColor='red'
+      i.style.transform='translate(860px,0px)'
+      i.style.color='white'
+    
+    }
+
+   else if(i.style.backgroundColor==='red' ){
+        i.style.backgroundColor='green'
+      i.style.transform='translate(860px,530px)'
+      i.style.color='white'
+    }
+
+    else if(i.style.backgroundColor==='green'){
+        i.style.backgroundColor='yellow'
+      i.style.transform='translate(0px,530px)'
+      i.style.color='black'
+    }
+
+    
+   else  if(i.style.backgroundColor==='yellow'){
+        i.style.backgroundColor='blue'
+      i.style.transform='translate(0px,0px)'
+      i.style.color='black'
+    }
+
+ 
+
+}
+
+    </script>
+
+<div class="container">
+    <div class="square">
+        <div onclick="round()" class="circle"> Hello
+        </div>
+    </div>
+</div>
+
+<button onclick="round()">Click Here</button>
+
+    
+</body>
+</html>

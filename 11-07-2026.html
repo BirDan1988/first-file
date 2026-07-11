@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-tic-tac-toe</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+
+
+
+
+
+
+    <div class="w-full py-10 bg-blue-900">
+        <div class="container  mx-auto p-6 flex justify-center ">
+        <div class="grid grid-cols-3  bg-brown-500 flex justify-center items-center  gap-5 w-180 bg-zinc-500 p-8">
+            <div  class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+            <div  class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center"></div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+
+    
+       
+        let i = document.getElementsByClassName('box')
+        let turn ="O"
+            
+
+      for (j=0;j<i.length;j++){
+
+          i[j].style.color='white'
+            i[j].style.fontSize='100px'
+            i[j].style.fontWeight='700'
+
+
+        i[j].onclick = function() {
+
+            if ( this.innerText==='')  {
+
+              this.innerText= turn;
+                if (turn==='O'){
+                    turn ='X'
+                }
+                else {
+                    turn='O'
+                }
+
+                
+            }
+           
+            
+           
+
+        }
+
+      }
+
+</script>
+
+
+
+    
+</body>
+</html>

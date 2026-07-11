@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+  </head>
+  <body>
+
+
+<script>
+
+function toggle(){
+    let t=document.getElementsByClassName('toggle')[0]
+    let m =document.getElementsByClassName('toggle-menu')[0]
+  
+
+    if (m.style.height=== '0px' ||m.style.height===''){
+       m.style.height='288px'
+}
+    else {
+        m.style.height= '0px' 
+    }
+
+}
+
+// function dropdown() {
+  
+//     let i = document.getElementsByClassName('dropdown')[0]
+
+//      if (i.style.height=== '0px' ||i.style.height===''){
+
+//        i.style.height='180px'
+//        }
+
+//     else {
+//         i.style.height= '0px' 
+//     }
+
+// }
+
+// function dropdown2() {
+  
+//     let i = document.getElementsByClassName('dropdown')[1]
+
+//      if (i.style.height=== '0px' ||i.style.height===''){
+
+//        i.style.height='180px'
+//        }
+
+//     else {
+//         i.style.height= '0px' 
+//     }
+
+// }
+
+// function td() {
+  
+//     let i = document.getElementsByClassName('dropdown')[1]
+
+//      if (i.style.height=== '0px' ||i.style.height===''){
+
+//        i.style.height='180px'
+//        }
+
+//     else {
+//         i.style.height= '0px' 
+//     }
+
+// }
+
+
+</script>
+
+    <div class="w-full">
+        <div class="container mx-auto px-4 group relative">
+            <div class="header py-3 flex justify-between items-center ">
+                <div class="logo w-50 h-15 ">
+                    <img class="block w-full" src="https://www.cdmi.in/assets/front/images/creative-logo-blue.svg">
+                </div>
+              <div  class="navmenu hidden lg:block  ">
+                <ul class=" flex style-none">
+                    <li><a class="px-2 py-2 text-sm text-orange-500 font-bold uppercase" href="#">Home</a></li>
+                    <li><a  onclick="dropdown()" class="px-2 py-2 text-sm text-[292b2c] font-semibold uppercase" href="#">Course<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a>
+                    <!-- <div class="dropdown group absolute top-15 bg-gray-100 w-35 h-0 transition-all duration-300 ease overflow-hidden rounded-md">
+                        <ul><li class="py-2 px-2">Blog-1</li></ul>
+                        <ul><li class="py-2 px-2">Blog-2</li></ul>
+                        <ul><li class="py-2 px-2">Blog-3</li></ul>
+                        <ul><li class="py-2 px-2">Blog-4</li></ul>
+
+                    </div> -->
+                    
+                    
+                    
+                    
+                    </li>
+                    <li><a class="px-2 py-2 text-sm text-[292b2c] font-semibold uppercase" href="#">Activities<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a></li>
+                    <li><a class="px-2 py-2 text-sm text-[292b2c] font-semibold uppercase" href="#">Blog<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a> </li>
+                    <li><a class="px-2 py-2 text-sm text-[292b2c] font-semibold uppercase" href="#">know us<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a></li>
+                    <li><a class="px-2 py-2 text-sm text-[292b2c] font-semibold uppercase" href="#">get in touch</a></li>
+                    <li><a onclick="dropdown2()" class="px-2 py-2 text-sm text-[292b2c] font-semibold uppercase" href="#">student zone<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a>
+                    
+                       <!-- <div class="dropdown group absolute top-15 bg-gray-100 w-35 h-0 transition-all duration-300 ease overflow-hidden rounded-md">
+                        <ul><li class="py-2 px-2">Blog-1</li></ul>
+                        <ul><li class="py-2 px-2">Blog-2</li></ul>
+                        <ul><li class="py-2 px-2">Blog-3</li></ul>
+                        <ul><li class="py-2 px-2">Blog-4</li></ul>
+
+                    </div></li> -->
+                </ul>
+              </div>
+              <div onclick="toggle()" class="toggle flex items-center block lg:hidden ">
+                <i class="fa-solid fa-bars font-bold text-xl "></i>
+                <div  class="toggle-menu  group absolute top-20 left-0 container mx-auto px-4 h-0 bg-gray-100 transition-all duration-300 ease overflow-hidden rounded-xl">
+                    <ul class="style-none">
+                        <li class=""><a class="text-md font-semibold py-2 flex justify-between text-orange-500" href="">Home<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a></li>
+                    <li class=""><a class="text-md font-semibold py-2 flex justify-between text-[292b2c]" href="">Course<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a></li>
+                    <li class=""><a onclick="td()" class="text-md font-semibold py-2 flex justify-between text-[292b2c] hover:text-orange-500" href="">Activities<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a>
+<!--                     
+                        <div class="dropdown group absolute top-15 bg-gray-100 w-35 h-0 transition-all duration-300 ease overflow-hidden rounded-md">
+                        <ul><li class="py-2 px-2">Blog-1</li></ul>
+                        <ul><li class="py-2 px-2">Blog-2</li></ul>
+                        <ul><li class="py-2 px-2">Blog-3</li></ul>
+                        <ul><li class="py-2 px-2">Blog-4</li></ul>
+
+                    </div></li> -->
+                    
+                    
+                    </li>
+                    <li class=""><a class="text-md font-semibold py-2 flex justify-between text-[292b2c] hover:text-orange-500" href="">Blog<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a></li>
+                    <li class=""><a class="text-md font-semibold py-2 flex justify-between text-[292b2c] hover:text-orange-500" href="">know us<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a></li>
+                    <li class=""><a class="text-md font-semibold py-2 flex justify-between text-[292b2c] hover:text-orange-500" href="">get in touch</a></li>
+                    <li class=""><a class="text-md font-semibold py-2 flex justify-between text-[292b2c] hover:text-orange-500" href="">student zone<i class="fa-solid fa-angle-down text-[292b2c] text-md"></i></a></li>
+                    </ul>
+                </div>
+
+              </div>
+            </div>
+        </div>
+    
+    </div>
+
+
+   
+        
+   
+  </body>
+</html>

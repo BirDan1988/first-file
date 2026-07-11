@@ -52,9 +52,25 @@ function hide() {
 // }
 
 function kya(){
-    let k =document.getElementsByTagName()
-    k.style.fontSize='26px'
-    k.style.setProperty("font-size", "26px", "important")
+    let k =document.getElementsByTagName("h3");
+    //  let h =document.getElementsByTagName('h3')[1];
+   
+   for (i=0;i<k.length;i++){
+        k[i].style.fontSize="24px";
+    }
+
+   }
+
+   else {
+       k[i].style.fontSize="16px"
+   }
+
+
+
+    
+    // k.style.fontSize='20px'
+    // h.style.fontSize='16px'
+    // k.style.setProperty("font-size", "26px", "important")
 }
 
 
@@ -93,7 +109,7 @@ function change(){
          <div onclick="light()" class="btn btn-primary">Light Mode</div>
          <div class="part-2 mt-2">
             <div onclick="hide()" class="btn btn-secondary">Profile show/ Hide</div>
-         <div onclick="kya()" class="btn btn-warning">Change Font Size</div>
+         <div onclick="kya()" class="btn btn-success">Change Font Size</div>
          <div onclick="change()" class="btn btn-secondary">Change photo</div>
          </div>
          
