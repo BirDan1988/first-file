@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting filter</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+
+    <script>
+               arr = [{name:"lion",category:"Animal"},
+                      {name:"Jesmin",category:"flower"},
+                      {name:"Pigeon",category:"Bird"},
+                      {name:"Norway",category:"Country"},
+                      {name:"Tiger",category:"Animal"},
+                      {name:"Sunflower",category:"flower"},
+                      {name:"Peacock",category:"Bird"},
+                      {name:"India",category:"Country"},
+                      {name:"Elephant",category:"Animal"},
+                      {name:"Hibiscus",category:"flower"},
+                      {name:"Owl",category:"Bird"},
+                      {name:"Australia",category:"Country"},
+                      {name:"Zebra",category:"Animal"},
+                      {name:"Rose",category:"flower"},
+                      {name:"Sparrow",category:"Bird"},
+                      {name:"Polland",category:"Country"},
+                      {name:"Monkey",category:"Animal"},
+                      {name:"Tulip",category:"flower"},
+                      {name:"Eagle",category:"Bird"},
+                      {name:"Itly",category:"Country"},
+               ]
+
+
+let buttons =document.getElementsByClassName('category')
+let a =document.getElementById('result')
+
+
+for (let i=0;i<buttons.length;i++) {
+    buttons[i].onclick = function() {
+        console.log(this.innerText)
+    }
+}
+
+
+
+
+
+
+    </script>
+
+
+
+<button  class="category p-2 text-sm border bg-gray-100 text-blue-800">Animal</button>
+<button  class=" category p-2 text-sm border bg-gray-100 text-blue-800">Flowers</button>
+<button  class=" category p-2 text-sm border bg-gray-100 text-blue-800">Bird</button>
+<button  class=" category p-2 text-sm border bg-gray-100 text-blue-800">Country</button>
+
+<div id="result w-full">
+    <!-- <div class="list container mx-auto px-4 bg-gray-100 h-200">
+        <h6 class="text-brown-800 font-bold text-2xl">lion</h6>
+         <h6 class="text-brown-800 font-bold text-2xl">Jesmin</h6>
+          <h6 class="text-brown-800 font-bold text-2xl">Pigeon</h6>
+           <h6 class="text-brown-800 font-bold text-2xl">Norway</h6>
+            <h6 class="text-brown-800 font-bold text-2xl">Tiger</h6>
+             <h6 class="text-brown-800 font-bold text-2xl">Sunflower</h6>
+              <h6 class="text-brown-800 font-bold text-2xl">Peacock</h6>
+               <h6 class="text-brown-800 font-bold text-2xl">India</h6>
+               <h6 class="text-brown-800 font-bold text-2xl">Elephant</h6>
+         <h6 class="text-brown-800 font-bold text-2xl">Hibiscus</h6>
+          <h6 class="text-brown-800 font-bold text-2xl">Owl</h6>
+           <h6 class="text-brown-800 font-bold text-2xl">Australia</h6>
+            <h6 class="text-brown-800 font-bold text-2xl">Zebra</h6>
+             <h6 class="text-brown-800 font-bold text-2xl">Rose</h6>
+              <h6 class="text-brown-800 font-bold text-2xl">Sparrow</h6>
+               <h6 class="text-brown-800 font-bold text-2xl">Polland</h6>
+            <h6 class="text-brown-800 font-bold text-2xl">Monkey</h6>
+             <h6 class="text-brown-800 font-bold text-2xl">Tulip</h6>
+              <h6 class="text-brown-800 font-bold text-2xl">Eagle</h6>
+               <h6 class="text-brown-800 font-bold text-2xl">Itly</h6>
+
+
+    </div> -->
+</div>
+
+    
+</body>
+</html>

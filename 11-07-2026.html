@@ -36,38 +36,132 @@
 
     
        
-        let i = document.getElementsByClassName('box')
-        let turn ="O"
-            
+//         let i = document.getElementsByClassName('box')
+//         let turn ="O"
+//              let win = [
+//                 [0,1,2],
+//                 [3,4,5],
+//                 [6,7,8],
+//                 [0,3,6],
+//                 [1,4,7],
+//                 [2,5,8],
+//                 [0,4,8],
+//                 [2,4,6]
+//         ]
 
-      for (j=0;j<i.length;j++){
+//             function winner(){
+//                 win.forEach((pattern) => {
 
-          i[j].style.color='white'
-            i[j].style.fontSize='100px'
-            i[j].style.fontWeight='700'
+//     let a = pattern[0];
+//     let b = pattern[1];
+//     let c = pattern[2];
+
+//     if (
+//         i[a].innerText !== "" &&
+//         i[a].innerText === i[b].innerText &&
+//         i[b].innerText === i[c].innerText
+//     ) {
+//         document.write("Game Over ", i[a].innerText + " is Winner!");
+//     }
+
+// });
+//                 }
+ 
+//       for (j=0;j<i.length;j++){
+
+//         i[j].style.color='white'
+//          i[j].style.fontSize='100px'
+//         i[j].style.fontWeight='700'
+
+       
 
 
-        i[j].onclick = function() {
+//         i[j].onclick = function() {
 
-            if ( this.innerText==='')  {
+//             if ( this.innerText==='')  {
 
-              this.innerText= turn;
-                if (turn==='O'){
-                    turn ='X'
-                }
-                else {
-                    turn='O'
-                }
-
+//               this.innerText= turn;
+//                 if (turn==='O'){
+//                     turn ='X'
+//                 }
+//                 else {
+//                     turn='O'
+//                 }
+              
                 
-            }
+//             }
            
+//           winner()
+           
+
+//         }
+
+//       }
+
+
+
+let boxes=document.getElementsByClassName('box')
+let turn= "X"
+let gameOver=false;
+
+let win = [
+                [0,1,2],
+                [3,4,5],
+                [6,7,8],
+                [0,3,6],
+                [1,4,7],
+                [2,5,8],
+                [0,4,8],
+                [2,4,6]
+]
+
+
+
+function winner(){
+    win.forEach((value) => {
+        let a = value[0];
+        let b= value[1];
+        let c= value[2];  
+        if (boxes[a].innerText !== "" && boxes[a].innerText === boxes[b].innerText && boxes[b].innerText === boxes[c].innerText) {
+
+            boxes[a].style.color='yellow'
+            boxes[b].style.color='yellow'
+            boxes[c].style.color='yellow'
+            console.log("Winner is ",boxes[a].innerText)
+            gameOver=true
             
-           
+        }     
+    });
+}
 
+for (i=0;i<boxes.length;i++) {
+
+           boxes[i].style.color='white'
+           boxes[i].style.fontSize='100px'
+           boxes[i].style.fontWeight='700'
+
+boxes[i].onclick =function (){
+
+    if(gameOver){
+        return
+    }
+
+    if(this.innerText==="") {
+        this.innerText=turn
+        if (turn==='X') {
+            turn='O';
         }
+        else {
+            turn='X';
+        }
+    }
+     winner()
+}
 
-      }
+}
+
+
+
 
 </script>
 
