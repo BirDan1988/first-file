@@ -10,7 +10,17 @@
 </head>
 <body>
 
-    <script>
+<div class="container mx-auto flex justify-center my-5">
+<button  class="category p-2 text-sm border bg-gray-100 text-blue-800">All</button>
+<button  class="category p-2 text-sm border bg-gray-100 text-blue-800">Animal</button>
+<button  class="category p-2 text-sm border bg-gray-100 text-blue-800">flower</button>
+<button  class="category p-2 text-sm border bg-gray-100 text-blue-800">Bird</button>
+<button  class="category p-2 text-sm border bg-gray-100 text-blue-800">Country</button>
+
+</div>
+
+<div id="result" class="w-full text-2xl py-2 font-bold container mx-auto pl-20"></div>
+              <script>
                arr = [{name:"lion",category:"Animal"},
                       {name:"Jesmin",category:"flower"},
                       {name:"Pigeon",category:"Bird"},
@@ -38,52 +48,41 @@ let buttons =document.getElementsByClassName('category')
 let a =document.getElementById('result')
 
 
-for (let i=0;i<buttons.length;i++) {
+   for (i=0;i<buttons.length;i++){
+
+
     buttons[i].onclick = function() {
-        console.log(this.innerText)
-    }
+        let category = this.innerText;
+
+        if(category==="All") {
+         let full=  arr.map(v=>v.name)
+        a.innerHTML = full.join("<br>")
+        }
+else {
+
+    
+
+    let newarr = arr.filter(v => v.category === category).map(v => v.name);
+
+
+    a.innerHTML = newarr.join("<br>");
+
 }
+   }
+        
+    }
 
+     // buttons[i].filter(v=>v.category='Animal').map(v=>v.name)
 
-
-
+//     for (let i=0;i<buttons.length;i++) {
+// }
 
 
     </script>
 
 
 
-<button  class="category p-2 text-sm border bg-gray-100 text-blue-800">Animal</button>
-<button  class=" category p-2 text-sm border bg-gray-100 text-blue-800">Flowers</button>
-<button  class=" category p-2 text-sm border bg-gray-100 text-blue-800">Bird</button>
-<button  class=" category p-2 text-sm border bg-gray-100 text-blue-800">Country</button>
 
-<div id="result w-full">
-    <!-- <div class="list container mx-auto px-4 bg-gray-100 h-200">
-        <h6 class="text-brown-800 font-bold text-2xl">lion</h6>
-         <h6 class="text-brown-800 font-bold text-2xl">Jesmin</h6>
-          <h6 class="text-brown-800 font-bold text-2xl">Pigeon</h6>
-           <h6 class="text-brown-800 font-bold text-2xl">Norway</h6>
-            <h6 class="text-brown-800 font-bold text-2xl">Tiger</h6>
-             <h6 class="text-brown-800 font-bold text-2xl">Sunflower</h6>
-              <h6 class="text-brown-800 font-bold text-2xl">Peacock</h6>
-               <h6 class="text-brown-800 font-bold text-2xl">India</h6>
-               <h6 class="text-brown-800 font-bold text-2xl">Elephant</h6>
-         <h6 class="text-brown-800 font-bold text-2xl">Hibiscus</h6>
-          <h6 class="text-brown-800 font-bold text-2xl">Owl</h6>
-           <h6 class="text-brown-800 font-bold text-2xl">Australia</h6>
-            <h6 class="text-brown-800 font-bold text-2xl">Zebra</h6>
-             <h6 class="text-brown-800 font-bold text-2xl">Rose</h6>
-              <h6 class="text-brown-800 font-bold text-2xl">Sparrow</h6>
-               <h6 class="text-brown-800 font-bold text-2xl">Polland</h6>
-            <h6 class="text-brown-800 font-bold text-2xl">Monkey</h6>
-             <h6 class="text-brown-800 font-bold text-2xl">Tulip</h6>
-              <h6 class="text-brown-800 font-bold text-2xl">Eagle</h6>
-               <h6 class="text-brown-800 font-bold text-2xl">Itly</h6>
-
-
-    </div> -->
-</div>
 
     
 </body>
