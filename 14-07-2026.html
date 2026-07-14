@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+
+    <div class="container mx-auto px-8">
+    <h1 class="text-2xl text-black font-bold mb-3">Hello World</h1>
+    <h4> Name:-<input onfocus="lat()" onblur="blue()" id="45" type="text" value=""></h4>
+    <button ondblclick="call()" class="bg-gray-200 text-blue-800 px-3 rounded-xl">Click Me</button>
+    <form onsubmit="formsubmit()" class="mt-10">
+        <input type="text" name="First Name" placeholder="Enter Here">
+        <input type="text" name="Last Name" placeholder="Enter Here">
+        <button type="submit" value="submit">Submit</button>
+
+        <select onchange="myselect()" class="my">
+            <option>Your City</option>
+            <option>Mumbai</option>
+            <option>Surat</option>
+            <option>Ahmedabad</option>
+            <option>Chennai</option>
+        </select>
+    </form>
+    </div>
+
+    
+
+
+<script>
+  let i =document.getElementsByTagName('h1')[0]
+  let j =document.getElementsByClassName('my')[0]
+
+
+function call(){
+
+    if(i.innerText==='Welcome'){
+        i.innerText='Hello Wolrd'
+    }
+    else {
+        i.innerText='Welcome'
+    }
+}
+
+
+function lat(){
+    i.innerText='Enter Your Name'
+}
+
+function blue(){
+    i.innerText='Welcome'
+}
+
+function formsubmit(){
+    alert("Your Form Submitted")
+}
+
+
+function myselect(){
+
+    if (j.value==='Your City'){
+        alert("Please Select City from Below")
+    }
+
+    else {
+         alert("You Have Selected " + j.value)
+    }
+ 
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
