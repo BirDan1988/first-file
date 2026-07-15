@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+
+    <div class="container mx-auto px-4 ">
+        <div class="main relative group">
+            <img id="101" class="w-full h-150 block " src="https://cdmi.in/sliders/Ethical-Haking.webp">
+            <button onclick="prev()" class="size-12 font-medium text-xl text-slat-500 bg-black opacity-50 rounded-full absolute top-70 left-287 hover:opacity-100 transitions-all duration-300 ease hidden group-hover:block"><i class="fa-solid fa-chevron-right text-xl text-white"></i></button>
+            <button onclick="next()" class="size-12 font-medium text-xl text-slat-500 bg-black opacity-50 rounded-full absolute top-70 left-10 hover:opacity-100 transitions-all duration-300 ease hidden group-hover:block"><i class="fa-solid fa-chevron-left text-xl text-white"></i></button>
+        </div>
+        <div class="btns flex mt-3 gap-4 justify-center">
+            
+        </div>
+        </div>
+    </div>
+
+
+
+<script>
+ let images = ["https://cdmi.in/sliders/Ethical-Haking.webp","https://cdmi.in/sliders/jtnlz6ehbdbbl2jfvrmm.webp", "https://cdmi.in/sliders/AI.jpg", "https://cdmi.in/sliders/5.webp",
+              "https://cdmi.in/sliders/2.webp",
+              "https://cdmi.in/sliders/web-design-institute-gujarat-surat.webp",
+            "https://cdmi.in/sliders/Ethical-Haking.webp",]
+
+              let slid = document.getElementById('101')
+             
+              let i=0;
+              function next(){
+                 i++;
+
+                 if(i>= images.length){
+                    i=0;
+                 }
+                 slid.src = images[i]
+              }
+
+              function prev(){
+                 i--;
+
+                 if(i< 0){
+                    i=images.length-1;
+                 }
+                 slid.src = images[i]
+              }
+             
+ 
+</script>
+
+   
+    
+</body>
+</html>

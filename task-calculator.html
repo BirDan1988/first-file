@@ -14,18 +14,18 @@
            <div class="big-box bg-black h-110 mx-100 my-20 p-5 rounded-xl">
             <div id="screen" class="w-full h-20 bg-gray-200 rounded-md mb-5 text-4xl font-bold text-black flex items-center justify-end p-4"></div>
             <div class="row-1 grid grid-cols-5 gap-4 mb-4">
-                 <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">7</div>
-                 <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">8</div>
-                 <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">9</div>
-                 <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">/</div>
-                 <div  class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold"> C</div>
+                 <div   class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">7</div>
+                 <div  class=" box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">8</div>
+                 <div  class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">9</div>
+                 <div  class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">/</div>
+                 <div onclick="clr()"   class="box1 h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">C</div>
         </div>
         <div class="row-1 grid grid-cols-5 gap-4 mb-4">
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">4</div>
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">5</div>
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">6</div>
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">*</div>
-                 <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold"></div>
+                 <div onclick="dlt()" class="box1 h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold block"><i class="fa-solid fa-right-long"></i></div>
         </div>
         <div class="row-1 grid grid-cols-5 gap-4 mb-4">
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">1</div>
@@ -37,7 +37,7 @@
         <div class="row-1 grid grid-cols-5 gap-4 mb-4">
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">0</div>
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">00</div>
-                 <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">=</div>
+                 <div onclick="execution()" class="box1 h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">=</div>
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold">.</div>
                  <div class="box h-15 bg-gray-200 rounded-md flex items-center justify-center text-4xl font-bold"></div>
         </div>
@@ -47,36 +47,75 @@
     </div>
 
     <script>
+
+
+
    let display=document.getElementById('screen')
    let boxes=document.getElementsByClassName('box')
    let first=""
    let operator=""
+
+
+
+   function execution(){
+    let x =eval(display.innerText)
+    display.innerText =x;
+   }
+
+   function clr(){
+    display.innerText="";
+   }
+
+function dlt(){
+     display.innerText=  display.innerText.slice(0,-1)
+}
+
+   for (let box of boxes){
+    box.onclick = function(){
+    display.innerText += this.innerText
+}
+
+   }
+ 
+
+
+
+
    
   
 
-  for (box of boxes){
-    box.onclick= function(){
+
+
+
+
+
+
+
+
+
+//   for (box of boxes){
+//     box.onclick= function(){
       
-       let value =this.innerText
-       if(value==='+' ||value==='-' || value==='*'|| value==='/'){
+//        let value =this.innerText
+//        if(value==='+' ||value==='-' || value==='*'|| value==='/'){
 
-           first=display.innerText
-            operator =value
-            display.innerText=''
-       }
+//            first=display.innerText
+//             operator =value
+//             display.innerText=''
+//        }
 
-   else if(value==='='){
-    let second=display.innerText
-    if(operator ==='+'){
-    display.innerText=Number(first)+Number(second)
-}
-}
+//    else if(value==='='){
+//     let second=display.innerText
+//     if(operator ==='+'){
+//     display.innerText=Number(first)+Number(second)
+// }
+// }
 
-else {
-    display.innerText += value
-}
-    }
-  }
+// else {
+//     display.innerText += value
+// }
+//     }
+//   }
 
 
   
