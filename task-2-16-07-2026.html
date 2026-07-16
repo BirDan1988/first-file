@@ -28,8 +28,37 @@ let isource=document.getElementById('img').value
 let obj={product,info,op,dp,isource}
 
 output.push(obj)
-console.log(output)
+dataview()
 
+}
+
+function dataview(){
+
+    let print="";
+    output.map((i)=>{
+        print += `<div class="main-part card border rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-part ">
+                <img class="w-full h-60" src="${i.isource}">
+            </div>
+            <div class="content-part mt-3">
+                <h3 class="heading text-xl text-black font-bold text-center mb-3 font-mono">${i.product}</h3>
+                <p class="info text-gray-700 text-sm mb-3 text-center">${i.info}</p>
+                <div class="pricing flex gap-4 justify-center mb-3">
+                    <div class="price-card flex gap-2 items-center">
+                        <p class="text-md text-gray-800 font-medium">Latest Price</p>
+                        <div class="price-new text-2xl text-purple-800  font-bold font-mono">${i.dp}$</div>
+                    </div>
+                    <div class="price-card flex gap-2 items-center">
+                        <p class="text-md text-gray-800 font-medium">Original Price</p>
+                    <div class="price-org text-black text-2xl font-bold line-through font-mono">${i.op}$</div>
+                  </div>
+                </div>
+                </div>
+            </div>`
+
+           document.getElementById('card').innerHTML=print
+
+    })
 
 }
 
@@ -53,8 +82,8 @@ console.log(output)
         <div class="flex items-start mb-3">
         <lable >Description:- </lable><textarea id="info" class="border-2 ml-6" rows="5" type="text" name=""></textarea>
     </div>
-    <lable>Original Price:- </lable><input id="op" class="border-2 mb-3 ml-1" type="number" name=""><br>
-    <lable>Our Price:- </lable><input id="discount" class="border-2 mb-3 ml-8" type="number" name=""><br>
+    <lable>Original Price:- </lable><input id="op" class="border-2 mb-3 ml-1" type="text" name=""><br>
+    <lable>Our Price:- </lable><input id="discount" class="border-2 mb-3 ml-8" type="text" name=""><br>
     <lable>Image Source:- </lable><input id="img" class="border-2 mb-3 ml-0.5" type="text" name=""><br>
 </div>
 </div>
@@ -67,18 +96,25 @@ console.log(output)
 </div>
 
 <div class="container mx-auto px-4 mt-5">
-    <div class="grid grid-cols-3 gap-5">
-        <div class="card border rounded-2xl shadow-lg overflow-hidden">
+    <div class="">
+        <div  id="card" class=" grid grid-cols-3 gap-5">
+            <div class="main-part card border rounded-2xl shadow-lg overflow-hidden">
             <div class="image-part ">
                 <img class="w-full h-60" src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh">
             </div>
-            <div class="content-part mt-3">
+            <div class="content-part mt-3 p-4">
                 <h3 class="heading text-xl text-black font-bold text-center mb-3">123</h3>
-                <p class="info text-gray-700 text-sm mb-3 text-center"> there is a nice card created here as its nice look.</p>
+                <p class="info text-gray-700 text-sm mb-3 text-justify"> there is a nice card created here as its nice look.</p>
                 <div class="pricing flex gap-4 justify-center mb-3">
-                    <div class="price-new text-black text-xl font-bold">100</div>
-                    <div class="price-org text-black text-xl font-bold line-through">110</div>
-
+                    <div class="price-card flex gap-2 items-center">
+                        <p class="text-md text-gray-800 font-medium">Latest Price</p>
+                        <div class="price-new text-2xl text-purple-800  font-bold font-mono">100$</div>
+                    </div>
+                    <div class="price-card flex gap-2 items-center">
+                        <p class="text-md text-gray-800 font-medium">Original Price</p>
+                    <div class="price-org text-black text-2xl font-bold line-through font-mono">110$</div>
+                  </div>
+                  </div>
                 </div>
             </div>
         </div>
