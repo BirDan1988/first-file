@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+
+
+
+<script>
+
+    let output=[]
+
+
+    function sub(){
+
+let product=document.getElementById('pro-name').value
+let info=document.getElementById('info').value
+let op=document.getElementById('op').value
+let dp=document.getElementById('discount').value
+let isource=document.getElementById('img').value
+
+let obj={product,info,op,dp,isource}
+
+output.push(obj)
+console.log(output)
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+    <div class="container mx-auto px-10 mt-10 flex justify-center mb-3">
+        <div class="main ">
+        <lable>Product Name:- </lable><input id="pro-name" class="border-2 mb-3" type="text" name=""><br>
+        <div class="flex items-start mb-3">
+        <lable >Description:- </lable><textarea id="info" class="border-2 ml-6" rows="5" type="text" name=""></textarea>
+    </div>
+    <lable>Original Price:- </lable><input id="op" class="border-2 mb-3 ml-1" type="number" name=""><br>
+    <lable>Our Price:- </lable><input id="discount" class="border-2 mb-3 ml-8" type="number" name=""><br>
+    <lable>Image Source:- </lable><input id="img" class="border-2 mb-3 ml-0.5" type="text" name=""><br>
+</div>
+</div>
+
+
+<div class="container mx-auto flex justify-center mb-2">
+    <div class="btns">
+        <button onclick="sub()" class="py-1 px-3 text-sm text-black rounded-md border">Submit</button>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 mt-5">
+    <div class="grid grid-cols-3 gap-5">
+        <div class="card border rounded-2xl shadow-lg overflow-hidden">
+            <div class="image-part ">
+                <img class="w-full h-60" src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh">
+            </div>
+            <div class="content-part mt-3">
+                <h3 class="heading text-xl text-black font-bold text-center mb-3">123</h3>
+                <p class="info text-gray-700 text-sm mb-3 text-center"> there is a nice card created here as its nice look.</p>
+                <div class="pricing flex gap-4 justify-center mb-3">
+                    <div class="price-new text-black text-xl font-bold">100</div>
+                    <div class="price-org text-black text-xl font-bold line-through">110</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    
+</body>
+</html>
