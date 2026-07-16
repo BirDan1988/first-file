@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+
+
+
+        <div class="w-full py-10 bg-blue-900">
+            <div id="1" class="container mx-auto text-center mt-3 text-white text-2xl font-bold"></div>
+        <div class="container  mx-auto p-6 flex justify-center ">
+        <div class="grid grid-cols-3  bg-brown-500 flex justify-center items-center  gap-5 w-180 bg-zinc-500 p-8">
+            <div  class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+            <div  class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+            <div class="box size-50 bg-black rounded-2xl flex justify-center items-center text-6xl text-white font-bold"></div>
+        </div> 
+        </div>
+        <div class="container mx-auto px-4">
+            <button onclick="rst()" id="reset" class="px-2 bg-white text-black font-bold text-2xl">Reset</button>
+        </div>
+    </div>
+
+
+    <script>
+
+let boxes=document.getElementsByClassName('box')
+let winning=document.getElementById('1')
+
+let turn="X"
+
+let win = [
+                [0,1,2],
+                [3,4,5],
+                [6,7,8],
+                [0,3,6],
+                [1,4,7],
+                [2,5,8],
+                [0,4,8],
+                [2,4,6]
+        ]
+
+
+          function rst(){
+
+              for (box of boxes){
+                box.innerText=''
+              }
+
+              winning.innerText=''
+        
+        }
+
+        function winner(){
+            win.forEach((v)=>{
+          let a =v[0]
+          let b =v[1]
+          let c =v[2]
+
+
+          
+             if (boxes[a].innerText !== '' && boxes[a].innerText===boxes[b].innerText && boxes[b].innerText===boxes[c].innerText){
+                winning.innerText=boxes[a].innerText + " Is a Winner of This Round"
+             }
+        
+
+          })
+
+        }
+
+
+      
+
+
+
+
+
+for(let i=0;i<boxes.length;i++){
+  
+
+  boxes[i].onclick = function () {
+   
+
+        if(this.innerText===''){
+            this.innerText=turn
+        }
+        if(turn==='X'){
+            turn='O'
+        }
+        else {
+            turn='X'
+        }
+ 
+         winner()
+
+    }
+       
+}
+
+
+    
+     
+
+    
+
+
+
+    </script>
+    
+</body>
+</html>
