@@ -16,6 +16,7 @@
 
     let output=[]
     let editid=null
+    let newarr= ""
 
 
     function sub(){
@@ -98,8 +99,43 @@ function dataview(){
                 </div>
                 </div>
             </div>`  
+            
     })
-document.getElementById('card').innerHTML=print
+      document.getElementById('card').innerHTML=print
+}
+
+
+function filterview(){
+
+    let print="";
+    output.map((i,index)=>{
+        print += `<div class="main-part card border rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-part ">
+                <img class="w-full h-60" src="${i.isource}">
+            </div>
+            <div class="content-part mt-3 p-4">
+                <h3 class="heading text-xl text-black font-bold text-center mb-3 font-mono">${i.product}</h3>
+                <p class="info text-gray-700 text-sm mb-3 text-center">${i.info}</p>
+                <div class="pricing flex gap-4 justify-center mb-3">
+                    <div class="price-card flex gap-2 items-center">
+                        <p class="text-md text-gray-800 font-medium">Latest Price</p>
+                        <div class="price-new text-2xl text-purple-800  font-bold font-mono">${i.dp}$</div>
+                    </div>
+                    <div class="price-card flex gap-2 items-center">
+                        <p class="text-md text-gray-800 font-medium">Original Price</p>
+                    <div class="price-org text-black text-2xl font-bold line-through font-mono">${i.op}$</div>
+                  </div>
+                </div>
+                <div class="btn-div flex gap-4">
+                <button onclick=update(${index}) class="px-3 border bg-blue-100 rounded-xl">Update</button>
+                <button onclick=dlt(${index}) class="px-3 border bg-red-100 rounded-xl">Delete</button>
+                </div>
+                </div>
+            </div>`  
+            
+    })
+   
+      document.getElementById('card').innerHTML=print
 }
 
 function update(index){
@@ -123,6 +159,12 @@ function dlt(index){
 
 }
 
+function search(){
+   
+    let field = document.getElementById('search').value
+    newarr= output.filter(i=>i.product==field)
+    filterview()
+}
 
 
 
@@ -166,6 +208,10 @@ function dlt(index){
     <div class="btns ml-40">
         <button onclick="sub()" class="py-1 px-3 text-sm text-black rounded-md border font-medium">Submit</button>
     </div>
+</div>
+
+<div class="container mx-auto px-3 flex items-center gap-3">
+    <input  id="search" type="text" placeholder="Search by Product Name" class="border border-gray-500 px-3 rounded-full"><button onclick="search()" class="px-4 border rounded-md">Search</button>
 </div>
 
 <div class="container mx-auto px-4 mt-5">
