@@ -19,6 +19,10 @@
 
     function sub(){
 
+
+
+
+
 let product=document.getElementById('pro-name').value
 let info=document.getElementById('info').value
 let op=document.getElementById('op').value
@@ -27,7 +31,30 @@ let isource=document.getElementById('img').value
 
 let obj={product,info,op,dp,isource}
 
+if(!product){
+    document.getElementById('product-error').innerText='Enter product Name'       
+}
+
+if(!info){
+    document.getElementById('info-error').innerText='Enter Description'       
+}
+
+if(!op){
+    document.getElementById('op-error').innerText='Enter Original Price'       
+}
+
+if(!dp){
+    document.getElementById('dp-error').innerText='Enter Discount Price'       
+}
+if(!isource){
+    document.getElementById('isource-error').innerText='Enter Image URL'       
+}
+
+if(product && info && op && dp && isource){
 output.push(obj)
+}
+
+
 dataview()
 
 }
@@ -78,13 +105,26 @@ function dataview(){
 
     <div class="container mx-auto px-10 mt-10 flex justify-center mb-3">
         <div class="main ">
-        <lable>Product Name:- </lable><input id="pro-name" class="border-2 mb-3" type="text" name=""><br>
-        <div class="flex items-start mb-3">
-        <lable >Description:- </lable><textarea id="info" class="border-2 ml-6" rows="5" type="text" name=""></textarea>
+            <div class="div flex gap-3">
+    <lable>Product Name:- </lable><input id="pro-name" class="border-2 mb-3" type="text" name="">
+    <p id="product-error" class="text-red-600"></p>
+   </div>
+    <div class="flex items-start mb-3 gap-3">
+    <lable >Description:- </lable><textarea id="info" class="border-2 ml-6" rows="5" type="text" name=""></textarea>
+    <p id="info-error" class="text-red-600"></p>
     </div>
-    <lable>Original Price:- </lable><input id="op" class="border-2 mb-3 ml-1" type="text" name=""><br>
-    <lable>Our Price:- </lable><input id="discount" class="border-2 mb-3 ml-8" type="text" name=""><br>
-    <lable>Image Source:- </lable><input id="img" class="border-2 mb-3 ml-0.5" type="text" name=""><br>
+    <div class="div flex gap-3">
+    <lable>Original Price:- </lable><input id="op" class="border-2 mb-3 ml-1" type="text" name="">
+    <p id="op-error" class="text-red-600"></p>
+</div>
+<div class="div flex gap-3">
+    <lable>Our Price:- </lable><input id="discount" class="border-2 mb-3 ml-8" type="text" name="">
+    <p id="dp-error" class="text-red-600"></p>
+</div>
+<div class="div flex gap-3">
+    <lable>Image Source:- </lable><input id="img" class="border-2 mb-3 ml-0.5" type="text" name="">
+    <p id="isource-error" class="text-red-600"></p>
+</div>
 </div>
 </div>
 
