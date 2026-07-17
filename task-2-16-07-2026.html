@@ -106,9 +106,10 @@ function dataview(){
 
 
 function filterview(){
+    let field = document.getElementById('search').value
 
     let print="";
-    output.map((i,index)=>{
+   (i=>i.product==field).map((i,index)=>{
         print += `<div class="main-part card border rounded-2xl shadow-lg overflow-hidden">
         <div class="image-part ">
                 <img class="w-full h-60" src="${i.isource}">
@@ -160,10 +161,10 @@ function dlt(index){
 }
 
 function search(){
-   
     let field = document.getElementById('search').value
-    newarr= output.filter(i=>i.product==field)
-    filterview()
+     newarr= output.filter(i=>i.product==field)
+      
+    console.log(newarr)
 }
 
 
