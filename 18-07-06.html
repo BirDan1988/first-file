@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task CRUD</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+
+    <div class="container mx-auto px-4 py-5 mb-10">
+        <h1 class="text-4xl text-slat-700 text-center font-bold font-mono">To Do List Manager</h1>
+    </div>
+
+ 
+
+
+
+<div class="container mx-auto px-3 mb-15">
+    <div class="div flex gap-4 mb-3">
+    <label class="font-medium"> Enter Task Name:-</label><input id="task" type="text" placeholder="Enter Task Name" class="ml-3 px-3 border " >
+    <p id="task-error" class="text-red-500"></p>
+</div>
+<div class="div flex gap-4 mb-3">
+    <label class="font-medium"> Priority:-</label><input id="priority" type="text" placeholder="Enter Priority" class="ml-20 px-3 border " >
+    <p id="priority-error" class="text-red-500"></p>
+</div>
+<div class="div flex gap-4 mb-3">
+    <label class="font-medium"> Due Date:-</label><input id="date" type="date" placeholder="Enter Due Date" class="ml-16 px-3 border " >
+    <p id="date-error" class="text-red-500 ml-11"></p>
+</div>
+<div class="div flex gap-4 mb-3">
+    <label class="font-medium"> Status:-</label><input id="status" type="text" placeholder="Enter Status" class="ml-22 px-3 border " >
+    <p id="status-error" class="text-red-500"></p>
+</div>
+<button onclick="sub()" class="px-3 text-xl font-medium bg-gray-100 rounded-md border ml-40 mt-3 hover:bg-black hover:text-white">Submit</button>
+
+</div>
+
+
+ <div class="container mx-auto px-6 flex items-center gap-3 mb-4">
+    <input  id="search" type="text" placeholder="Search by Product Name" class="border border-gray-500 px-3 rounded-full"><button onclick="search()" class="px-4 border rounded-md">Search</button>
+</div>
+
+
+<div class="container mx-auto px-5">
+   <table class="table-auto">
+  <thead class="border px-2">
+    <tr>
+      <th class="px-4 border-2 border-black text-blue-500">Task name</th>
+      <th class="px-4 border-2 border-black text-blue-500">Priority</th>
+      <th class="px-4 border-2 border-black text-blue-500">Due Date</th>
+      <th class="px-4 border-2 border-black text-blue-500">Status</th>
+      <th class="px-4 border-2 border-black text-blue-500" colspan="2">Properties</th>
+      
+    </tr>
+  </thead>
+  <tbody id="showdata">
+  </tbody>
+</table>
+ </div>
+
+
+
+
+
+<script>
+
+
+
+
+
+let users=[]
+let newarr=[]
+let editid=null
+
+
+function sub(){
+
+     let task=document.getElementById('task').value
+    let priority=document.getElementById('priority').value
+   let date=document.getElementById('date').value
+   let status=document.getElementById('status').value
+   let obj ={task,priority,date,status}
+   
+       
+   
+
+if(!task){
+    document.getElementById('task-error').innerText='* Task Name is Mandotary'
+}
+
+if(!priority){
+    document.getElementById('priority-error').innerText='* Priority is Mandotary'
+}
+
+if(!date){
+    document.getElementById('date-error').innerText='* Date is Mandotary'
+}
+
+if(!status){
+   
+    document.getElementById('status-error').innerText='* Status is Mandotary'
+}
+
+
+if(task && priority && date && status){
+        if(editid!=null){
+         users[editid]=obj
+         editid=null
+
+        }
+        else {
+      users.push(obj)
+        }
+
+        document.getElementById('task-error').innerText=''
+        document.getElementById('priority-error').innerText=''
+        document.getElementById('date-error').innerText=''
+        document.getElementById('status-error').innerText=''
+          color()
+          dataview(users)
+    }
+   
+
+}
+
+function dlt(index){
+    users.splice(index,1)
+
+dataview(users)
+}
+
+
+function update(index){
+  
+    editid=index
+  let  edit=users[index]
+    document.getElementById('task').value=edit.task
+    document.getElementById('priority').value=edit.priority
+    document.getElementById('date').valuee=edit.date
+    document.getElementById('status').value=edit.status
+}
+
+
+
+
+function dataview(data){
+    let print =''
+    data.map((i,index)=>{           
+           print+=`<tr>
+      <th class="px-4 border-2 border-black text-black">${i.task}</th>
+      <th class="px-4 border-2 border-black text-black">${i.priority}</th>
+      <th class="px-4 border-2 border-black text-black">${i.date}</th>
+      <th class="px-4 border-2 border-black text-black">${i.status}</th>
+      <th class="px-4 border-2 border-black text-black text-gray-500 "><button onclick=update(${i.position ?? index}) class="hover:underline">Update</button></th>
+      <th class="px-4 border-2 border-black text-black text-red-800 "><button onclick=dlt(${i.position ?? index}) class="hover:underline">Delete</button></th>
+        </tr>`
+       
+    })
+    document.getElementById('showdata').innerHTML=print;
+}
+
+function search(){
+    let field = document.getElementById('search').value
+
+   newarr= users.map((i,index)=>{
+      return {
+        ...i,
+        position: users.indexOf(i)
+      }
+
+    }).filter(i=>i.status===field)
+
+    dataview(newarr)
+
+ 
+
+}
+dataview(users)
+
+
+
+
+
+function color(){
+ if (status.value==='')
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
