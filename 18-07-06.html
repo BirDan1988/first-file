@@ -53,6 +53,7 @@
       <th class="px-4 border-2 border-black text-blue-500">Priority</th>
       <th class="px-4 border-2 border-black text-blue-500">Due Date</th>
       <th class="px-4 border-2 border-black text-blue-500">Status</th>
+      <th class="px-4 border-2 border-black text-blue-500">Days Left</th>
       <th class="px-4 border-2 border-black text-blue-500" colspan="2">Properties</th>
       
     </tr>
@@ -77,13 +78,28 @@ let newarr=[]
 let editid=null
 
 
+
+
 function sub(){
 
      let task=document.getElementById('task').value
     let priority=document.getElementById('priority').value
    let date=document.getElementById('date').value
    let status=document.getElementById('status').value
-   let obj ={task,priority,date,status}
+  
+
+   let today = new Date()
+
+    let dueDate= new Date(document.getElementById('date').value)
+     let diff = Math.abs(dueDate - today); // milliseconds
+
+    let days = parseInt(diff / (1000 * 60 * 60 * 24));
+    if (days < 0) {
+     days = 0;
+         }
+
+
+     let obj ={task,priority,date,status,days}
    
        
    
@@ -120,8 +136,11 @@ if(task && priority && date && status){
         document.getElementById('priority-error').innerText=''
         document.getElementById('date-error').innerText=''
         document.getElementById('status-error').innerText=''
-          color()
+         
           dataview(users)
+          color()
+          
+           
     }
    
 
@@ -131,6 +150,7 @@ function dlt(index){
     users.splice(index,1)
 
 dataview(users)
+color()
 }
 
 
@@ -142,6 +162,7 @@ function update(index){
     document.getElementById('priority').value=edit.priority
     document.getElementById('date').valuee=edit.date
     document.getElementById('status').value=edit.status
+    color()
 }
 
 
@@ -154,13 +175,16 @@ function dataview(data){
       <th class="px-4 border-2 border-black text-black">${i.task}</th>
       <th class="px-4 border-2 border-black text-black">${i.priority}</th>
       <th class="px-4 border-2 border-black text-black">${i.date}</th>
-      <th class="px-4 border-2 border-black text-black">${i.status}</th>
+      <th  class= "color px-4 border-2 border-black text-black">${i.status}</th>
+      <th  class= "color px-4 border-2 border-black text-black">${i.days} days left</th>
       <th class="px-4 border-2 border-black text-black text-gray-500 "><button onclick=update(${i.position ?? index}) class="hover:underline">Update</button></th>
       <th class="px-4 border-2 border-black text-black text-red-800 "><button onclick=dlt(${i.position ?? index}) class="hover:underline">Delete</button></th>
         </tr>`
        
     })
+
     document.getElementById('showdata').innerHTML=print;
+    
 }
 
 function search(){
@@ -175,22 +199,40 @@ function search(){
     }).filter(i=>i.status===field)
 
     dataview(newarr)
+    color()
 
- 
 
 }
 dataview(users)
-
-
+color()
 
 
 
 function color(){
- if (status.value==='')
+  let  sc= document.querySelectorAll('.color');
+
+
+  sc.forEach(el => {
+
+    if (el.innerText==='pending'){
+    el.style.backgroundColor='red'
+    el.style.color='white'
+ }
+
+ if (el.innerText==='completed'){
+    el.style.backgroundColor='green'
+ }
+    
+  });
+ 
 
 }
 
-
+function days(){
+    
+    
+    console.log(parseInt(days))
+}
 
 
 
