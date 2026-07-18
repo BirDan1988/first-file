@@ -11,174 +11,7 @@
 <body>
 
 
-
-<script>
-
-    let output=[]
-    let editid=null
-    let newarr= ""
-
-
-    function sub(){
-
-let product=document.getElementById('pro-name').value
-let info=document.getElementById('info').value
-let op=document.getElementById('op').value
-let dp=document.getElementById('discount').value
-let isource=document.getElementById('img').value
-
-let obj={product,info,op,dp,isource}
-
-if(!product){
-    document.getElementById('product-error').innerText='Enter product Name'       
-}
-
-if(!info){
-    document.getElementById('info-error').innerText='Enter Description'       
-}
-
-if(!op){
-    document.getElementById('op-error').innerText='Enter Original Price'       
-}
-
-if(!dp){
-    document.getElementById('dp-error').innerText='Enter Discount Price'       
-}
-if(!isource){
-    document.getElementById('isource-error').innerText='Enter Image URL'       
-}
-
-if(product && info && op && dp && isource){
-
-    if(editid!=null){
-    output[editid]=obj
-    edited=null
-    }
-    else {
-       output.push(obj)
-    }
-
     
-    document.getElementById('pro-name').value=''
-    document.getElementById('info').value=''
-   document.getElementById('op').value=''
-   document.getElementById('discount').value=''
-   document.getElementById('img').value=''
-    dataview()
-}
-
-
-
-
-}
-
-function dataview(){
-
-    let print="";
-    output.map((i,index)=>{
-        print += `<div class="main-part card border rounded-2xl shadow-lg overflow-hidden">
-        <div class="image-part ">
-                <img class="w-full h-60" src="${i.isource}">
-            </div>
-            <div class="content-part mt-3 p-4">
-                <h3 class="heading text-xl text-black font-bold text-center mb-3 font-mono">${i.product}</h3>
-                <p class="info text-gray-700 text-sm mb-3 text-center">${i.info}</p>
-                <div class="pricing flex gap-4 justify-center mb-3">
-                    <div class="price-card flex gap-2 items-center">
-                        <p class="text-md text-gray-800 font-medium">Latest Price</p>
-                        <div class="price-new text-2xl text-purple-800  font-bold font-mono">${i.dp}$</div>
-                    </div>
-                    <div class="price-card flex gap-2 items-center">
-                        <p class="text-md text-gray-800 font-medium">Original Price</p>
-                    <div class="price-org text-black text-2xl font-bold line-through font-mono">${i.op}$</div>
-                  </div>
-                </div>
-                <div class="btn-div flex gap-4">
-                <button onclick=update(${index}) class="px-3 border bg-blue-100 rounded-xl">Update</button>
-                <button onclick=dlt(${index}) class="px-3 border bg-red-100 rounded-xl">Delete</button>
-                </div>
-                </div>
-            </div>`  
-            
-    })
-      document.getElementById('card').innerHTML=print
-}
-
-
-function filterview(){
-    let field = document.getElementById('search').value
-
-    let print="";
-   (i=>i.product==field).map((i,index)=>{
-        print += `<div class="main-part card border rounded-2xl shadow-lg overflow-hidden">
-        <div class="image-part ">
-                <img class="w-full h-60" src="${i.isource}">
-            </div>
-            <div class="content-part mt-3 p-4">
-                <h3 class="heading text-xl text-black font-bold text-center mb-3 font-mono">${i.product}</h3>
-                <p class="info text-gray-700 text-sm mb-3 text-center">${i.info}</p>
-                <div class="pricing flex gap-4 justify-center mb-3">
-                    <div class="price-card flex gap-2 items-center">
-                        <p class="text-md text-gray-800 font-medium">Latest Price</p>
-                        <div class="price-new text-2xl text-purple-800  font-bold font-mono">${i.dp}$</div>
-                    </div>
-                    <div class="price-card flex gap-2 items-center">
-                        <p class="text-md text-gray-800 font-medium">Original Price</p>
-                    <div class="price-org text-black text-2xl font-bold line-through font-mono">${i.op}$</div>
-                  </div>
-                </div>
-                <div class="btn-div flex gap-4">
-                <button onclick=update(${index}) class="px-3 border bg-blue-100 rounded-xl">Update</button>
-                <button onclick=dlt(${index}) class="px-3 border bg-red-100 rounded-xl">Delete</button>
-                </div>
-                </div>
-            </div>`  
-            
-    })
-   
-      document.getElementById('card').innerHTML=print
-}
-
-function update(index){
-  
- editid=index 
- let edit=output[index]
-     document.getElementById('pro-name').value=edit.product
-    document.getElementById('info').value=edit.info
-   document.getElementById('op').value=edit.op
-   document.getElementById('discount').value=edit.dp
-   document.getElementById('img').value=edit.isource
-
-
-}
-
-function dlt(index){
-      console.log(output)
-    output.splice(index,1)
-     console.log(output)
-    dataview()
-
-}
-
-function search(){
-    let field = document.getElementById('search').value
-     newarr= output.filter(i=>i.product==field)
-      
-    console.log(newarr)
-}
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
     <div class="container mx-auto px-10 mt-10 flex justify-start mb-3">
         <div class="main ">
             <div class="div flex gap-3">
@@ -218,29 +51,154 @@ function search(){
 <div class="container mx-auto px-4 mt-5">
     <div class="">
         <div  id="card" class=" grid grid-cols-3 gap-5">
-            <!-- <div class="main-part card border rounded-2xl shadow-lg overflow-hidden">
-            <div class="image-part ">
-                <img class="w-full h-60" src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh">
-            </div>
-            <div class="content-part mt-3 p-4">
-                <h3 class="heading text-xl text-black font-bold text-center mb-3">123</h3>
-                <p class="info text-gray-700 text-sm mb-3 text-justify-start"> there is a nice card created here as its nice look.</p>
-                <div class="pricing flex gap-4 justify-center mb-3">
-                    <div class="price-card flex gap-2 items-center">
-                        <p class="text-md text-gray-800 font-medium">Latest Price</p>
-                        <div class="price-new text-2xl text-purple-800  font-bold font-mono">100$</div>
-                    </div>
-                    <div class="price-card flex gap-2 items-center text-justify-between">
-                        <p class="text-md text-gray-800 font-medium">Original Price</p>
-                    <div class="price-org text-black text-2xl font-bold line-through font-mono">110$</div>
-                  </div>
-                  </div>
-                  
-                </div>
-            </div> -->
+           
         </div>
     </div>
     </div>
+
+
+
+<script>
+
+    let output=[]
+    let editid=null
+    let newarr= []
+
+
+    function sub(){
+
+let product=document.getElementById('pro-name').value
+let info=document.getElementById('info').value
+let op=document.getElementById('op').value
+let dp=document.getElementById('discount').value
+let isource=document.getElementById('img').value
+
+let obj={product,info,op,dp,isource}
+
+if(!product){
+    document.getElementById('product-error').innerText='Enter product Name'       
+}
+
+if(!info){
+    document.getElementById('info-error').innerText='Enter Description'       
+}
+
+if(!op){
+    document.getElementById('op-error').innerText='Enter Original Price'       
+}
+
+if(!dp){
+    document.getElementById('dp-error').innerText='Enter Discount Price'       
+}
+if(!isource){
+    document.getElementById('isource-error').innerText='Enter Image URL'       
+}
+
+if(product && info && op && dp && isource){
+
+    if(editid!=null){
+    output[editid]=obj
+    editid=null
+    }
+    else {
+       output.push(obj)
+    }
+
+    
+    document.getElementById('pro-name').value=''
+    document.getElementById('info').value=''
+   document.getElementById('op').value=''
+   document.getElementById('discount').value=''
+   document.getElementById('img').value=''
+    dataview(output)
+}
+
+
+
+
+}
+
+
+
+
+function dataview(data){
+    
+
+    let print="";
+   data.forEach((i,index)=>{
+        print += `<div class="main-part card border rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-part ">
+                <img class="w-full h-60" src="${i.isource}">
+            </div>
+            <div class="content-part mt-3 p-4">
+                <h3 class="heading text-xl text-black font-bold text-center mb-3 font-mono">${i.product}</h3>
+                <p class="info text-gray-700 text-sm mb-3 text-center">${i.info}</p>
+                <div class="pricing flex gap-4 justify-center mb-3">
+                    <div class="price-card flex gap-2 items-center">
+                        <p class="text-md text-gray-800 font-medium">Latest Price</p>
+                        <div class="price-new text-2xl text-purple-800  font-bold font-mono">${i.dp}$</div>
+                    </div>
+                    <div class="price-card flex gap-2 items-center">
+                        <p class="text-md text-gray-800 font-medium">Original Price</p>
+                    <div class="price-org text-black text-2xl font-bold line-through font-mono">${i.op}$</div>
+                  </div>
+                </div>
+                <div class="btn-div flex gap-4">
+                <button onclick=update(${i.postition ?? index}) class="px-3 border bg-blue-100 rounded-xl">Update</button>
+                <button onclick=dlt(${i.postition ?? index}) class="px-3 border bg-red-100 rounded-xl">Delete</button>
+                </div>
+                </div>
+            </div>`  
+            
+    })
+   
+      document.getElementById('card').innerHTML=print
+}
+
+function update(index){
+  
+ editid=index 
+ let edit=output[index]
+     document.getElementById('pro-name').value=edit.product
+    document.getElementById('info').value=edit.info
+   document.getElementById('op').value=edit.op
+   document.getElementById('discount').value=edit.dp
+   document.getElementById('img').value=edit.isource
+
+
+}
+
+function dlt(index){
+      console.log(output)
+    output.splice(index,1)
+     console.log(output)
+    dataview(output)
+
+}
+
+function search(){
+    let field = document.getElementById('search').value.toLowerCase()
+     newarr= output.map((i,index)=> {
+        return {
+            ...i,
+               postition:output.indexOf(i)
+        }
+
+     }).filter(i=>i.product.toLowerCase().includes(field))
+        dataview(newarr)
+        document.getElementById('search').value =''
+     }
+
+
+    dataview(output);
+      
+
+</script>
+
+
+
+
+
 
 
 
