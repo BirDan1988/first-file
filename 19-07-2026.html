@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body class="bg-black">
+
+    <div class="container mx-auto px-3 mt-10 mb-15">
+        <h1 class="text-white font-bold text-4xl text-center">CDMI Student Marksheet</h1>
+    </div>
+
+<div class="input-entry  border-2 border-gray-800 container mx-auto  mb-10  grid grid-cols-2 rounded-2xl items-center ">
+    <div class="py-10">
+    <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
+            <lable class="text-white text-xl">Student Name :-</lable><input id="s-name" class=" w-80 border-2 border-white px-2 text-white py-2" type="text" placeholder="Enter Your Name">
+            <p id="name-error" class="text-red-500 text-md "></p>
+    </div>
+    <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
+            <lable class="text-white text-xl">English :-</lable><input id="eng"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <p id="eng-error" class="text-red-500 text-md "></p>
+    </div>
+    <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
+            <lable class="text-white text-xl">Maths :-</lable><input id="mat"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <p id="mat-error" class="text-red-500 text-md "></p>
+    </div>
+    <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
+            <lable class="text-white text-xl">Science :-</lable><input id="sci"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <p id="sci-error" class="text-red-500 text-md "></p>
+    </div>
+    <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
+            <lable class="text-white text-xl">Computer :-</lable><input id="cmp"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <p id="cmp-error" class="text-red-500 text-md "></p>
+    </div>
+    <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-5">
+            <lable class="text-white text-xl">Gujarati :-</lable><input id="guj"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <p id="guj-error" class="text-red-500 text-md "></p>
+    </div>
+<div class="container mx-auto px-3  items-center flex gap-3">
+            <button onclick="submit()" class=" ml-38 text-white font-medium px-4 py-1 text-xl rounded-md bg-gray-700 inline">Submit</button><p id="error" class="text-red-500 text-md "></p>
+    </div>
+    </div>
+    <div class="image rounded-r-xl overflow-hidden w-full h-full">
+        <img class=" w-full h-full object-cover block" src="study.png">
+    </div>
+
+</div>
+
+
+    
+
+    <div class="container mx-auto px-3 mb-10">
+        <h1 class="text-white text-4xl font-bold text-center">Studnet's Report Card</h1>
+    </div>
+    <div class="container mx-auto px-3">
+        <table>
+            <thead>
+                <tr>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1 border-r-2 border-black">Student's name</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">English</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Maths</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Science</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Computer</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Gujarati</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Total</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Percentage</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Average</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Grade</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Result</td>
+                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black" colspan="2">Correction</td>
+                </tr>
+            </thead>
+            <tbody id="tabledata">
+
+                
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>  
+
+
+                   <!-- <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.name}</td>
+                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.name}</td>
+                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.name}</td>
+                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.name}</td>
+                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">Pass</td>
+                     <td class="text-cyan-400 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick="update()" class="px-2 py-1 text-white bg-sky-800 rounded-md font-medium">Update</button></td>
+                     <td class="text-red-500 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick="dlt()" class="px-2 py-1 text-white bg-red-500 rounded-md font-medium">Delete</button></td> -->
