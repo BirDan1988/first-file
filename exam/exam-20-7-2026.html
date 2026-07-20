@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+</head>
+<body class="bg-black">
+
+    
+    <div class="container mx-auto px-3 mt-5">
+        <h1 class="text-center font-mono text-4xl font-bold text-sky-300">CDMI Result Card</h1>
+    </div>
+
+    <!-- inputfield -->
+      <div class="container mx-auto px-3 mt-5 mb-5">
+        <div class="form mb-3 grid grid-cols-[120px_250px] gap-3 items-center">
+            <lable class="font-medium text-white">Student Name:- </lable><input id="s-name" type="text" placeholder="Enter student Full Name" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
+            <lable class="font-medium text-white">English:- </lable><input id="eng" type="number" min="0" max="100" placeholder="Enter Mark" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
+             <lable class="font-medium text-white">Maths:- </lable><input id="mat" type="number" min="0" max="100" placeholder="Enter Mark" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
+             <lable class="font-medium text-white">Science:- </lable><input id="sci" type="number" min="0" max="100" placeholder="Enter Mark" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
+             <lable class="font-medium text-white">Porfile Photo:- </lable><input id="img" type="text" placeholder="Enter Your Link" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
+        </div> 
+        <div class="btn">
+                <button onclick="submit()" class="text-lg font-medium text-white bg-gray-400 rounded-md px-3 py-1 ml-33 mt-3">Submit</button>
+             </div>
+    </div>
+<!-- input field end -->
+
+<div class="container mx-auto px-3">
+    <h1 class="text-center font-mono text-4xl font-bold text-sky-300 mt-5"> Student's Profile</h1>
+</div>
+
+<div class="container mx-auto px-3">
+    <div class="box flex gap-5">
+        <input id="search" class="w-70 px-2 py-1 border border-white/50 rounded-full text-white" type="text" placeholder="Search by name here"><button onclick="search()" class="text-md bg-gray-700  text-white font-medium px-3 py-1 rounded-md">Search</button>
+    </div>
+</div>
+
+<div class="container mx-auto px-3 mt-5">
+    <div id="card" class="grid grid-cols-4 gap-4">
+              
+    </div>
+</div>
+
+<script src="script.js"></script>
+    
+</body>
+</html>
+
+
+<!-- <div class="profile border border-black rounded-xl overflow-hidden">
+                <div class="image ">
+                    <img class="w-100 h-70" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw53kJ0CczmGdSeOSS_et0sxg8gp-WlLfX3tZeCBV1znhtdOZEVpMUOHyw&s=10">
+                </div>
+                <div class="content bg-gray-700 px-3 py-4">
+                    <h3 class="name text-center text-[#36ADA3] text-xl font-bold mb-3">Rahul Patel</h3>
+                    <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">English:- </lable><span class="w-[150px] text-[#FFE2E2]" >120</span>
+                    </div>
+                    <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Maths:- </lable><span class="w-[150px] text-[#FFE2E2]" >90</span>
+                    </div>
+                    <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Science:- </lable><span class="w-[150px] text-[#FFE2E2]" >70</span>
+                    </div>
+                     <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Total:- </lable><span class="w-[150px] text-[#FFE2E2]" >240</span>
+                    </div>
+                     <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Percentage:- </lable><span class="w-[150px] text-[#FFE2E2] " >120%</span>
+                    </div>
+                     <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Min Marks:- </lable><span class="w-[150px] text-[#FFE2E2]" >70</span>
+                    </div>
+                     <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Max Marks:- </lable><span class="w-[150px] text-[#FFE2E2]" >70</span>
+                    </div>
+                     <div class="marks flex gap-6 justify-center mt-3">
+                          <button class="text-white bg-blue-500 px-3 py-1 rounded-md">Edit</button><button class="text-white bg-red-500 px-3 py-1 rounded-md">Delete</button>
+                    </div>
+                </div>
+                
+
+              </div> -->
+
+
+
+
+
+
+
+              <!-- 
+                     <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Percentage:- </lable><span class="w-[150px] text-[#FFE2E2] " >120%</span>
+                    </div>
+                     <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Min Marks:- </lable><span class="w-[150px] text-[#FFE2E2]" >70</span>
+                    </div>
+                     <div class="marks flex  ">
+                          <lable class="mb-3 w-[120px] text-yellow-500 font-medium">Max Marks:- </lable><span class="w-[150px] text-[#FFE2E2]" >70</span>
+                    </div>
+                     <div class="marks flex gap-6 justify-center mt-3">
+                          <button class="text-white bg-blue-500 px-3 py-1 rounded-md">Edit</button><button class="text-white bg-red-500 px-3 py-1 rounded-md">Delete</button>
+                    </div> -->
