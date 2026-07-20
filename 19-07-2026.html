@@ -11,37 +11,37 @@
 <body class="bg-black">
 
     <div class="container mx-auto px-3 mt-10 mb-15">
-        <h1 class="text-white font-bold text-4xl text-center">CDMI Student Marksheet</h1>
+        <h1 class="text-[#E1EFF6] font-bold text-4xl text-center font-mono">CDMI Student Marksheet</h1>
     </div>
 
 <div class="input-entry  border-2 border-gray-800 container mx-auto  mb-10  grid grid-cols-2 rounded-2xl items-center ">
     <div class="py-10">
     <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
-            <lable class="text-white text-xl">Student Name :-</lable><input id="s-name" class=" w-80 border-2 border-white px-2 text-white py-2" type="text" placeholder="Enter Your Name">
+            <lable class="text-white text-xl">Student Name :-</lable><input id="s-name" class=" w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="text" placeholder="Enter Your Name">
             <p id="name-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
-            <lable class="text-white text-xl">English :-</lable><input id="eng"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <lable class="text-white text-xl">English :-</lable><input id="eng"  class=" w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="eng-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
-            <lable class="text-white text-xl">Maths :-</lable><input id="mat"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <lable class="text-white text-xl">Maths :-</lable><input id="mat"  class=" w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="mat-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
-            <lable class="text-white text-xl">Science :-</lable><input id="sci"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <lable class="text-white text-xl">Science :-</lable><input id="sci"  class=" w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="sci-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-3">
-            <lable class="text-white text-xl">Computer :-</lable><input id="cmp"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <lable class="text-white text-xl">Computer :-</lable><input id="cmp"  class=" w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="cmp-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-[150px_350px_1fr] items-center mb-5">
-            <lable class="text-white text-xl">Gujarati :-</lable><input id="guj"  class=" w-80 border-2 border-white px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <lable class="text-white text-xl">Gujarati :-</lable><input id="guj"  class=" w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="guj-error" class="text-red-500 text-md "></p>
     </div>
 <div class="container mx-auto px-3  items-center flex gap-3">
-            <button onclick="submit()" class=" ml-38 text-white font-medium px-4 py-1 text-xl rounded-md bg-gray-700 inline">Submit</button><p id="error" class="text-red-500 text-md "></p>
+            <button onclick="submit()" class=" ml-38 text-white font-medium px-4 py-1 text-xl rounded-md bg-gray-700 inline">Submit</button><button onclick="demo()" class=" ml-1 text-white font-medium px-4 py-1 text-xl rounded-md bg-indigo-950 inline">Demo Data</button><p id="error" class="text-red-500 text-md "></p>
     </div>
     </div>
     <div class="image rounded-r-xl overflow-hidden w-full h-full">
@@ -54,7 +54,11 @@
     
 
     <div class="container mx-auto px-3 mb-10">
-        <h1 class="text-white text-4xl font-bold text-center">Studnet's Report Card</h1>
+        <h1 class="text-[#32DE8A] text-4xl font-bold text-center font-serif">Studnet's Report Card</h1>
+    </div>
+
+    <div class="container mx-auto px-3 mb-5 flex items-center">
+        <input id="search" class="border border-gray-800 w-80 rounded-sm text-gray-200 px-3 py-1" type="text" placeholder="Enter Search Field"><button  onclick="fltr()" class="ml-5 px-4 py-1 bg-gray-700  text-md font-medium text-white rounded-md">search</button>
     </div>
     <div class="container mx-auto px-3">
         <table>
