@@ -12,37 +12,42 @@
 
     
     <div class="container mx-auto px-3 mt-5">
-        <h1 class="text-center font-mono text-4xl font-bold text-sky-300">CDMI Result Card</h1>
+        <h1 class="text-center font-mono text-2xl sm:text-4xl font-bold text-sky-300">CDMI Result Card</h1>
     </div>
 
     <!-- inputfield -->
-      <div class="container mx-auto px-3 mt-5 mb-5">
-        <div class="form mb-3 grid grid-cols-[120px_250px] gap-3 items-center">
+     <div class="div">
+      <div class="container mx-auto px-3 mt-5 mb-5 flex justify-start sm:justify-center">
+        <div class="form mb-3 grid-cols-1 grid sm:grid-cols-[120px_250px] gap-3 items-center shrink">
             <lable class="font-medium text-white">Student Name:- </lable><input id="s-name" type="text" placeholder="Enter student Full Name" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
             <lable class="font-medium text-white">English:- </lable><input id="eng" type="number" min="0" max="100" placeholder="Enter Mark" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
              <lable class="font-medium text-white">Maths:- </lable><input id="mat" type="number" min="0" max="100" placeholder="Enter Mark" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
              <lable class="font-medium text-white">Science:- </lable><input id="sci" type="number" min="0" max="100" placeholder="Enter Mark" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
              <lable class="font-medium text-white">Porfile Photo:- </lable><input id="img" type="text" placeholder="Enter Your Link" class="w-80 border border-gray-500 px-2 py-1 rounded-md text-white">
-        </div> 
-        <div class="btn">
-                <button onclick="submit()" class="text-lg font-medium text-white bg-gray-400 rounded-md px-3 py-1 ml-33 mt-3">Submit</button>
-             </div>
+        </div>  
     </div>
+    <div class="btn flex gap-4 items-center mt-6 justify-start sm:justify-center w-full">
+                <button onclick="submit()" class="text-lg font-medium text-white bg-gray-700 rounded-md px-3 py-1 ml-5 sm:ml-30 ">Submit</button><button onclick="demo()" class=" text-white font-medium px-4 py-1 text-lg rounded-md bg-indigo-950 ">Demo Data</button>
+                <p  id="error" class=" text-red-500 hidden sm:block"></p>
+             </div>
+
+             </div>
 <!-- input field end -->
 
-<div class="container mx-auto px-3">
-    <h1 class="text-center font-mono text-4xl font-bold text-sky-300 mt-5"> Student's Profile</h1>
+<div class="container mx-auto px-3 mt-8">
+    <h1 class="text-center font-mono text-2xl sm:text-4xl font-bold text-sky-300 mt-5"> Student's Profile</h1>
 </div>
 
-<div class="container mx-auto px-3">
+<div class="container mx-auto px-3 mt-8">
     <div class="box flex gap-5">
-        <input id="search" class="w-70 px-2 py-1 border border-white/50 rounded-full text-white" type="text" placeholder="Search by name here"><button onclick="search()" class="text-md bg-gray-700  text-white font-medium px-3 py-1 rounded-md">Search</button>
+         <input id="search" class="w-70 px-2 py-1 border border-white/50 rounded-full text-white" type="text" placeholder="Search by name here"><button onclick="search()" class="text-md bg-gray-700  text-white font-medium px-3 py-1 rounded-md">Search</button>
+         <!--<button onclick="all()" class="text-md bg-gray-700  text-white font-medium px-3 py-1 rounded-md">All</button> -->
     </div>
 </div>
 
-<div class="container mx-auto px-3 mt-5">
-    <div id="card" class="grid grid-cols-4 gap-4">
-              
+<div class="container mx-auto px-3 mt-5 ">
+    <div id="card" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center">
+              <!-- output data here -->
     </div>
 </div>
 
