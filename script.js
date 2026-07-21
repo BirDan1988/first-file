@@ -40,6 +40,11 @@ function submit(){
 
     document.getElementById('error').innerText='Enter Empty Field'
  }
+
+ if (eng > 100 || eng < 0 || mat > 100 || mat<0 || sci > 100 || sci<0 || cmp > 100 || cmp<0 || guj > 100 || guj<0) {
+    document.getElementById('error').innerText = "Marks must be between 0 and 100";
+    return;
+}
     
 
     if(name && eng && mat && sci && cmp && guj){
@@ -86,7 +91,7 @@ let print=''
                  let rsl= result(i)
 
                 print += 
-                 `<tr>
+                 `<tr class="${index % 2 == 0 ? 'bg-gray-800' : 'bg-gray-700'}">
                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1 border-r-2 border-black">${i.name}</td>
                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.eng}</td>
                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.mat}</td>
@@ -98,8 +103,8 @@ let print=''
                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${avg}</td>
                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${grd}</td>
                     <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${rsl}</td>
-                    <td class="text-cyan-400 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick=update(${i.position ?? index}) class="px-2  text-white bg-sky-800 rounded-md font-medium">Update</button></td>
-                    <td class="text-red-500 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick=dlt(${i.position ?? index}) class="px-2  text-white bg-red-500 rounded-md font-medium">Delete</button></td>
+                    <td class="text-cyan-400 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick=update(${i.position ?? index}) class="px-2  text-white bg-sky-800 rounded-md font-medium flex gap-1 items-center"><i class="fa-regular fa-pen-to-square font-thin text-sm flex items-center"></i>Edit</button></td>
+                    <td class="text-red-500 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick=dlt(${i.position ?? index}) class="px-2  text-white bg-red-500 rounded-md font-medium flex gap-1 items-center"><i class="fa-regular fa-trash-can font-thin text-sm flex items-center"></i>Delete</button></td>
                    
                 </tr>`
                 
