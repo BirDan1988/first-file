@@ -10,40 +10,59 @@
 </head>
 <body class="bg-black">
 
-    <div class="container mx-auto px-3 mt-10 mb-15">
+    <div class="container mx-auto px-3 mt-7 mb-8">
         <h1 class="text-[#E1EFF6] font-bold text-4xl text-center font-mono mb-3">Student Management System</h1>
         <p class="text-center text-gray-400 text-sm">Create • Update • Delete • Search Student Records</p>
     </div>
 
-<div class="input-entry  border-2 border-gray-800 container mx-auto  mb-10  grid grid-cols-12 rounded-2xl items-center justify-center ">
-    <div class=" left-part pt-10 pb-2  order-2 lg:order-1 col-span-12 lg:col-span-5 ">
+<div class="input-entry  border-2 border-gray-800 container mx-auto  mb-10  grid grid-cols-12 rounded-2xl items-center justify-center gap-0 lg:gap-12 xl:gap-4">
+    <div class=" left-part pt-6 pb-2  order-2 lg:order-1 col-span-12 lg:col-span-5 ">
+        <h3 class="text-white font-serif text-center text-xl mb-8">Enter Student's Details</h3>
         <div class="div">
     <div class="container mx-auto px-3 grid grid-cols-1 sm:grid-cols-[180px_250px] items-center mb-5">
-            <lable class="text-white text-xl flex gap-2 items-center mb-3 sm:mb-0"><i class="fa-regular fa-user"></i>Student Name :-</lable><input id="s-name" class=" w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="text" placeholder="Enter Your Name">
+            <label class="text-white text-lg flex gap-2 items-center mb-3 sm:mb-0"><i class="fa-regular fa-user text-yellow-600"></i>Student Name :-</label><input id="s-name" class="focus:outline-none
+focus:border-yellow-500
+focus:ring-1
+focus:ring-yellow-500/30 bg-gray-900 w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="text" placeholder="Enter Your Name">
             <p id="name-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-1 sm:grid-cols-[180px_250px] items-center mb-5">
-            <lable class="text-white text-xl flex gap-2 items-center"><i class="fa-solid fa-book"></i>English :-</lable><input id="eng"  class=" w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <label class="text-white text-lg flex gap-2 items-center  mb-3 sm:mb-0"><i class="fa-solid fa-book text-yellow-600"></i>English :-</label><input id="eng"  class="focus:outline-none
+focus:border-yellow-500
+focus:ring-2
+focus:ring-yellow-500/30 bg-gray-900 shadow-2xl w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="eng-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-1 sm:grid-cols-[180px_250px] items-center mb-5">
-            <lable class="text-white text-xl flex gap-2 items-center"> <i class="fa-solid fa-calculator"></i>Maths :-</lable><input id="mat"  class=" w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <label class="text-white text-lg flex gap-2 items-center  mb-3 sm:mb-0"> <i class="fa-solid fa-calculator text-yellow-600"></i>Maths :-</label><input id="mat"  class="focus:outline-none
+focus:border-yellow-500
+focus:ring-2
+focus:ring-yellow-500/30 bg-gray-900 shadow-2xl w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="mat-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-1 sm:grid-cols-[180px_250px] items-center mb-5">
-            <lable class="text-white text-xl flex gap-2 items-center"> <i class="fa-solid fa-atom"></i>Science :-</lable><input id="sci"  class=" w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <label class="text-white text-lg flex gap-2 items-center  mb-3 sm:mb-0"> <i class="fa-solid fa-atom text-yellow-600"></i>Science :-</label><input id="sci"  class="focus:outline-none
+focus:border-yellow-500
+focus:ring-2
+focus:ring-yellow-500/30 bg-gray-900 shadow-2xl w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="sci-error" class="text-red-500 text-md "></p>
     </div>
     <div class="container mx-auto px-3 grid grid-cols-1 sm:grid-cols-[180px_250px] items-center mb-5">
-            <lable class="text-white text-xl flex gap-2 items-center"> <i class="fa-solid fa-computer"></i>Computer :-</lable><input id="cmp"  class=" w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+            <label class="text-white text-lg flex gap-2 items-center  mb-3 sm:mb-0"> <i class="fa-solid fa-computer text-yellow-600"></i>Computer :-</label><input id="cmp"  class="focus:outline-none
+focus:border-yellow-500
+focus:ring-2
+focus:ring-yellow-500/30 bg-gray-900 shadow-2xl w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="cmp-error" class="text-red-500 text-md "></p>
     </div>
-    <div class="container mx-auto px-3 grid grid-cols-1 sm:grid-cols-[180px_250px] items-center mb-5">
-            <lable class="text-white text-xl flex gap-2 items-center"> <i class="fa-regular fa-file-lines"></i>Gujarati :-</lable><input id="guj"  class=" w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
+    <div class="container mx-auto px-3 grid grid-cols-1 sm:grid-cols-[180px_250px] items-center mb-8">
+            <label class="text-white text-lg flex gap-2 items-center  mb-3 sm:mb-0"> <i class="fa-regular fa-file-lines text-yellow-600"></i>Gujarati :-</label><input id="guj"  class="focus:outline-none
+focus:border-yellow-500
+focus:ring-2
+focus:ring-yellow-500/30 bg-gray-900 shadow-2xl w-full max-w-80 border-2 border-gray-800 rounded-sm px-2 text-white py-2" type="number" min="1" max="100" placeholder="Enter Your Marks">
             <p id="guj-error" class="text-red-500 text-md "></p>
     </div>
 <div class="container mx-auto px-3  items-center flex gap-5 justify-center">
-            <button onclick="submit()" class= "text-white font-medium px-4 py-1 text-xl rounded-md bg-gray-700 ">Submit</button><button onclick="demo()" class=" ml-1 text-white font-medium px-4 py-1 text-xl rounded-md bg-indigo-950 inline">Demo Data</button>
+            <button onclick="submit()" class= " text-white font-medium px-4 py-1 text-lg rounded-md bg-gray-700 ">Submit</button><button onclick="demo()" class=" ml-1 text-white font-medium px-4 py-1 text-lg rounded-md bg-indigo-950 inline">Demo Data</button>
             
     </div>
     <div class="container mx-auto px-3 grid grid-cols-[180px_250px] items-center mt-5">
@@ -60,28 +79,32 @@
     
 
     <div class="container mx-auto px-3 mb-10">
-        <h1 class="text-[#32DE8A] text-4xl font-bold text-center font-serif">Studnet's Information</h1>
+        <h1 class="text-[#E1EFF6] text-4xl font-bold text-center font-serif">Studnet's Information</h1>
     </div>
 
-    <div class="container mx-auto px-3 mb-5 flex items-center justify-center">
-        <input id="search" class="border border-gray-800 w-80 rounded-sm text-gray-200 px-3 py-1" type="text" placeholder="Enter Search Field"><button  onclick="fltr()" class="ml-5 px-4 py-1 bg-gray-700  text-md font-medium text-white rounded-md">search</button>
+    <div class="container mx-auto px-3 mb-5 flex items-center justify-center gap-5 ">
+        <div class="div relative">
+        <i class=" absolute left-3 top-1/2 -translate-y-1/2 text-white/50 text-md fa-solid fa-magnifying-glass"></i>
+        <input id="search" class="w-50 sm:w-80 border border-gray-800 rounded-sm text-gray-200 pl-10 py-1" type="text" placeholder="Enter Search Field">
+    </div>
+    <button  onclick="fltr()" class=" px-4 py-1 bg-gray-700  text-md font-medium text-white rounded-md">search</button>
     </div>
     <div class="container mx-auto px-3 overflow-x-auto overflow-y-auto">
         <table class="min-w-full mx-auto">
             <thead>
                 <tr>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1 border-r-2 border-black">Student's name</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">English</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Maths</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Science</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Computer</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Gujarati</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Total</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">%</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Average</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Grade</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Result</td>
-                    <td class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black" colspan="2">Correction</td>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1 border-r-2 border-black">Student</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">English</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Maths</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Science</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Computer</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Gujarati</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Total</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">%</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Average</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Grade</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black">Result</th>
+                    <th class="text-yellow-600 text-xl font-medium bg-gray-800 text-center px-3 py-1  border-r-2 border-black" colspan="2">Actions</th>
                 </tr>
             </thead>
             <tbody id="tabledata">
@@ -91,6 +114,10 @@
             </tbody>
         </table>
     </div>
+
+    <footer class="text-center text-gray-500 text-sm py-6 mt-3">
+    © 2026 Student Management System | Created by Birju Danak
+</footer>
 
     <script src="script.js"></script>
 </body>

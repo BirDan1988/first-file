@@ -38,7 +38,7 @@ function submit(){
 
  if(!name || !eng || !mat || !sci || !cmp || !guj){
 
-    document.getElementById('error').innerText='Enter Empty Field'
+    document.getElementById('error').innerText='Please fill all required fields.'
  }
 
  if (eng > 100 || eng < 0 || mat > 100 || mat<0 || sci > 100 || sci<0 || cmp > 100 || cmp<0 || guj > 100 || guj<0) {
@@ -89,22 +89,23 @@ let print=''
                 let avg = (total/5)
                  let grd= grade(percentage)
                  let rsl= result(i)
+                 let tdClass="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1 border-r-2 border-black"
 
                 print += 
                  `<tr class="${index % 2 == 0 ? 'bg-gray-800' : 'bg-gray-700'}">
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1 border-r-2 border-black">${i.name}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.eng}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.mat}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.sci}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.cmp}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${i.guj}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${total}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${percentage}%</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${avg}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${grd}</td>
-                    <td class="text-[#FFBE91] text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black">${rsl}</td>
-                    <td class="text-cyan-400 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick=update(${i.position ?? index}) class="px-2  text-white bg-sky-800 rounded-md font-medium flex gap-1 items-center"><i class="fa-regular fa-pen-to-square font-thin text-sm flex items-center"></i>Edit</button></td>
-                    <td class="text-red-500 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick=dlt(${i.position ?? index}) class="px-2  text-white bg-red-500 rounded-md font-medium flex gap-1 items-center"><i class="fa-regular fa-trash-can font-thin text-sm flex items-center"></i>Delete</button></td>
+                    <td class="${tdClass}" >${i.name}</td>
+                    <td class="${tdClass}">${i.eng}</td>
+                    <td class="${tdClass}">${i.mat}</td>
+                    <td class="${tdClass}">${i.sci}</td>
+                    <td class="${tdClass}">${i.cmp}</td>
+                    <td class="${tdClass}">${i.guj}</td>
+                    <td class="${tdClass}">${total}</td>
+                    <td class="${tdClass}">${percentage}%</td>
+                    <td class="${tdClass}">${avg}</td>
+                    <td class="${tdClass}">${grd}</td>
+                    <td class="${tdClass}">${rsl}</td>
+                    <td class="text-cyan-400 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick=update(${i.position ?? index}) class="px-2  text-white bg-sky-800 rounded-md font-regualar flex gap-1 items-center"><i class="fa-regular fa-pen-to-square font-thin text-sm flex items-center"></i>Edit</button></td>
+                    <td class="text-red-500 text-lg bg-white/10   text-center px-3 py-1  border-r-2 border-black"><button onclick=dlt(${i.position ?? index}) class="px-2  text-white bg-red-500 rounded-md font-regular flex gap-1 items-center"><i class="fa-regular fa-trash-can font-thin text-sm flex items-center"></i>Delete</button></td>
                    
                 </tr>`
                 
