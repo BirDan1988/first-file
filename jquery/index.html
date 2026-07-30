@@ -1,206 +1,59 @@
+<!-- jQuery
+CDN file -->
+
+<!-- selector -->
+<!-- tag, class, id -->
+
+<!-- $ -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
-        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
-    
-     
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#5B5FEF",
-                        secondary: "#10B981",
-                        accent: "#38BDF8",
-
-                        gradientStart: "#5B5FEF",
-                        gradientEnd: "#10B981",
-
-                        background: "#F8FAFC",
-                        paragraph: "#64748B",
-
-                        btnPrimary: "#2563EB",
-                        btnHover: "#48EBFA",
-
-                        heading: "#0F172A",
-                        cardBg: "#3D293B"
-                    },
-
-                    fontFamily: {
-                        main: ["Poppins", "sans-serif"],
-                        body: ["Inter", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
-        
 </head>
+
 <body>
 
- <div class="container px-3 mx-auto">
-    <div class="register mb-3">
-    <label class="text-xl font-semibold block" > Full Name</label>
-    <input class="p-2 border rounded-xl " type="text" placeholder="Enter Name">
-    </div>
-    <div class="login mb-3">
-    <label class="text-xl font-semibold block" > Email ID</label>
-    <input class="p-2 border rounded-xl " type="email" placeholder="Enter Email">
-    </div>
-    <div class="register mb-3">
-    <label class="text-xl font-semibold block" > Phone</label>
-    <input class="p-2 border rounded-xl " type="number" placeholder="Enter Email">
-    </div>
-    <div class="login mb-3">
-    <label class="text-xl font-semibold block" > Password</label>
-    <input class="p-2 border rounded-xl" type="password" placeholder="Enter Email">
-    </div>
-    <div class="register mb-3">
-    <label class="text-xl font-semibold block" >Confrim Password</label>
-    <input class="p-2 border rounded-xl" type="password" placeholder="Enter Email">
-    </div>
-    <div class=" mb-3">
-    <button id="log" class="px-3 py-1 rounded-lg font-semibold border bg-gray-200">log-in</button>
-    <button id="reg" class="px-3 py-1 rounded-lg font-semibold border bg-gray-200">Register</button>
+    <h1>Hello</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium molestias ea quia natus dignissimos voluptas earum sit repellendus, veniam tenetur, odio commodi ipsam! Unde placeat aliquid rem eius eaque ratione.</p>
+    
 
-    </div>
- </div>
- 
- <p id="toggle" class="text-xl font-medium">Already an account? <button class="btn-log text-sky-600 text-xl font-meduim">log In</button> from here</p>
+    <button class="btnclick">Click</button>
+    <button id="hide">Click</button>
+    <button id="show">show</button>
 
+    
 
- <div class="container mx-auto px-3">
-    <h1 class="text-center text-2xl font-bold mb-4"> Creative Infotech</h1>
- 
-<div class="grid grid-cols-3 gap-5">
-    <div class="box-1 p-3">
-        <div id="1" class="image hidden w-full h-[300px]">
-          <img class="w-full h-full object-cover block" src="https://www.aaha.org/wp-content/uploads/2024/03/b5e516f1655346558958c939e85de37a.jpg">  
-        </div>
-        <h3 class="text-lg font-semibold text-center mb-4">What is Animal <button id="show" class="text-blue-500 font-semibold ml-10">Show</button></h3>
-        <p id="p"  class=" text-gray-700 text-sm text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat sit, suscipit molestias, eum recusandae expedita iusto at impedit quaerat culpa pariatur velit optio dolores, aliquam odio corporis eius eaque saepe.
-        Similique, beatae. Corporis, sed possimus? Aliquam ipsam nobis repellendus perspiciatis sint adipisci tenetur rem repellat sit debitis ut cum culpa, modi blanditiis, iure impedit maxime rerum dolorum. Minus, vero fugiat.</p>
-        <button id="btn1" class="text-sm text-black px-4 py-1 bg-gray-300 font-bold rounded-lg mt-3 hover:bg-black hover:text-white">Show</button>
-    </div>
-    <div  class="box-2 p-3">
-         <div id="2" class="image w-full hidden h-[300px]">
-          <img class="w-full h-full block object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFA2wXp8904DccLgpyXGJePmHUpUEAC8fIItPXGMTP69qUU5cBzh6QukA&s=10">  
-        </div>
-        <h3 class="text-lg font-semibold text-center mb-4">What is Animal <button id="show" class="text-blue-500 font-semibold ml-10">Show</button></h3>
-        <p id="p"  class=" text-gray-700 text-sm text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat sit, suscipit molestias, eum recusandae expedita iusto at impedit quaerat culpa pariatur velit optio dolores, aliquam odio corporis eius eaque saepe.
-        Similique, beatae. Corporis, sed possimus? Aliquam ipsam nobis repellendus perspiciatis sint adipisci tenetur rem repellat sit debitis ut cum culpa, modi blanditiis, iure impedit maxime rerum dolorum. Minus, vero fugiat.</p>
-                <button id="btn2" class="text-sm text-black px-4 py-1 bg-gray-300 font-bold rounded-lg mt-3 hover:bg-black hover:text-white">Show</button>
-
-    </div>
-    <div  class="box-3 p-3">
-         <div id="3" class="image w-full hidden h-[300px]">
-          <img class="w-full h-full block object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbrhNnungmqDRwy9IRSODU_zfXCkD2MnQwymPfi7Cik-sG2HrARcvNfK4&s=10">  
-        </div>
-        <h3 class="text-lg font-semibold text-center mb-4">What is Animal <button id="show" class="text-blue-500 font-semibold ml-10">Show</button></h3>
-        <p id="p"  class=" text-gray-700 text-sm text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat sit, suscipit molestias, eum recusandae expedita iusto at impedit quaerat culpa pariatur velit optio dolores, aliquam odio corporis eius eaque saepe.
-        Similique, beatae. Corporis, sed possimus? Aliquam ipsam nobis repellendus perspiciatis sint adipisci tenetur rem repellat sit debitis ut cum culpa, modi blanditiis, iure impedit maxime rerum dolorum. Minus, vero fugiat.</p>
-                <button id="btn3" class="text-sm text-black px-4 py-1 bg-gray-300 font-bold rounded-lg mt-3 hover:bg-black hover:text-white">Show</button>
-
-    </div>
-</div>
- </div>
-
-
- <div class="container mx-auto px-3 mt-8">
-    <div class="grid grid-cols-3">
-        <div class="box border border-gray-400 rounded-xl px-5 py-4">
-        <div class="profile">
-            <h3 class="text-lg font-bold mb-1">Name: John Parker <button id="btn4" class="text-blue-500 text-sm ml-[98px]">Show More</button></h3>
-            <p class="font-semibold text-sm">Web Designer</p>
-        </div>
-        <div id="info" class="hidden">
-            <p class="text-gray-800 font-medium">Phone Number:- 123456789</p>
-            <p class="text-gray-800 font-medium">Email Address:- support@gmail.com</p>
-            <p class="text-gray-800 font-medium">Address :- surat,gujarat,india</p>
-       </div>
-        </div>
-    </div>
- </div>
-
-
- <div class="container mx-auto px-3 mt-5">
-    <button id="send-btn" class="px-4 py-1 text-md font-semibold font-black border border-gray-500 rounded-lg">check</button>
-
- <div id="msg" class="message  px-3 py-1 bg-green-200 inline-flex ">
-    <p class="text-green-900">Your Data Submitted Successfully</p>
-    <button id="msg-hide" class="text-xs font-medium px-3 py-1 border border-gray-400 bg-gray-500 ml-3">Close</button>
- </div>
- </div>
-            
-
-
+     <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
     <script>
+        $(document).ready(function(){
+            // $('button').click(function(){
+            //     $('h1').hide()
+            // })
 
-        $('#reg').click(function(){
-            $('.register').show()
-            $('#toggle').html('Already an account? <button class="btn-log text-sky-600 text-xl font-meduim">log In</button> from here')
+             $('.btnclick').click(function(){
+                $('h1').hide()
+            })
+
+            $('#hide').click(function(){
+                $('p').hide()
+            })
+
+            $('#show').click(function(){
+                $('h1').show()
+                $('p').show()
+            })
+
+            $('h1').click(function(){
+                $(this).hide()
+            })
         })
-
-
-        $('#log').click(function(){
-            $('.register').hide()
-            $('#toggle').html('Do not have account? <button class="btn-log text-sky-600 text-xl font-meduim">Register</button> from here')
-        })
-       
-      
-      $('.box').click(function(){
-        
-        $('#p').toggle()
-      })
-
-
-      $('#btn1').click(function(){
-            $('#1').toggle()
-            $('#2').hide()
-            $('#3').hide()
-      })
-
-       $('#btn2').click(function(){
-            $('#2').toggle()
-            $('#1').hide()
-            $('#3').hide()
-      })
-
-      $('#btn3').click(function(){
-            $('#3').toggle()
-            $('#1').hide()
-            $('#2').hide()
-      })
-
-
-      $('#btn4').click(function(){
-        $('#info').toggle()
-      })
-
-
-      $('#send-btn').click(function(){
-
-        $('#msg').show()
-      })
-
-      $('#msg-hide').click(function(){
-        $('#msg').hide()
-      })
-
-    
-        
-        
-        </script>
-    
+    </script>
+   
 </body>
+
 </html>

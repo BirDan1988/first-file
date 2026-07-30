@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get-set</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5B5FEF",
+                        secondary: "#10B981",
+                        accent: "#38BDF8",
+
+                        gradientStart: "#5B5FEF",
+                        gradientEnd: "#10B981",
+
+                        background: "#F8FAFC",
+                        paragraph: "#64748B",
+
+                        btnPrimary: "#2563EB",
+                        btnHover: "#48EBFA",
+
+                        heading: "#0F172A",
+                        cardBg: "#3D293B"
+                    },
+
+                    fontFamily: {
+                        main: ["Poppins", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container mx-auto px-3">
+        <h1 id="title" class="text-black text-center text-2xl text-bold">Hello World</h1>
+        <p id="p" class="text-gray-500 mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non velit labore ipsa perspiciatis repellendus nesciunt. Excepturi, minima eum nam, dicta necessitatibus voluptatum quas doloremque modi expedita perferendis distinctio, quae at!
+        Molestiae debitis, consectetur aut in omnis deleniti eos sint nostrum autem maxime ex, aspernatur tempore aliquam optio facere cumque tenetur aliquid deserunt modi reprehenderit unde distinctio. Laboriosam praesentium veniam animi!
+        Eveniet provident eum voluptatum <span class="text-black italic font-bold">laudantium</span> repudiandae expedita dolorum nihil architecto eaque. Necessitatibus adipisci in quasi esse blanditiis voluptates harum doloribus, neque earum repellat vero quos maxime magnam dignissimos vel ipsam?
+        Ullam aspernatur culpa similique nemo autem ab? Illum fuga voluptate eius, iste rerum cum <b class="line-through text-black font-bold">consequatur</b> veritatis optio reiciendis dolorum explicabo deleniti molestiae quas magnam quisquam ea voluptatum eligendi ullam earum.
+        Expedita laborum fugiat eum doloribus, minima vel laudantium facilis eius modi numquam saepe illo recusandae tenetur veritatis consequatur vero. Error quisquam ea dignissimos neque explicabo, in vero nobis modi! Rem.</p>
+    </div>
+
+<div class="container mx-auto px-3 mt-5">
+<h2 class="text-blue-900 text-center text-2xl font-bold">Your Content Here</h2>
+<button id="btn" class="bg-gray-300 px-4 py-1 rounded-xl">Click Me</button>
+<p id="output" class="text-gray-500 text-sm"></p>
+</div>
+
+<div class="container mx-auto px-3 mt-5">
+    <label class="mr-2 ">Name:</label><input id="name" class="border px-2 py-1 rounded-xl" type="text" value="" placeholder="Enter your name">
+    <button id="name-btn" class="bg-gray-300 px-4 py-1 rounded-xl">Click me</button>
+    <div id="fn" class="text-green-700 text-sm font-bold"></div>
+</div>
+
+<div class="container mx-auto px-3 mt-5">
+   
+    <div id="123" class="text-green-700  font-bold"> Hello</div>
+    <button id="btn-1" class="bg-gray-300 px-4 py-1 rounded-xl">increase</button> <button id="btn-2" class="bg-gray-300 px-4 py-1 rounded-xl">decrease</button>
+</div>
+
+<div class="container mx-auto px-3 mt-5">
+    <label class="mr-2 ">Character count:</label><input id="list" class="border px-2 py-1 rounded-xl" type="text" value="" placeholder="Enter your name">
+    <button id="list-btn" class="bg-gray-300 px-4 py-1 rounded-xl">Click me</button>
+    <div id="list-item" class="text-green-700 text-sm font-bold"></div>
+</div>
+
+<div class="container mx-auto px-3 mt-7 flex gap-5 items-center">
+    <div class="box100 size-14 bg-yellow-800"></div>
+    <p id="meve" class="text-lg font-bold text-black "></p>
+</div>
+<!-- <div class="container mx-auto px-3 mt-5 flex gap-5">
+    <select id="slct" class="border-2 p-1">
+        <option class="">select-color</option>
+        <option class="bg-red-600 text-white">Red</option>
+        <option class="bg-blue-600 text-white">Blue</option>
+        <option class="bg-green-600 text-white" >Green</option>
+    </select>
+
+    <div class="boxes size-14 border-2 "></div>
+</div> -->
+<div class="container mx-auto px-3 mt-5 flex gap-5">
+    <select id="slct" class="border-2 p-1">
+        <option class="">Country</option>
+        <option class="bg-red-600 text-white">India</option>
+        <option class="bg-blue-600 text-white">Australia</option>
+        <option class="bg-green-600 text-white" >Greece</option>
+    </select>
+
+    <div class="boxes"></div>
+    <div><input id="terms" type="checkbox"> Term & Condition</div>
+    <div class="tmc text-xl text-red"></div>
+</div>
+
+<div class="container mx-auto px-3 mt-5">
+    <h3 class="text-black text-3xl font-bold text-black text-center mb-3">Profile Practice</h3>
+    <div class="grid grid-cols-3">
+        <div class="form">
+            <div>
+                <label class="mr-4">Name:</label><input id="1-name" class="border-2 rounded-md px-2 py-1" type="text" placeholder="Enter Your Name">
+            </div>
+            <div class="mt-3">
+                <label class="mr-4">Gender:</label>
+                <select id="2-gen" class="border-2 rounded-md px-2 py-1">
+                    <option>select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div> 
+
+            <div class="mt-3">
+                <label class="mr-4">City</label>
+                <select id="3-ct" class="border-2 rounded-md px-2 py-1">
+                    <option>select</option>
+                    <option>Surat</option>
+                    <option>Ahmedabad</option>
+                    <option>Mumbai</option>
+                    <option>Kanpur</option>
+                    <option>Delhi</option>
+                </select>
+            </div> 
+             <div class="mt-3">
+                <label class="mr-4">BG Color</label>
+                <select id="4-bg" class="border-2 rounded-md px-2 py-1">
+                    <option>select</option>
+                    <option>red</option>
+                    <option>yellow</option>
+                    <option>green</option>
+                    <option>blue</option>
+                    <option>purple</option>
+                </select>
+            </div> 
+        </div>
+
+        <div class="profile-view p-4 bg-pink-500">
+            <h3 id="usname" class="text-black font-bold text-2xl">Your Name here</h3>
+            <p id="gen" class="text-xl text-gray-900 font-bold">Female</p>
+            <p id="city" class="text-xl text-gray-900 font-bold">city</p>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <script>
+     
+    $(document).ready(function(){
+
+        // $('#title').click(function(){
+        //     alert($('#p').text())
+        // })
+
+        let sg= $('#p').html()
+
+        $('#title').click(function(){
+            $('#output').html(sg)
+        })
+      
+        $('#btn').click(function(){
+            // $('#output').html('<h3 class="text-red-500 text-sm font-bold">Welcome to the club</h3>')
+            $('#output').text('Welcome to the club as we will contact you shortly')
+        })
+           
+        let count=0
+        $('#name-btn').click(function(){
+            count++
+            let abc=$('#name').val()
+            $('#fn').text(`Hello ${abc} its so pleasre to see you here ${count}`)
+        })
+       
+        $('#title').click(function(){
+           $(this).css('color','red')
+           })
+
+           $('#title').click(function(){
+           $('#p').toggle()
+
+        })
+       
+        let fs=16
+        $('#btn-1').click(function(){
+            fs+=4
+            $('#123').css('font-size',`${fs}px`)
+        })
+          $('#btn-2').click(function(){
+            fs-=4
+            $('#123').css('font-size',`${fs}px`)
+        })
+
+
+        $('.box100').mouseenter(function(){
+            $(this).css('background-color','red')
+        })
+          $('.box100').mouseleave(function(){
+            $(this).css('background-color','blue')
+        })
+
+        $('.box100').mouseover(function(){
+            $('#meve').text('Mouse is Over me!')
+            $('#meve').css('color','green')
+        })
+        $('.box100').mouseout(function(){
+            $('#meve').text('Mouse is Over me!')
+            $('#meve').css('color','red')
+        })
+          
+        //   $('#list').keyup(function(){
+        //    let a= $('#list').val().length
+        //     $('#list-item').text(a)
+        //   })
+
+          $('#list').keyup(function(event){
+            $('#list-item').text($('#list').val())
+            if(event.key=='Enter'){
+                alert('Form Submitted')
+            }
+          })
+
+          $('#list').focus(function(){
+
+              $(this).css('border','2px solid green')          
+          })
+
+           $('#list').blur(function(){
+
+              $(this).css('background-color','yellow')          
+          })
+
+
+        //   $('#list').keyup(function(){
+        //     let a = $('#list').val().length
+        //     if (a==6){
+        //         $('#list-item').text('Weak Password')
+        //     }
+
+        //     else if(a==8){
+        //         $('#list-item').text('good Password')
+        //     }
+        //   })
+
+          $('#list').keyup(function(event){
+            let a = $('#list').val().length
+            if (event.key >= 0 && event.key<=9){
+                $('#list-item').text('Numbers are not allowed')
+            }
+          })
+
+          $('#slct').change(function(){
+
+            let a = $('#slct').val()
+            $('.boxes').text('You Select! '+ a)
+          })
+
+          $('#terms').change(function(){
+            if($(this).prop('checked')){
+                   $('.tmc').text('Accpted')
+            }
+            else{
+                $('.tmc').text('Not Accpted')
+            }
+
+          })
+    
+          $('#1-name').change(function(){
+            let a =$(this).val()
+            $('#usname').text(a)
+          })
+
+          $('#2-gen').change(function(){
+            let a =$(this).val()
+            $('#gen').text(a)
+          })
+
+           $('#3-ct').change(function(){
+            let a =$(this).val()
+            $('#city').text(a)
+          })
+           $('#4-bg').change(function(){
+            let a =$(this).val()
+            $('.profile-view').css('background-color',a)
+          })
+
+
+
+
+
+
+
+    })
+
+
+
+    </script>
+
+    
+</body>
+</html>
