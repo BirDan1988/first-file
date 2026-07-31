@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>fadein</title>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5B5FEF",
+                        secondary: "#10B981",
+                        accent: "#38BDF8",
+
+                        gradientStart: "#5B5FEF",
+                        gradientEnd: "#10B981",
+
+                        background: "#F8FAFC",
+                        paragraph: "#64748B",
+
+                        btnPrimary: "#2563EB",
+                        btnHover: "#48EBFA",
+
+                        heading: "#0F172A",
+                        cardBg: "#3D293B"
+                    },
+
+                    fontFamily: {
+                        main: ["Poppins", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container mx-auto px-3">
+          <h3 class="text-center font-bold text-2xl font-sens">Register Form</h3>
+          <div class="form mt-3 w-[800px] mx-auto border-2 border-zinc-900 p-5 rounded-lg ">
+            <div class="firstline flex gap-2 items-center mb-4">
+            <label class="text-black mr-3">Name:-</label><input id="name" class=" w-full text-gray-800 px-2 py-1 border rounded-lg" type="text" placeholder="Enter your Name">
+            </div>
+            <div class="secondtline flex gap-2 items-center mb-4">
+            <label class="text-black mr-3">Email:-</label><input id="name" class=" w-full text-gray-800 px-2 py-1 border rounded-lg" type="text" placeholder="Enter your Name">
+            </div>
+          </div>
+
+    </div>
+    
+</body>
+</html>
