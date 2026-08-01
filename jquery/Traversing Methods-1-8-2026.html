@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Methods</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5B5FEF",
+                        secondary: "#10B981",
+                        accent: "#38BDF8",
+
+                        gradientStart: "#5B5FEF",
+                        gradientEnd: "#10B981",
+
+                        background: "#F8FAFC",
+                        paragraph: "#64748B",
+
+                        btnPrimary: "#2563EB",
+                        btnHover: "#48EBFA",
+
+                        heading: "#0F172A",
+                        cardBg: "#3D293B"
+                    },
+
+                    fontFamily: {
+                        main: ["Poppins", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+ <div  class="container mx-auto px-3">
+    <h1 class="text-black font-bold text-2xl text-center mb-3">What is jQuery</h1>
+    <p class="text-gray-600 text-lg font-medium">jQuery is libaray of Javascript with predefine classes.</p>
+    <button id="get-p" class=" text-sm text-black bg-blue-500 px-3 py-1 ">Click Me</button>
+    <p class="newp"></p>
+
+    <label>Name:-</label><input id="g-name" type="text" value="Rahul" disabled>
+
+    <div class="box bg-green-600 size-14">
+        <div class="box1 w-full h-full">
+            <div class="box2 border-2 border-gray-700 p-2 flex justify-center items-center  w-full h-full text-white font-bold bg-yellow-800">
+               <p class="child">Hello</p> 
+            </div>
+        </div>
+    </div>
+    <button id="box-btn" class=" text-sm text-black bg-blue-500 px-3 py-1 ">Click Me</button>
+    <ul class="list-disc px-5">
+        <li class="item-1 text-red-700 text-md font-bold active">100</li>
+         <li class="item-2 text-black text-md font-regular">200</li>
+         <li class="item-3 text-black text-md font-regular">300</li>
+         <li class="item-4 text-black text-md font-regular">400</li>
+         <li class=" item-5 text-black text-md font-regular">500</li>
+    </ul>
+ </div>
+
+ <div class="conatiner mx-auto px-3 ">
+    <div class="q p-3 border-2 rounded-lg mb-2">
+        <h2 id="" class="qa text-black text-2xl font-bold">What is JQuery</h2>
+        <p class="text-gray-600 text-lg font-medium hidden">Jquery is a library for javascript for write more easy way.</p>
+        <p class="hidden">Click here for more</p>
+    </div>
+    <div class="q p-3 border-2 rounded-lg mb-2">
+        <h2 id="" class="qa text-black text-2xl font-bold">What is Html</h2>
+        <p class="text-gray-600 text-lg font-medium hidden">Jquery is a library for javascript for write more easy way.</p>
+        <p class="hidden">Click here for more</p>
+    </div>
+    <div class="q p-3 border-2 rounded-lg mb-2">
+        <h2 id="" class="qa text-black text-2xl font-bold">What is CSS</h2>
+        <p class=" 1 text-gray-600 text-lg font-medium hidden">1 Jquery is a library for javascript for write more easy way.</p>
+        <p class="2 hidden">2 Click here for more</p>
+        <p class="3 hidden">3 Click here for more</p>
+        <p class=" 4 hidden">4 Click here for more</p>
+    </div>
+    
+ </div>
+
+ <div class="container mx-auto px-3">
+    <div class="grid grid-cols-4">
+        <div class="card">
+            <div class="image w-full">
+                <img src="https://tiimg.tistatic.com/fp/1/007/574/vivo-mobile-phone-7-38mm-ultra-smooth-body-170g-light-2-5d-adjusted-outline-for-a-great-hold-703.jpg" alt="">
+            </div>
+            <h1 class="name text-xl text-center font-black font-semibold">Samsung</h1>
+            <p class="price text-center text-black/80 font-semibold">15,000</p>
+        </div>
+        <div class="card">
+            <div class="image w-full">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb-A7hL0IspZM0IOUxmABI4bZ2b666lpyX2tY60ncOOA&s" alt="">
+            </div>
+            <h1 class="name text-xl text-center font-black font-semibold">Xiomi</h1>
+            <p class="price text-center text-black/80 font-semibold">14,000</p>
+            <p class="discount text-lg text-black px-4 py-1 bg-yellow-400 rounded-xl  inline-flex justify-center">20 % Discount</p>
+        </div>
+        <div class="card">
+            <div class="image w-full">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb-A7hL0IspZM0IOUxmABI4bZ2b666lpyX2tY60ncOOA&s" alt="">
+            </div>
+            <h1 class="name text-xl text-center font-black font-semibold">Vivo</h1>
+            <p class="price text-center text-black/80 font-semibold">17,000</p>
+            <p class="discount text-lg text-black px-4 py-1 bg-yellow-400 rounded-xl  inline-flex justify-center">10 % Discount</p>
+        </div>
+    </div>
+
+
+<button id="dsc" class="text-md px-3 py-1 bg-gray-500 text-black font-bold">Discount</button>
+ </div>
+
+
+
+ <script>
+
+ $(document).ready(function(){
+    $('#get-p').click(function(){
+        let s =$('p').text()
+        $('.newp').text(s)
+    })
+
+    $('#get-p').click(function(){
+         $('.newp').html('<b class="text-red-500">Welcome to Jquery<b>')
+    })
+
+    $('#get-p').click(function(){
+        $('.newp').text($('#g-name').val())
+    })
+
+     $('#get-p').click(function(){
+        $('#g-name').val('Ramesh')
+    })
+
+    $('#get-p').click(function(){
+         $('h1').append('?')
+
+    })
+
+     $('#get-p').click(function(){
+         $('h1').prepend('Are you Ready ')
+
+    })
+
+    $('#get-p').click(function(){
+        $(this).after('<p class="text-green-700 text-sm font-medium">Thank you for like my post<p>')
+        $(this)
+        })
+
+    //  $('#get-p').click(function(){
+    //     $('#g-name').attr('disabled','true')
+    //  }) 
+     
+     $('#g-name').click(function(){
+        $(this).removeAttr('disabled')
+     })
+
+     $('#box-btn').click(function(){
+        $('.box').empty()
+     })
+
+    //  $('#box-btn').click(function(){
+    //     $('.box').addClass('bg-red-700 border-2 border-zinc-600 rotate-90 duration-30000 ease transition-all')
+    //  })
+
+      $('#box-btn').click(function(){
+        $('.box').toggleClass('bg-red-700')
+     })
+
+    //  let w = $('.box2').width('100px')
+    //  console.log(w)
+    //   let iw = $('.box2').innerWidth()
+    //  console.log(iw)
+    // let ow = $('.box2').outerHeight('100px')
+    //  console.log(ow)
+
+     let a =$('.child').parent()
+        console.log(a.attr('class'))
+
+        let b =$('.child').parents('.box')
+        console.log(b.attr('class'))
+
+       let c = $('.item-1').siblings('.item-3')
+       console.log(c) 
+
+
+       $('li').click(function(){
+        $(this).addClass('active text-green-800')
+           .siblings().removeClass('active text-green-800')
+       })
+
+       $('.qa').click(function(){
+        $(this).nextUntil('.4').toggleClass('hidden')
+       })
+
+    //   let d = $('li').eq('2').text()
+    //   console.log(d)
+
+    // let res= $('li').filter(function(){
+       
+    //     return $(this).text()>='300'
+        
+
+    //  })
+    //        res.each(function(){
+    //         console.log($(this).text())
+    //        })
+     
+let j =$('li').not('.item-1')
+
+console.log($(j).text())
+
+
+// $('#dsc').click(function(){
+//     $('.card').hide()
+//     $('.card').has('.discount').show()
+
+// })
+
+$('#dsc').click(function(){
+    $('.card').hide()
+    $('.card').filter(function(){
+     return $(this).has('.discount').length >0;
+
+    }).show()
+
+})
+
+
+
+
+
+
+
+
+
+ })
+
+
+ 
+
+
+
+
+ </script>
+
+
+    
+</body>
+</html>
