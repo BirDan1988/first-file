@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5B5FEF",
+                        secondary: "#10B981",
+                        accent: "#38BDF8",
+
+                        gradientStart: "#5B5FEF",
+                        gradientEnd: "#10B981",
+
+                        background: "#F8FAFC",
+                        paragraph: "#64748B",
+
+                        btnPrimary: "#2563EB",
+                        btnHover: "#48EBFA",
+
+                        heading: "#0F172A",
+                        cardBg: "#3D293B"
+                    },
+
+                    fontFamily: {
+                        main: ["Poppins", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+    <!-- <div class="container mx-auto px-8">
+    <h1 class="text-center text-black font-bold text-2xl">jQuery Practice</h1>
+
+    <p class="intro text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores architecto, sapiente suscipit rerum delectus mollitia culpa impedit laborum repudiandae? Eveniet impedit excepturi ea recusandae culpa soluta odio ducimus eum explicabo.</p>
+
+    <ul id="list-disc  list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Mango</li>
+    </ul>
+
+    <p>Second Paragraph</p>
+
+    <button id="btn">Click Me</button> -->
+
+
+
+    <!-- <div class="box">
+    <h2 class="text-lg font-bold">Heading</h2>
+
+    <p class="first">Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+
+    <button id="btn">Highlight</button>
+</div> -->
+
+<!-- <div class="grandparent">
+
+    <div class="parent">
+
+        <div class="child">
+            <span>Hello</span>
+        </div>
+
+    </div>
+
+</div> -->
+
+<!-- <div class="wrapper flex gap-7">
+
+    <div class="card">
+        <h3>Card 1</h3>
+        <p>Paragraph 1</p>
+        <button>Button 1</button>
+    </div>
+
+    <div class="card active">
+        <h3>Card 2</h3>
+        <p>Paragraph 2</p>
+        <button>Button 2</button>
+    </div>
+
+    <div class="card">
+        <h3>Card 3</h3>
+        <p>Paragraph 3</p>
+        <button>Button 3</button>
+    </div>
+
+</div> -->
+
+
+<div class="container mx-auto px-3">
+    <ul>
+        <li class="text-md- text-red-800 font-semibold">Mango</li>
+        <li class="text-md- text-red-800 font-semibold">Apple</li>
+        <li class="text-md- text-red-800 font-semibold">Banana</li>
+        <li class="text-md- text-red-800 font-semibold">Watermelon</li>
+        <li class="text-md- text-red-800 font-semibold">Chiku</li>
+        <li class="text-md- text-red-800 font-semibold">Custerd Apple</li>
+    </ul>
+</div>
+
+<!-- <div class="form container px-3 mx-auto">
+    <div class="register mb-3">
+    <label class="text-xl font-semibold block" > Full Name</label>
+    <input class="p-2 border rounded-xl " type="text" placeholder="Enter Name">
+    </div>
+    <div class="login mb-3">
+    <label class="text-xl font-semibold block" > Email ID</label>
+    <input class="p-2 border rounded-xl " type="email" placeholder="Enter Email">
+    </div>
+    <div class="register mb-3">
+    <label class="text-xl font-semibold block" > Phone</label>
+    <input class="p-2 border rounded-xl " type="number" placeholder="Enter Email">
+    </div>
+    <div class="login mb-3">
+    <label class="text-xl font-semibold block" > Password</label>
+    <input class="p-2 border rounded-xl" type="password" placeholder="Enter Email">
+    </div>
+    <div class="register mb-3">
+    <label class="text-xl font-semibold block" >Confrim Password</label>
+    <input class="p-2 border rounded-xl" type="password" placeholder="Enter Email">
+    </div>
+    <div class=" mb-3">
+    <button id="log" class="px-3 py-1 rounded-lg font-semibold border bg-gray-200">log-in</button>
+    <button id="reg" class="px-3 py-1 rounded-lg font-semibold border bg-gray-200">Register</button>
+    <button id="reset" class="px-3 py-1 rounded-lg font-semibold border bg-gray-200">Reset</button>
+
+    </div>
+ </div> -->
+
+
+ <!-- <div class="container">
+
+    <input type="text" placeholder="Name">
+
+    <input type="email" placeholder="Email">
+
+    <input type="password" placeholder="Password">
+
+    <input type="checkbox">
+
+    <button>Submit</button>
+
+</div>
+
+<div class="box">
+
+    <input type="text" value="John">
+
+    <input type="text" value="Mike">
+
+    <input type="text" value="Alex">
+
+    <input type="email" value="test@gmail.com">
+
+</div>
+<div class="products">
+
+    <input type="checkbox" value="Laptop" checked>
+    <input type="checkbox" value="Mobile">
+    <input type="checkbox" value="Tablet">
+
+</div>
+
+
+<select id="country">
+
+    <option>India</option>
+    <option selected>USA</option>
+    <option>Canada</option>
+
+</select>
+
+<div class="box">
+
+    <input type="text">
+    <input type="email">
+    <input type="password">
+    <button>Submit</button>
+
+</div> -->
+
+<div class="users text-black mt-5">
+
+    <input type="text" value="John">
+
+    <input type="text" value="Mike">
+
+    <input type="text" value="Alex">
+
+</div>
+<!-- 
+<div class="menu">
+
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Login</a>
+
+</div> -->
+<div class="items">
+
+    <p>Item 1</p>
+    <p class="active">Item 2</p>
+    <p>Item 3</p>
+    <p>Item 4</p>
+
+</div>
+
+<div class="students">
+
+    <p class="student">John</p>
+    <p class="student">Mike</p>
+    <p class="student">Alex</p>
+    <p class="student">David</p>
+
+</div>
+
+<div class="menu">
+
+    <a class="link">Home</a>
+    <a class="link">About</a>
+    <a class="link">Contact</a>
+    <a class="link">Login</a>
+
+</div>
+
+<div class="box">
+
+    <input type="text" value="A">
+
+    <input type="text" value="B">
+
+    <input type="text" value="C">
+
+</div>
+
+
+
+<script>
+$(document).ready(function(){
+
+//    $('#btn').click(function(){
+//        $(this).parent().css('background-color','pink')
+
+//    })
+
+//     $('#btn').click(function(){
+//        $('.container').children().css('background-color','yellow')
+
+//    })
+
+
+//    $('#btn').click(function(){
+//     $('li').first().addClass('font-semibold')
+//     $('li').last().addClass('text-red-700')
+//     $('li').eq(1).addClass('text-md text-blue-800')
+//    })
+
+// $('#btn').click(function(){
+
+//  $('.first').siblings().addClass('text-blue-500 font-medium')
+//  $('h2').next().addClass('text-green-800')
+//  $(this).prev('p').addClass('text-red-900 font-bold')
+//  $('.first').nextAll('p').addClass('text-yellow-900')
+//   $(this).prevAll('p').addClass('text-red-900 font-bold')
+
+
+// })
+
+// $('span').click(function(){
+//     $(this).parent().addClass('bg-red-300')
+// })
+
+// $('span').closest('.grandparent').addClass('border-black border')
+// $('.grandparent').find('span').addClass('text-red-800')
+// $('.grandparent').find('div').addClass('border-2 border-gray-700')
+
+$('button').click(function(){
+ $(this).siblings('h3').addClass('text-red-500')
+//  $(this).parent().siblings().hide()
+ $('.wrapper').addClass('bg-gray-300')
+ $(this).parent().next().addClass('bg-yellow-600')
+ 
+
+
+
+})
+
+
+$('.card')
+    .filter(function () {
+        return $(this).hasClass('active');
+    })
+    .show();
+
+    $('li:even').addClass('bg-green-200')
+    $('li:odd').addClass('bg-yellow-200 text-blue-700')
+    $('li:first').addClass('italic')
+
+    $('#reset').click(function(){
+        $('.form :input').val('')
+    })
+
+   
+    $('input[type="email"]').addClass('text-green-600')
+    $('input[type="number"]').addClass('text-blue-600')
+     $('input:text').addClass('text-red-800')
+
+
+     $('input:password').addClass('text-red-600')
+     $('input:text').val('')
+
+     $('input:checked').addClass('bg-green-200')
+
+     $('option:selected').addClass('text-blue-500')
+    
+
+     $('.users :input:first').addClass('text-red-800')
+     $('.menu a:last').addClass('text-blue-800')
+     $('.items .active').addClass('text-green-800')
+
+    $('li:lt(2)').addClass('text-gray-600')
+
+
+    $('.students p:eq(2)').addClass('text-blue-500')
+
+    $('.menu a:not(:last)').addClass('text-red-800')
+
+    $('.box input:last').change().val('done')
+
+})
+    
+    
+    
+    </script>
+
+</div>
+    
+</body>
+</html>
