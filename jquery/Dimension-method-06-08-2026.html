@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamension method</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5B5FEF",
+                        secondary: "#10B981",
+                        accent: "#38BDF8",
+
+                        gradientStart: "#5B5FEF",
+                        gradientEnd: "#10B981",
+
+                        background: "#F8FAFC",
+                        paragraph: "#64748B",
+
+                        btnPrimary: "#2563EB",
+                        btnHover: "#48EBFA",
+
+                        heading: "#0F172A",
+                        cardBg: "#3D293B"
+                    },
+
+                    fontFamily: {
+                        main: ["Poppins", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+    <div class="container mx-auto px-3 flex">
+        <div class="size-[200px]  box border-2 border-gray-700 bg-green-600 px-3 py-2 my-4"></div>
+        <div class="px-3 my-4">
+           <label class="font-medium text-lg">Output</label><input id="output" class="text-xl text-gray-700 px-3 py-1 border border-gray-600 rounded-lg ml-3 mt-[80px]">
+        </div>
+        </div>
+
+<div class="container mx-auto px-3 flex">
+        <button data-type="width" class=" btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3 hover:bg-black hover:text-white">Width</button>
+        <button data-type="innerWidth"  class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Inner Width</button>
+        <button data-type="outerWidth"  class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Outer Width</button>
+        <button data-type="height" class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Height</button>
+        <button data-type="innerHeight" class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Inner Height</button>
+        <button data-type="outherHeight"  class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Outer Height</button>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+         $('.btn').click(function(){
+            let type = $(this).data('type')
+            let result;
+
+            if(type==='width'){
+               result= $('.box').width()
+              $('#output').val(result)
+            }
+
+             else if (type === 'innerWidth') {
+                result = $('.box').innerWidth()
+                $('#output').val(result)
+            }
+
+             else if (type === 'outerWidth') {
+                result = $('.box').outerWidth()
+                $('#output').val(result)
+            }
+
+            else if (type === 'height') {
+                result = $('.box').height()
+                $('#output').val(result)
+            }
+
+            else if (type === 'innerHeight') {
+                result = $('.box').innerHeight()
+                $('#output').val(result)
+            }
+
+            else if (type === 'outerHeight') {
+                result = $('.box').outerHeight()
+                $('#output').val(result)
+            }
+
+         })
+
+        
+            
+
+        })
+         
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
