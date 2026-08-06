@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5B5FEF",
+                        secondary: "#10B981",
+                        accent: "#38BDF8",
+
+                        gradientStart: "#5B5FEF",
+                        gradientEnd: "#10B981",
+
+                        background: "#F8FAFC",
+                        paragraph: "#64748B",
+
+                        btnPrimary: "#2563EB",
+                        btnHover: "#48EBFA",
+
+                        heading: "#0F172A",
+                        cardBg: "#3D293B"
+                    },
+
+                    fontFamily: {
+                        main: ["Poppins", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+     <div class="bg-white p-8 rounded-xl shadow-lg text-center space-y-6">
+
+    <button class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700">
+      Hide Box
+    </button>
+
+    <div class="w-64 h-40 bg-blue-500 rounded-lg"></div>
+
+  </div>
+
+  <div class="bg-white p-8 rounded-xl shadow-lg text-center space-y-6">
+
+        <div class="flex justify-center gap-4">
+            <button
+                id="hideBtn"
+                class="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg">
+                Hide
+            </button>
+
+            <button
+                id="showBtn"
+                class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg">
+                Show
+            </button>
+        </div>
+
+        <div
+            id="box"
+            class="w-64 h-40 bg-red-500 rounded-lg">
+        </div>
+
+    </div>
+
+  <script>
+     $(document).ready(function(){
+        $('#hideBtn').click(function(){
+
+            $('#box').hide()
+        })
+
+        $('#showBtn').click(function(){
+            $('#box').show()
+        })
+
+
+     })
+
+
+
+
+  </script>
+
+    
+</body>
+</html>

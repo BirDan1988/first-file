@@ -61,9 +61,29 @@
         <button data-type="outerWidth"  class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Outer Width</button>
         <button data-type="height" class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Height</button>
         <button data-type="innerHeight" class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Inner Height</button>
-        <button data-type="outherHeight"  class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Outer Height</button>
-
+        <button data-type="outerHeight"  class="btn text-md px-3 py-1 rounded-xl bg-zinc-200 font-medium mr-3  hover:bg-black hover:text-white">Outer Height</button>
     </div>
+
+
+    <div class="container mx-auto px-3 mt-8">
+        <div class="grid grid-cols-1 gap-5">
+            <div class="">
+            <div class="box-1 size-[150px] bg-red-500 border-4 border-black "></div>
+            <div class="btns mt-3">
+                <button id="ani" class="text-gray-700 bg-zinc-200 rounded-md px-3 py-2 font-medium border border-gray-800">Animation</button>
+                <button id="clr" class="text-gray-700 bg-zinc-200 rounded-md px-3 py-2 font-medium border border-gray-800">clear</button>
+            </div>
+        </div>
+    </div>
+    <div class="qanda mt-8 border-2 border-gray-800 rounded-md px-3">
+        <h1 id="h1" class="text-lg text-black font-semibold px-2 py-1 ">What is jQuery <button id="start" class="text-md text-gray-700 underline ml-3">Press</button> <button id="stop" class="text-md text-gray-700 underline ml-3">stop</button></h1>
+        <p id="p" class="hidden text-gray-500 italic mt-1 px-2 py-2">Jquery is Libaray for javascript to make code more shorter and easy.</p>
+    </div>
+</div>
+
+
+
+
 
     <script>
         $(document).ready(function(){
@@ -100,8 +120,67 @@
                 result = $('.box').outerHeight()
                 $('#output').val(result)
             }
-
          })
+             
+         $('#ani').click(function(){
+            //    $('.box-1').hide(1000)
+            //    $('.box-1').queue(function(next){
+            //     alert('Box Hidden Completly')
+            //      next()
+            //    })
+              
+            //    $('.box-1').show(1000)
+               $('.box-1').dequeue('my')
+             
+         })
+
+         $('#clr').click(function(){
+            $('.box-1').clearQueue('my')
+         })
+
+         $('.box-1').queue('my',function(next){
+            $(this).removeClass('bg-red-500')
+           $(this).addClass('bg-orange-500')
+            $(this).text('Burger is Ready')
+           next()
+         }).delay(3000,'my')
+
+          $('.box-1').queue('my',function(next){
+           $(this).removeClass('bg-orange-500')
+           $(this).addClass('bg-green-500')
+           $(this).text('Pizza is Ready')
+           
+           next()
+         
+         }).delay(3000,'my')
+
+         $('.box-1').queue('my',function(next){
+             $(this).removeClass('bg-green-500')
+             $(this).addClass('bg-blue-500')
+              $(this).text('Pasta is Ready')
+          
+            next()
+         
+         }).delay(3000,'my')
+
+          $('#start').click(function(){
+            $('#p').show(2000)
+            $('#p').hide(2000)
+             $('#p').show(2000)
+            $('#p').hide(2000)
+            $('#p').show(2000)
+            $('#p').queue(function(){
+                $(this).addClass('bg-green-500')
+                next()
+            })
+
+          })
+
+          $('#stop').click(function(){
+            $('#p').finish()
+          })
+
+         
 
         
             
