@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+    
+
+    <div class="grid grid-cols-2 gap-6">
+
+        <div id="card1" class="bg-white p-5 rounded shadow">
+            <h2 class="text-xl font-bold mb-2">Card 1</h2>
+            <p id="para1" class="mb-4">Paragraph One</p>
+            <button id="btn1" class="bg-blue-500 text-white px-4 py-2 rounded">
+                Hide Paragraph 2
+            </button>
+        </div>
+
+        <div id="card2" class="bg-white p-5 rounded shadow">
+            <h2 class="text-xl font-bold mb-2">Card 2</h2>
+            <p id="para2">Paragraph Two</p>
+        </div>
+
+    </div>
+
+    <div class="space-y-4 p-8">
+    
+        <div id="box1" class="bg-green-300 p-6 rounded transition-all duration-300">
+            Box 1
+        </div>
+    
+        <div id="box2" class="bg-gray-200 p-6 rounded transition-all duration-300">
+            Box 2
+        </div>
+    
+        <div id="box3" class="bg-blue-200 p-6 rounded">
+            Box 3
+        </div>
+    
+    </div>
+
+    <div id="container" class="bg-gray-100 p-6 rounded space-y-2">
+    
+        <div id="item1" class="p-3 bg-white rounded">Item 1</div>
+    
+        <div id="item2" class="p-3 bg-white rounded">Item 2</div>
+    
+        <div id="item3" class="p-3 bg-green-300 rounded">Item 3</div>
+    
+        <div id="item4" class="p-3 bg-white rounded">Item 4</div>
+    
+        <div id="item5" class="p-3 bg-white rounded">Item 5</div>
+    
+    </div>
+    
+    <button id="btnDelete" class="mt-5 bg-red-500 text-white px-4 py-2 rounded">
+        Execute
+    </button>
+
+    <div id="card" class="bg-white p-6 rounded shadow space-y-3">
+    
+        <h2 class="text-xl font-bold">Profile</h2>
+    
+        <p>Name: John Doe</p>
+    
+        <p>Age: 25</p>
+    
+        <button class="bg-green-500 text-white px-4 py-2 rounded">
+            Internal Button
+        </button>
+    
+    </div>
+    
+    <button id="btnFade" class="mt-6 bg-blue-500 text-white px-5 py-2 rounded">
+        Fade Content
+    </button>
+
+    <ul id="menu" class="space-y-2">
+    
+        <li class="item p-3 bg-gray-100 rounded">Home</li>
+    
+        <li class="item p-3 bg-gray-100 rounded">About</li>
+    
+        <li class="item p-3 bg-gray-100 rounded">Services</li>
+    
+        <li class="item p-3 bg-gray-100 rounded">Contact</li>
+    
+    </ul>
+
+    <div id="content" class="p-4 bg-gray-100 rounded">
+    
+        <p>
+            Hello <span>John</span>
+        </p>
+    
+        <div>
+            <span>Developer</span>
+        </div>
+    
+    </div>
+    
+    <div class="mt-4">
+        Outside <span>Should Not Change</span>
+    </div>
+    
+    <button id="btnFind" class="mt-5 bg-indigo-500 text-white px-4 py-2 rounded">
+        Find Span
+    </button>
+
+    <div class="space-y-3 p-6">
+    
+        <div class="box bg-blue-200 p-5 rounded">
+            Box A
+        </div>
+    
+        <div class="box bg-green-200 p-5 rounded">
+            Box B
+        </div>
+    
+        <div class="box bg-yellow-200 p-5 rounded">
+            Box C
+        </div>
+    
+    </div>
+    
+    <button id="btnToggle" class="mt-5 bg-purple-500 text-white px-5 py-2 rounded">
+        Hide Boxes
+    </button>
+
+
+
+
+    <script>
+          $(document).ready(function(){
+           $('#btn1').click(function(){
+            $('#para2').hide()
+            $('#card2').addClass('bg-red-200')
+           })
+
+           
+           $('#box1').on({mouseenter:function(){
+                 $(this).addClass('scale-110')
+                 $(this).next().addClass('text-red-600')},mouseleave: function(){
+                    $(this).removeClass('scale-110')
+                     $(this).next().removeClass('text-red-600')}
+          })
+
+          $('#btnDelete').click(function(){
+            $('.bg-green-300').siblings().hide()
+            $('.bg-green-300').parent().addClass('bg-yellow-200')
+          })
+
+          $('#btnFade').click(function(){
+            $('#card').children().fadeOut(2000, function(){
+                $('#card').addClass('border-4 border-blue-500')
+            })
+            
+          })
+
+          $('.item').dblclick(function(){
+            $(this).toggleClass('bg-purple-300 text-gray-400')
+            $(this).siblings().addClass('text-gray-400')
+            $(this).siblings().removeClass('bg-purple-300 ')
+          })
+
+          $('#btnFind').click(function(){
+            $('#content').find('span').addClass('text-blue-600')
+          })
+
+          $('#btnToggle').click(function(){
+            $('.box').slideToggle(3000, function(){
+                let a = $('#btnToggle').text()
+                if(a == 'Show Boxes'){
+                    $('#btnToggle').text('Hide Boxes')
+                }
+                else{
+                    $('#btnToggle').text('Show Boxes')
+                }
+            })
+            
+          })
+        
+           
+
+
+
+
+
+          })
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+
+
+</html>

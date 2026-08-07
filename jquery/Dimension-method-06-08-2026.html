@@ -87,40 +87,40 @@
 
     <script>
         $(document).ready(function(){
-         $('.btn').click(function(){
-            let type = $(this).data('type')
-            let result;
+        //  $('.btn').click(function(){
+        //     let type = $(this).data('type')
+        //     let result;
 
-            if(type==='width'){
-               result= $('.box').width()
-              $('#output').val(result)
-            }
+        //     if(type==='width'){
+        //        result= $('.box').width()
+        //       $('#output').val(result)
+        //     }
 
-             else if (type === 'innerWidth') {
-                result = $('.box').innerWidth()
-                $('#output').val(result)
-            }
+        //      else if (type === 'innerWidth') {
+        //         result = $('.box').innerWidth()
+        //         $('#output').val(result)
+        //     }
 
-             else if (type === 'outerWidth') {
-                result = $('.box').outerWidth()
-                $('#output').val(result)
-            }
+        //      else if (type === 'outerWidth') {
+        //         result = $('.box').outerWidth()
+        //         $('#output').val(result)
+        //     }
 
-            else if (type === 'height') {
-                result = $('.box').height()
-                $('#output').val(result)
-            }
+        //     else if (type === 'height') {
+        //         result = $('.box').height()
+        //         $('#output').val(result)
+        //     }
 
-            else if (type === 'innerHeight') {
-                result = $('.box').innerHeight()
-                $('#output').val(result)
-            }
+        //     else if (type === 'innerHeight') {
+        //         result = $('.box').innerHeight()
+        //         $('#output').val(result)
+        //     }
 
-            else if (type === 'outerHeight') {
-                result = $('.box').outerHeight()
-                $('#output').val(result)
-            }
-         })
+        //     else if (type === 'outerHeight') {
+        //         result = $('.box').outerHeight()
+        //         $('#output').val(result)
+        //     }
+        //  })
              
          $('#ani').click(function(){
             //    $('.box-1').hide(1000)
@@ -179,6 +179,18 @@
           $('#stop').click(function(){
             $('#p').finish()
           })
+
+
+          $('.btn').on({click:function(){ 
+            let a = $(this).text()
+            alert(`Its Clicked  ${a}`);
+          },mouseover:function(){
+            let a = $(this).text()
+            alert(`Its mouseovered ${a}`);
+          }
+    
+        })
+        
 
          
 
