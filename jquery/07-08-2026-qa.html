@@ -130,6 +130,283 @@
         Hide Boxes
     </button>
 
+    <div class="bg-white shadow-xl rounded-xl p-8 w-[500px]">
+
+    <h1 class="text-3xl font-bold mb-6 text-center">
+        Student List
+    </h1>
+
+    <ul class="border rounded-lg overflow-hidden">
+
+        <li class="student px-4 py-3 border-b bg-white">
+            Rahul
+        </li>
+
+        <li class="student px-4 py-3 border-b bg-white">
+            Priya
+        </li>
+
+        <li class="student px-4 py-3 border-b bg-white">
+            Amit
+        </li>
+
+        <li class="student px-4 py-3 border-b bg-white">
+            Neha
+        </li>
+
+        <li class="student px-4 py-3 bg-white">
+            Karan
+        </li>
+
+    </ul>
+
+    <div class="mt-6 text-center">
+        <button
+            id="actionBtn"
+            class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 cursor-pointer">
+            Perform Action
+        </button>
+    </div>
+
+</div>
+
+<div class="bg-white p-8 rounded-xl shadow-xl w-[700px]">
+
+    <h1 class="text-3xl font-bold text-center mb-6">
+        Products
+    </h1>
+
+    <div class="grid grid-cols-3 gap-4">
+
+        <div class="product border rounded-lg p-4">
+            <h2 class="font-bold text-lg">Laptop</h2>
+            <p class="price text-gray-600">$1200</p>
+            <button class="buy mt-4 bg-green-600 text-white px-4 py-2 rounded cursor-pointer">
+                Buy
+            </button>
+        </div>
+
+        <div class="product border rounded-lg p-4">
+            <h2 class="font-bold text-lg">Phone</h2>
+            <p class="price text-gray-600">$800</p>
+            <button class="buy mt-4 bg-green-600 text-white px-4 py-2 rounded cursor-pointer">
+                Buy
+            </button>
+        </div>
+
+        <div class="product border rounded-lg p-4">
+            <h2 class="font-bold text-lg">Headphones</h2>
+            <p class="price text-gray-600">$250</p>
+            <button class="buy mt-4 bg-green-600 text-white px-4 py-2 rounded cursor-pointer">
+                Buy
+            </button>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-6">
+        <button id="reset" class="bg-red-600 text-white px-5 py-2 rounded cursor-pointer">
+            Reset
+        </button>
+    </div>
+
+</div>
+
+<div class="bg-white p-8 rounded-xl shadow-xl w-[600px]">
+
+    <h1 class="text-3xl font-bold text-center mb-6">
+        FAQ
+    </h1>
+
+    <div class="space-y-4">
+
+        <div class="faq border rounded-lg">
+
+            <div class="question bg-gray-100 p-4 cursor-pointer font-semibold">
+                What is HTML?
+            </div>
+
+            <div class="answer hidden p-4">
+                HTML is the standard markup language for web pages.
+            </div>
+
+        </div>
+
+        <div class="faq border rounded-lg">
+
+            <div class="question bg-gray-100 p-4 cursor-pointer font-semibold">
+                What is CSS?
+            </div>
+
+            <div class="answer hidden p-4">
+                CSS is used to style web pages.
+            </div>
+
+        </div>
+
+        <div class="faq border rounded-lg">
+
+            <div class="question bg-gray-100 p-4 cursor-pointer font-semibold">
+                What is JavaScript?
+            </div>
+
+            <div class="answer hidden p-4">
+                JavaScript adds interactivity to web pages.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="text-center mt-6">
+        <button
+            id="closeAll"
+            class="bg-red-600 text-white px-5 py-2 rounded cursor-pointer">
+            Close All
+        </button>
+    </div>
+
+</div>
+
+<div class="bg-white shadow-xl rounded-xl p-8 w-[700px]">
+
+    <h1 class="text-3xl font-bold text-center mb-6">
+        Team Members
+    </h1>
+
+    <div class="space-y-4">
+
+        <div class="member border rounded-lg p-4">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+                    <h2 class="font-bold text-lg">Rahul</h2>
+                    <p class="text-gray-500">Frontend Developer</p>
+                </div>
+
+                <button class="view bg-blue-600 text-white px-4 py-2 rounded cursor-pointer">
+                    View
+                </button>
+
+            </div>
+
+            <div class="details hidden mt-4 border-t pt-4 text-gray-700">
+                Rahul has 3 years of experience in HTML, CSS, JavaScript and React.
+            </div>
+
+        </div>
+
+        <div class="member border rounded-lg p-4">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+                    <h2 class="font-bold text-lg">Priya</h2>
+                    <p class="text-gray-500">Backend Developer</p>
+                </div>
+
+                <button class="view bg-blue-600 text-white px-4 py-2 rounded cursor-pointer">
+                    View
+                </button>
+
+            </div>
+
+            <div class="details hidden mt-4 border-t pt-4 text-gray-700">
+                Priya has 4 years of experience in Node.js, Express and MongoDB.
+            </div>
+
+        </div>
+
+        <div class="member border rounded-lg p-4">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+                    <h2 class="font-bold text-lg">Karan</h2>
+                    <p class="text-gray-500">UI Designer</p>
+                </div>
+
+                <button class="view bg-blue-600 text-white px-4 py-2 rounded cursor-pointer">
+                    View
+                </button>
+
+            </div>
+
+            <div class="details hidden mt-4 border-t pt-4 text-gray-700">
+                Karan specializes in Figma, Tailwind CSS and UI/UX design.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mt-6 flex justify-center gap-4">
+
+        <button id="collapseAll"
+            class="bg-red-600 text-white px-5 py-2 rounded cursor-pointer">
+            Collapse All
+        </button>
+
+        <button id="expandAll"
+            class="bg-green-600 text-white px-5 py-2 rounded cursor-pointer">
+            Expand All
+        </button>
+
+    </div>
+
+</div>
+
+<div class="bg-white shadow-xl rounded-xl p-8 w-[700px]">
+
+    <h1 class="text-3xl font-bold text-center mb-6">
+        Product Filter
+    </h1>
+
+    <div class="flex gap-3 justify-center mb-6">
+
+        <button class="filter bg-blue-600 text-white px-4 py-2 rounded" data-category="all">
+            All
+        </button>
+
+        <button class="filter bg-blue-600 text-white px-4 py-2 rounded" data-category="mobile">
+            Mobile
+        </button>
+
+        <button class="filter bg-blue-600 text-white px-4 py-2 rounded" data-category="laptop">
+            Laptop
+        </button>
+
+    </div>
+
+
+    <div class="grid grid-cols-3 gap-4">
+
+        <div class="product border p-4 rounded" data-category="mobile">
+            <h2 class="font-bold">iPhone</h2>
+            <p>$999</p>
+        </div>
+
+        <div class="product border p-4 rounded" data-category="laptop">
+            <h2 class="font-bold">MacBook</h2>
+            <p>$1500</p>
+        </div>
+
+        <div class="product border p-4 rounded" data-category="mobile">
+            <h2 class="font-bold">Samsung</h2>
+            <p>$700</p>
+        </div>
+
+        <div class="product border p-4 rounded" data-category="laptop">
+            <h2 class="font-bold">Dell</h2>
+            <p>$800</p>
+        </div>
+
+    </div>
+
+</div>
+
+
 
 
 
@@ -182,6 +459,64 @@
             })
             
           })
+
+          $('.student').click(function(){
+            $(this).addClass('bg-yellow-400')
+            $(this).siblings().removeClass('bg-yellow-400')
+          })
+
+          $('#actionBtn').click(function(){
+            $('.student').removeClass('bg-yellow-400')
+          })
+
+          $('.buy').click(function(){
+            $(this).parent().addClass('border-2 border-green-300 shadow-xl scale-110')
+            $(this).parent().siblings().removeClass('border-2 border-green-300 shadow-xl scale-110')
+          })
+
+          $('#reset').click(function(){
+            $('.product').removeClass('border-2 border-green-300 shadow-xl scale-110')
+          })
+
+          $('.question').click(function(){
+                  $(this).next().slideToggle(1000)
+                  $(this).parent().siblings().children().next().hide()
+          })
+          $('#closeAll').click(function(){
+            $('.answer').hide()
+          })
+
+
+          $('.view').click(function(){
+            $(this).closest('.member').find('.details').slideToggle()
+            if ($(this).text() == "Hide") {
+             $(this).text("View");
+             } else {
+             $(this).text("Hide");
+             }
+          })
+
+          $('#collapseAll').click(function(){
+            $('.details').hide()
+            $('.view').text('View')
+          })
+
+            $('#expandAll').click(function(){
+            $('.details').show()
+            $('.view').text('Hide')
+          })
+
+          $('.product').click(function(){
+            let selct = $(this).data('category')
+            filter();
+          })
+
+          function filter(){
+             $('.category').each(function(){
+               
+            })
+
+          }
         
            
 
