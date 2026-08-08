@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <style>
+        /* Initial position */
+        .slide-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.8s ease;
+        }
+
+        /* Final position */
+        .slide-left.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- <header id="header" class=" top-0 left-0 w-full z-50 bg-white border-b border-gray-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"> -->
+
+        <!-- Logo -->
+        <!-- <a href="#" class="text-2xl font-bold text-blue-600">
+            MyWebsite
+        </a> -->
+
+        <!-- Navigation -->
+        <!-- <nav class="hidden md:flex items-center gap-8">
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition">
+                Home
+            </a>
+
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition">
+                About
+            </a>
+
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition">
+                Services
+            </a>
+
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition">
+                Contact
+            </a>
+        </nav> -->
+
+        <!-- Button -->
+        <!-- <button class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+            Get Started
+        </button>
+
+    </div>
+</header> -->
+
+<!-- Spacer because header is fixed -->
+<!-- <div class="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quia eligendi voluptatibus laboriosam in accusamus recusandae, deserunt, numquam distinctio iusto tempora, rem quam! Cum accusantium corporis numquam quae dolorem provident.
+    Ratione animi eum doloribus necessitatibus vitae officia quae quod quo saepe omnis. Blanditiis esse id mollitia atque, repellendus sequi corrupti ea quo qui, alias animi deserunt quis, optio molestiae! At!
+    Reiciendis tenetur totam eos, officiis esse natus at corporis alias ratione iste maxime est voluptate sit voluptatibus a hic culpa, quas eaque eveniet quos. Voluptatibus soluta ipsa quam doloremque veritatis.
+    Atque, suscipit? Minus, corrupti velit veniam molestiae neque obcaecati libero nihil. Earum, blanditiis cumque quae quas libero nam explicabo velit repudiandae accusantium voluptate doloremque consectetur asperiores error assumenda reprehenderit recusandae.
+    Ex voluptates nemo veritatis? Nam voluptas cum explicabo esse aut maiores atque dolores nulla quasi placeat! Cumque nesciunt cupiditate porro dicta quia neque nemo tenetur aliquam placeat ipsam, rem consectetur?
+    Ad corrupti deserunt praesentium maxime adipisci sapiente saepe nulla cupiditate nam. Sapiente temporibus necessitatibus autem, nam atque aspernatur numquam fugiat omnis excepturi exercitationem minus sed. Fugit doloribus nisi eius illum.
+    Quae voluptate animi voluptatibus, iure tenetur ut quidem sunt quas iusto repellendus beatae nemo fugiat minus porro impedit ex incidunt perferendis illo aut! Laboriosam sint consectetur magnam esse mollitia ipsam.
+    Tempore eveniet dolores, quia sequi necessitatibus, sit porro non nihil, maiores debitis optio minima sint odio ratione ducimus cumque odit deleniti ab earum rerum itaque a quas perferendis? Iure, facere.
+    Ipsam velit expedita recusandae saepe perspiciatis numquam magni tempore sunt, ratione adipisci commodi laboriosam nesciunt sapiente. Tenetur dolorum autem error, temporibus non delectus asperiores fugit nostrum illum voluptatibus ad blanditiis.
+    Nihil praesentium possimus asperiores consequatur, natus esse, tempore eligendi laudantium autem tempora, ad incidunt sit rerum amet cum delectus ratione. Exercitationem obcaecati eligendi consequuntur corporis quis culpa consequatur laborum totam!
+    Voluptatum facere voluptates quasi recusandae hic sed laborum aliquam. Eius expedita delectus voluptatibus. Amet atque reprehenderit, nam optio perspiciatis delectus, asperiores nesciunt repellendus libero mollitia sit. Quibusdam molestias eligendi ad.
+    Harum, eius earum. Fuga quaerat, animi quidem tenetur molestias dolorem voluptate nihil obcaecati! Voluptatem consequuntur labore officiis facilis eum est quia perspiciatis, facere deleniti provident sunt obcaecati magni hic ipsam!
+    Dolor repudiandae temporibus, minima veniam, blanditiis fuga magni quas similique distinctio dolorem hic deserunt harum atque quisquam quam ea praesentium laudantium aliquid quae, mollitia cum ullam rerum omnis! Impedit, laboriosam.
+    Voluptas, quas fuga! Vero hic quam architecto error totam quibusdam quod sit cumque dolorem iste, nemo id minima, deserunt laborum qui blanditiis ducimus ratione omnis? Quaerat commodi debitis modi beatae?
+    Corporis, debitis libero ratione hic cum modi vitae eveniet repellendus, ipsam odit perspiciatis eligendi esse fugit cupiditate natus quam obcaecati blanditiis tempore molestiae numquam ducimus. Quaerat tempora vero in ad.
+    Ea vel veritatis maxime corporis soluta voluptate in tempore rem amet dicta quam quis iure repudiandae nesciunt eaque, tempora dolor voluptas possimus id sit repellendus praesentium sapiente odio commodi. Ducimus.
+    Cumque porro, assumenda est dolor neque totam ad voluptatum tempora magnam voluptate ipsum enim beatae amet vitae placeat cupiditate necessitatibus accusamus blanditiis in sunt rerum sequi qui eum facere. Cum.
+    Iusto, consequuntur perferendis. Velit cupiditate, rerum maiores ipsum harum saepe quis ut quibusdam repellendus ab veniam impedit, ea quasi, asperiores soluta ipsam reprehenderit eligendi! Officiis exercitationem quam vel dicta ratione.
+    Illo, suscipit odio, porro quisquam vitae provident facere minus, quia amet eum voluptatibus iusto iure id veritatis alias rem eveniet inventore fugiat libero ut nobis dolor! Asperiores animi placeat nobis.
+    Quaerat, necessitatibus eos dolor veritatis praesentium tenetur suscipit asperiores quibusdam dicta eaque alias non repellat corporis inventore totam. Velit cumque dignissimos sit repudiandae earum culpa odio totam, ad soluta voluptatibus.
+    Officiis officia deserunt odit mollitia! Officiis obcaecati aut, ratione adipisci tenetur delectus exercitationem nostrum consequatur ullam iusto fuga officia aperiam. Voluptatibus quos nesciunt deleniti pariatur laboriosam incidunt illum assumenda quaerat!
+    Esse, voluptatem laboriosam quasi pariatur optio, reprehenderit cum, aliquid tempore laborum magni soluta sapiente? Nesciunt ut eveniet minima? Iste rem expedita iure repellendus modi, vitae nesciunt perferendis laudantium possimus. Corporis?
+    Amet soluta magnam odio placeat earum accusantium. Commodi blanditiis hic maxime, ducimus maiores numquam at atque tenetur itaque corporis eveniet illo repudiandae porro corrupti cumque culpa soluta aspernatur praesentium assumenda?
+    Maxime, nesciunt quo aperiam officia est quae quia non, minima cupiditate nisi, ab ipsum? Provident suscipit obcaecati minima dolore nesciunt neque consequuntur nulla illum necessitatibus facilis! Amet minus obcaecati doloremque?
+    Eligendi adipisci sunt alias, veritatis atque, id sint quisquam quod eius aperiam dolore reprehenderit. Adipisci error qui totam, eos sint impedit rerum quisquam, rem non sequi, eligendi esse aliquam soluta!
+    Exercitationem dicta pariatur ratione aliquam sequi modi quaerat illum rerum accusantium ea tenetur qui dolor id, corrupti fugit alias, vel molestiae soluta natus. Beatae fugit qui voluptatibus, omnis consequuntur placeat.
+    Debitis, repellendus ab autem incidunt possimus ratione dignissimos recusandae neque eos illum, distinctio fugiat iure consequuntur laudantium veritatis maxime cumque voluptatum dolorum explicabo corrupti fugit. Veniam voluptas non facere nesciunt.
+    Quas quam officiis deleniti adipisci deserunt sed libero id, illo ullam sint repellendus quod molestias pariatur. Officia facere eius adipisci magnam, nisi totam quam earum modi illo quaerat velit ex?
+    Eligendi, quam! Corporis similique officia debitis eos adipisci ipsa est quam numquam cupiditate obcaecati sapiente neque nesciunt quisquam laborum, voluptatum asperiores pariatur perspiciatis itaque, possimus voluptate atque dolore! Neque, cum!
+    Earum nostrum quos tenetur dicta. Sint facere consequuntur odit quis quod vero totam veritatis repudiandae error in enim eveniet ex pariatur provident, autem qui? Vero cumque non ex earum suscipit.
+    Dolorem assumenda cum perferendis quisquam eos reprehenderit! Suscipit similique dolorum, provident ipsam libero harum illo quod odio! Veritatis et voluptas modi vitae ducimus aliquam non, mollitia, inventore, sequi sapiente ipsam.
+    A veniam deserunt, cum laboriosam qui repudiandae saepe id ratione harum blanditiis ut, necessitatibus dolorem nostrum nulla! Illo sequi ut, omnis modi sunt suscipit eum architecto nisi quis vel porro.
+    Saepe pariatur, doloribus nostrum facilis corrupti, explicabo laboriosam voluptatem qui illum quas non omnis in ab enim odit fugit itaque quae nam recusandae alias nesciunt, laudantium fugiat nisi culpa. Nemo!
+    Perferendis soluta error totam repellat in dicta amet et reiciendis iure dolorum sapiente tenetur, sequi asperiores consectetur, corporis dolore. Impedit nam nihil asperiores corporis veniam consequatur dignissimos a minus ipsa.
+    Ducimus, odio labore. Corporis illum rerum excepturi cumque magnam blanditiis earum nostrum, rem similique illo cupiditate totam exercitationem consectetur minima cum quo perferendis! In nesciunt velit, expedita adipisci saepe culpa.
+    At culpa, quos sit architecto beatae nostrum perferendis quo placeat rem molestias quae fugit praesentium earum nemo ea recusandae dolore accusamus autem minima libero ipsam minus harum voluptates. Saepe, natus!
+    Autem iusto placeat quam, voluptas odit minima error nemo, pariatur natus rem reiciendis, numquam temporibus ducimus fugit esse alias perferendis. Voluptatum dignissimos consectetur at nisi cupiditate explicabo! Consequuntur, aliquid quae?
+    Est vel, molestiae in, officiis doloribus saepe quis aliquid, ipsum corrupti consequuntur fugit accusamus voluptatum totam fugiat obcaecati? Ullam pariatur dolorum officia consequatur beatae sit quod nam laudantium temporibus nostrum.
+    Ipsam natus eum aspernatur dolores deserunt voluptatem vel commodi expedita, eveniet pariatur consectetur sit dolorem, nam, omnis maxime illo similique? Odio expedita necessitatibus quo itaque, quibusdam corrupti asperiores architecto corporis!
+    Nisi saepe commodi odio quisquam, ut dolores accusantium, animi impedit eligendi quia totam id maiores reprehenderit hic asperiores consectetur earum tempore molestias, iste adipisci labore aspernatur. Deserunt ut beatae vel.
+    Mollitia hic iure ratione. Amet aliquid quaerat laborum excepturi vero alias, asperiores nam. Velit veritatis nobis aperiam necessitatibus corrupti eligendi, in ad exercitationem, perspiciatis dicta error doloribus excepturi, repellat vero.
+    Dolorem ipsam beatae sit eos nam soluta vero laboriosam commodi tenetur ipsa a sint qui perferendis, accusantium quaerat esse deserunt, excepturi suscipit sunt obcaecati possimus iusto omnis voluptatibus necessitatibus. Harum.
+    Enim eaque ducimus numquam rerum vel praesentium quia eos dolorem maxime repellendus. Dignissimos, nostrum delectus? Corporis voluptatibus delectus maxime, placeat saepe veritatis reprehenderit aut? Repellendus sapiente perspiciatis inventore nostrum voluptas?
+    Vel blanditiis maxime possimus nisi eius. Alias, sint qui? Magni reprehenderit veniam vero omnis eos amet minus neque perferendis sapiente! Eligendi facilis sint eos? Autem consectetur odio aliquam illum inventore.
+    Nobis sunt, architecto a similique sequi quo debitis eligendi itaque quis repudiandae repellendus tempore autem in odio cupiditate optio magnam labore. Quisquam corporis totam ab in facere repellendus nesciunt ea.
+    Quo, alias ipsam facere aliquam inventore eveniet sint. Accusamus illum nobis similique deserunt cum ratione delectus, culpa consequuntur odit consequatur, sunt repudiandae fuga aliquid laudantium labore obcaecati aperiam quibusdam corporis.
+    Asperiores saepe velit, facilis, possimus sed enim odio commodi veniam nostrum, ab quae laborum! Voluptates accusantium a amet pariatur! Doloribus eligendi inventore ad eaque dolor dolore consequuntur nihil magni eum.
+    Architecto natus molestiae et animi, deserunt placeat iusto odio est? Explicabo, illum natus eos possimus eligendi porro quisquam ea cumque quis at laudantium, sed corrupti adipisci ex odio tempore perspiciatis.
+    Illum eum ut animi? Corporis animi dignissimos sed aut veniam tenetur maiores earum doloremque, minus nihil perferendis deserunt exercitationem eaque corrupti unde itaque odio nam optio dolorem debitis esse? Error?
+    Eius, harum magni consequatur deleniti vitae laudantium, repellendus nisi cum numquam ut commodi suscipit odio quisquam repellat vero doloremque quam soluta, neque fugiat aliquid recusandae! Facere dolorum iste nam provident.</p>
+</div>
+
+<div class="container mx-auto px-3 flex">
+    <div class="box size-[500px] bg-green-300 p-4 overflow-scroll">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ratione voluptas impedit dicta magnam vel corrupti magni nisi voluptates quibusdam, earum ut, illum obcaecati, molestiae commodi. Incidunt, dolor. Iste, cumque.
+        Fuga sed rerum doloremque! Ipsa aperiam ullam magni porro nemo quidem eius velit sunt voluptate vero repellendus perferendis consequuntur saepe officiis est quisquam tempore dolorem dolorum error, laudantium eum. Quos?
+        Deserunt, rerum, perferendis quis ducimus earum, esse corrupti veritatis aspernatur minus asperiores vero nam nulla assumenda eaque laboriosam facere accusamus iusto sequi quisquam iure. Molestias earum voluptates vero vitae odio?
+        Excepturi sed quibusdam eum, ut minus vel iure consequatur. Velit dolorum, laboriosam accusantium necessitatibus obcaecati sunt numquam vitae rem quae quas commodi illo eius ad dolores, porro in quisquam facere!
+        Saepe delectus itaque facilis deleniti vitae, eaque sed dolore, alias maxime cum assumenda tempora optio fuga quis sunt autem recusandae odit ea eos rerum totam veniam. Vel soluta earum optio.
+        Modi fugit velit quaerat doloribus. Corporis aliquid nostrum mollitia voluptatum quidem reprehenderit eveniet voluptates earum fuga quia maxime reiciendis dolore ipsum tempore excepturi, vero quas delectus officia minus modi. Laborum?
+        Modi aliquam, rerum tempore animi necessitatibus eveniet, mollitia in placeat voluptates asperiores a itaque autem dignissimos quidem? Ab quo rem est, laboriosam similique harum neque tempore, nulla nisi eos laborum.
+        Exercitationem culpa excepturi beatae accusamus hic, voluptate architecto libero dolore molestias perspiciatis dolorem vero porro totam error maxime facilis repellat itaque eos accusantium, aperiam repellendus veniam minima officiis. Magni, voluptatum.</p>
+    </div>
+    <div class="counter text-2xl text-gray-500 font-bold"></div>
+</div> -->
+
+
+<!-- <header id="header" class="bg-blue-600 text-white py-6 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <h1 class="text-2xl font-bold">My Website</h1>
+
+        <nav class="flex gap-6">
+            <a href="#" class="hover:text-blue-200">Home</a>
+            <a href="#" class="hover:text-blue-200">About</a>
+            <a href="#" class="hover:text-blue-200">Services</a>
+            <a href="#" class="hover:text-blue-200">Contact</a>
+        </nav>
+    </div>
+</header>
+
+
+<section class="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div class="text-center">
+        <h2 class="text-5xl font-bold text-gray-800 mb-4">
+            Welcome
+        </h2>
+        <p class="text-gray-600 text-lg">
+            Scroll down to practice jQuery.
+        </p>
+    </div>
+</section>
+
+
+<section class="min-h-screen bg-white flex items-center justify-center">
+    <div class="text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            About Us
+        </h2>
+        <p class="text-gray-600">
+            This section is here to create page scrolling.
+        </p>
+    </div>
+</section>
+
+
+<section class="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div class="text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            Services
+        </h2>
+        <p class="text-gray-600">
+            Keep scrolling and observe the header.
+        </p>
+    </div>
+</section> -->
+
+<!-- 
+<header id="header"
+    class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 transition-all duration-300">
+
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+
+        <h1 class="text-2xl font-bold text-blue-600">
+            MyWebsite
+        </h1>
+
+        <nav class="flex gap-8">
+            <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+        </nav>
+
+        <button class="bg-blue-600 text-white px-5 py-2 rounded-lg">
+            Login
+        </button>
+
+    </div>
+</header>
+
+<div class="h-24"></div>
+
+<section class="h-screen bg-gray-100 flex items-center justify-center">
+    <h2 class="text-5xl font-bold text-gray-800">
+        Section 1
+    </h2>
+</section>
+
+<section class="h-screen bg-blue-50 flex items-center justify-center">
+    <h2 class="text-5xl font-bold text-gray-800">
+        Section 2
+    </h2>
+</section>
+
+<section class="h-screen bg-gray-100 flex items-center justify-center">
+    <h2 class="text-5xl font-bold text-gray-800">
+        Section 3
+    </h2>
+</section> -->
+
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-6 py-5">
+            <h1 class="text-2xl font-bold text-blue-600">
+                Scroll Animation
+            </h1>
+        </div>
+    </header>
+
+    <!-- Spacer -->
+    <div class="h-20"></div>
+
+
+    <!-- Section 1 -->
+    <section class="h-screen flex items-center justify-center bg-gray-100">
+        <div class="text-center">
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">
+                Scroll Down
+            </h2>
+
+            <p class="text-gray-500 text-lg">
+                Scroll down to see the animation.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Section 2 -->
+    <section class="min-h-screen bg-white flex items-center">
+
+        <div class="max-w-6xl mx-auto px-6 w-full">
+
+            <div class="slide-left max-w-xl bg-blue-600 text-white p-10 rounded-2xl shadow-xl">
+
+                <h2 class="text-4xl font-bold mb-4">
+                    About Us
+                </h2>
+
+                <p class="text-blue-100 text-lg leading-relaxed">
+                    This box will come from the left side when
+                    you scroll down and it enters the screen.
+                </p>
+
+                <button class="mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold">
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Section 3 -->
+    <section class="h-screen bg-gray-100 flex items-center justify-center">
+
+        <div class="text-center">
+
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                Next Section
+            </h2>
+
+            <p class="text-gray-500">
+                Keep scrolling.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        // Your jQuery will go here
+
+    </script>
+
+</body>
+
+
+
+
+
+    <script>
+
+        $(document).ready(function(){
+        //   $(window).scroll(function(){
+        //     let x = $(window).scrollTop()
+        //     if(x>100){
+        //         $('#header').addClass('fixed')
+        //     }
+        //     else{
+        //         $('#header').removeClass('fixed')
+        //     }
+
+        // })
+
+        //        let i =0;
+        //    $('.box').scroll(function(){ 
+        //         i+= 1
+        //         $('.counter').html(i)
+        //     })
+
+        //  $(window).scroll(function(){
+        //     let x = $(window).scrollTop()
+
+        //     if (x>100){
+        //         $('#header').addClass('bg-black py-3')
+        //     }
+
+        //     else{
+        //         $('#header').removeClass('bg-black py-3')
+        //     }
+        //  })
+
+    //     $(window).scroll(function(){
+    //        let x= $(window).scrollTop()
+    //        let current_Scroll =0
+    //        if(x>150){
+            
+    //         $('#header').addClass('bg-black')
+    //         $('nav a').removeClass('text-gray-700')
+    //         $('nav a').addClass('text-white')
+    //        }
+    //        else{
+    //          $('#header').removeClass('bg-black')
+    //         $('nav a').addClass('text-gray-700')
+    //         $('nav a').removeClass('text-white')
+            
+    //        }
+           
+    //        if(x>current_Scroll){
+    //         console.log('Scroll UP')
+    //        }
+    //        else{
+    //         console.log('Scroll Down')
+    //        }
+    //    current_Scroll=x
+
+
+
+
+        // })
+
+        $(window).scroll(function () {
+
+    let scrollTop = $(window).scrollTop();
+    let windowHeight = $(window).height();
+
+    $('.slide-left').each(function () {
+
+        let elementTop = $(this).offset().top;
+
+        if (scrollTop + windowHeight > elementTop) {
+            $(this).addClass('show');
+        }
+
+    });
+
+});
+
+
+
+
+
+        })
+
+
+
+
+       
+
+
+    </script>
+    
+</body>
+</html>

@@ -506,21 +506,24 @@
             $('.view').text('Hide')
           })
 
-          $('.product').click(function(){
-            let selct = $(this).data('category')
-            filter();
-          })
-
-          function filter(){
-             $('.category').each(function(){
-               
-            })
-
-          }
-        
+          $('.filter').click(function(){
+            let btn_select=$(this).data('category')
            
+            if(btn_select=== 'all'){
+                $('.product').show()
+            }
+
+            else{
+                $('.product').hide()
+            }
+
+            $('.product').filter(function(){
+                return $(this).data('category')===btn_select
+            }).show()
 
 
+          })
+           
 
 
 
