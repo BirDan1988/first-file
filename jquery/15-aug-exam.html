@@ -78,7 +78,7 @@
         
     </div>
 
-    <section id="overview mt-10">
+    < id="overview mt-10">
         <div class="w-full ">
             <div class="container mx-auto px-3 ">
         <div class="filter-tab flex justify-center">
@@ -91,7 +91,7 @@
         </div>
 
         <div class="answer mt-10">
-            <div data-type="1" class="content-1 mb-4 ">
+            <div data-type="1" class="content mb-4 ">
                 <h2 class="text-black text-center text-2xl font-bold mb-3">Content-1</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis culpa amet libero magnam beatae, voluptate, cumque incidunt officia esse neque illum. Magnam, qui suscipit! Tempore ipsam ipsa temporibus reiciendis distinctio?
                 Et dignissimos vel totam nesciunt voluptatibus quis alias cumque praesentium consequatur id, nam debitis adipisci tempore dolorem doloribus eaque suscipit inventore consectetur voluptates minus qui, ex quaerat, nihil quo! Alias.
@@ -144,7 +144,7 @@
                 Minima voluptatibus, suscipit vel libero consectetur voluptate accusantium voluptas repellendus dolor, expedita obcaecati, excepturi rerum! Nihil ipsa, debitis consequuntur magnam consectetur, qui et voluptatem incidunt exercitationem, ullam beatae voluptatum earum!
                 Magni, distinctio suscipit hic debitis ex blanditiis consequuntur ipsam voluptatum iusto illum delectus dolor laudantium error harum vel inventore aperiam! Cumque ratione sapiente repellat! Accusamus, delectus. Id temporibus facere aspernatur.</p>
             </div>
-            <div data-type="2" class="content-2 mb-4 hidden">
+            <div data-type="2" class="content mb-4">
                 <h2 class="text-black text-center text-2xl font-bold mb-3">Content-2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis culpa amet libero magnam beatae, voluptate,
                     cumque incidunt officia esse neque illum. Magnam, qui suscipit! Tempore ipsam ipsa temporibus reiciendis
@@ -276,7 +276,7 @@
                     laudantium error harum vel inventore aperiam! Cumque ratione sapiente repellat! Accusamus, delectus. Id
                     temporibus facere aspernatur.</p>
             </div>
-            <div data-type="3" class="content-3 mb-4 hidden">
+            <div data-type="3" class="content mb-4">
                 <h2 class="text-black text-center text-2xl font-bold mb-3">Content-3</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis culpa amet libero magnam beatae, voluptate,
                     cumque incidunt officia esse neque illum. Magnam, qui suscipit! Tempore ipsam ipsa temporibus reiciendis
@@ -408,7 +408,7 @@
                     laudantium error harum vel inventore aperiam! Cumque ratione sapiente repellat! Accusamus, delectus. Id
                     temporibus facere aspernatur.</p>
             </div>
-            <div data-type="4" class="content-4 mb-4 hidden">
+            <div data-type="4" class="content mb-4">
                 <h2 class="text-black text-center text-2xl font-bold mb-3">Content-4</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis culpa amet libero magnam beatae, voluptate,
                     cumque incidunt officia esse neque illum. Magnam, qui suscipit! Tempore ipsam ipsa temporibus reiciendis
@@ -545,7 +545,6 @@
         </div>
     </div>
 </div>
-    </section>
 
 
 
@@ -569,29 +568,29 @@
             })
 
            
-            $('#ov').click(function(){
-             $(this).addClass('text-orange-600 border-b-2 border-orange-600').siblings().removeClass('text-orange-600 border-b-2 border-ornage-600')
-              $(this).removeClass('text-gray-700')
-              $('.content-1').show().siblings().hide()
-            })
+            // $('#ov').click(function(){
+            //  $(this).addClass('text-orange-600 border-b-2 border-orange-600').siblings().removeClass('text-orange-600 border-b-2 border-ornage-600')
+            //   $(this).removeClass('text-gray-700')
+            //   $('.content-1').show().siblings().hide()
+            // })
 
-             $('#cc').click(function () {
-                $(this).addClass('text-orange-600 border-b-2 border-orange-600').siblings().removeClass('text-orange-600 border-b-2 border-ornage-600')
-                $(this).removeClass('text-gray-700')
-                $('.content-2').show().siblings().hide()
-            })
+            //  $('#cc').click(function () {
+            //     $(this).addClass('text-orange-600 border-b-2 border-orange-600').siblings().removeClass('text-orange-600 border-b-2 border-ornage-600')
+            //     $(this).removeClass('text-gray-700')
+            //     $('.content-2').show().siblings().hide()
+            // })
 
-             $('#co').click(function () {
-                $(this).addClass('text-orange-600 border-b-2 border-orange-600').siblings().removeClass('text-orange-600 border-b-2 border-ornage-600')
-                $(this).removeClass('text-gray-700')
-                $('.content-3').show().siblings().hide()
-            })
+            //  $('#co').click(function () {
+            //     $(this).addClass('text-orange-600 border-b-2 border-orange-600').siblings().removeClass('text-orange-600 border-b-2 border-ornage-600')
+            //     $(this).removeClass('text-gray-700')
+            //     $('.content-3').show().siblings().hide()
+            // })
 
-             $('#rw').click(function () {
-                $(this).addClass('text-orange-600 border-b-2 border-orange-600').siblings().removeClass('text-orange-600 border-b-2 border-ornage-600')
-                $(this).removeClass('text-gray-700')
-                $('.content-4').show().siblings().hide()
-            })
+            //  $('#rw').click(function () {
+            //     $(this).addClass('text-orange-600 border-b-2 border-orange-600').siblings().removeClass('text-orange-600 border-b-2 border-ornage-600')
+            //     $(this).removeClass('text-gray-700')
+            //     $('.content-4').show().siblings().hide()
+            // })
 
 
     //         $('.abc').click(function () {
@@ -604,7 +603,30 @@
         
     //     return $(this).data('type') === btn_select
     //    }).show().siblings().hide()
-     })
+
+
+ 
+    $('.abc').click(function(){
+        let selected_btn = $(this).data('type')
+        $('.content').hide()
+        $('.content').filter(function(){
+            return $(this).data('type')===selected_btn;
+        }).show()
+
+    })
+
+       
+
+        
+
+
+    
+
+
+
+
+})
+
 
 
 

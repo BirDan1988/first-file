@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+   <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous">
+</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#5B5FEF",
+              secondary: "#10B981",
+              accent: "#38BDF8",
+
+              gradientStart: "#5B5FEF",
+              gradientEnd: "#10B981",
+
+              background: "#F8FAFC",
+              paragraph: "#64748B",
+
+              btnPrimary: "#2563EB",
+              btnHover: "#48EBFA",
+
+              heading: "#0F172A",
+              cardBg: "#3D293B",
+            },
+
+            fontFamily: {
+              main: ["Poppins", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- jQuery Practice Area -->
+    <div id="practice-area" class="max-w-4xl mx-auto p-6 bg-slate-900 rounded-2xl text-white">
+      <!-- Header -->
+      <div id="practice-header" class="mb-6">
+        <h2 id="main-title" class="text-2xl font-bold mb-2">jQuery Practice</h2>
+
+        <p id="subtitle" class="text-slate-400">Practice selectors, events, effects and traversing</p>
+      </div>
+
+      <!-- Buttons -->
+      <div id="button-section" class="mb-8">
+        <h3 class="text-lg font-semibold mb-3">Events & Effects</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <button id="btn-hide" class="px-4 py-2 bg-red-600 rounded-lg hover:bg-red-700">Hide</button>
+
+          <button id="btn-show" class="px-4 py-2 bg-green-600 rounded-lg hover:bg-green-700">Show</button>
+
+          <button id="btn-toggle" class="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700">Toggle</button>
+
+          <button id="btn-fade" class="px-4 py-2 bg-purple-600 rounded-lg hover:bg-purple-700">Fade</button>
+
+          <button id="btn-slide" class="px-4 py-2 bg-orange-600 rounded-lg hover:bg-orange-700">Slide</button>
+        </div>
+      </div>
+
+      <!-- Message Box -->
+      <div id="message-box" class="mb-8 p-5 bg-slate-800 rounded-xl border border-slate-700">
+        <h3 id="message-title" class="text-lg font-semibold mb-2">Message Box</h3>
+
+        <p id="message-text" class="text-slate-400">This box will be used for jQuery effects.</p>
+      </div>
+
+      <!-- Traversing Section -->
+      <div id="traversing-section" class="mb-8">
+        <h3 class="text-lg font-semibold mb-4">Traversing Practice</h3>
+
+        <div id="student-list" class="space-y-3">
+          <div class="student flex items-center justify-between p-4 bg-slate-800 rounded-xl">
+            <div class="student-info">
+              <h4 class="student-name font-semibold">Rahul</h4>
+
+              <p class="student-course text-sm text-slate-400">HTML & CSS</p>
+            </div>
+
+            <button class="select-student px-3 py-1 bg-blue-600 rounded-lg text-sm">Select</button>
+          </div>
+
+          <div class="student flex items-center justify-between p-4 bg-slate-800 rounded-xl">
+            <div class="student-info">
+              <h4 class="student-name font-semibold">Priya</h4>
+
+              <p class="student-course text-sm text-slate-400">JavaScript</p>
+            </div>
+
+            <button class="select-student px-3 py-1 bg-blue-600 rounded-lg text-sm">Select</button>
+          </div>
+
+          <div class="student flex items-center justify-between p-4 bg-slate-800 rounded-xl">
+            <div class="student-info">
+              <h4 class="student-name font-semibold">Amit</h4>
+
+              <p class="student-course text-sm text-slate-400">jQuery</p>
+            </div>
+
+            <button class="select-student px-3 py-1 bg-blue-600 rounded-lg text-sm">Select</button>
+          </div>
+
+          <div class="student flex items-center justify-between p-4 bg-slate-800 rounded-xl">
+            <div class="student-info">
+              <h4 class="student-name font-semibold">Neha</h4>
+
+              <p class="student-course text-sm text-slate-400">Tailwind CSS</p>
+            </div>
+
+            <button class="select-student px-3 py-1 bg-blue-600 rounded-lg text-sm">Select</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div id="navigation-section">
+        <h3 class="text-lg font-semibold mb-4">Navigation Practice</h3>
+
+        <ul id="menu-list" class="flex flex-wrap gap-3">
+          <li class="menu-item">
+            <a href="#" class="menu-link block px-4 py-2 bg-slate-800 rounded-lg"> Home </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="#" class="menu-link block px-4 py-2 bg-slate-800 rounded-lg"> About </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="#" class="menu-link block px-4 py-2 bg-slate-800 rounded-lg"> Services </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="#" class="menu-link block px-4 py-2 bg-slate-800 rounded-lg"> Contact </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+        console.log("JavaScript file connected");
+console.log(typeof $);
+
+$(document).ready(function(){
+    
+    // $('#btn-hide').click(function(){
+    //     $('#message-text').hide()
+
+    // })
+
+// $('.select-student').click(function(){
+//     $(this).parent().show()
+//     $(this).parent().siblings().hide()
+// })
+
+// $('.select-student').click(function(){
+//     $(this).parent().find('.student-course').text('selected!')
+// })
+
+// $('.select-student').click(function(){
+//     $(this).parent().next().find('.student-name').text('next student')
+// })
+
+// $('.select-student').click(function(){
+//     $(this).parent().prev().find('.student-course').text('previous course')
+// })
+
+// $('.select-student').click(function(){
+//     $(this).closest('.student').addClass('bg-blue-800')
+//      $(this).closest('.student').siblings().removeClass('bg-blue-800')
+// })
+
+// $('.student').click(function(){
+//     $(this).find('.student-course').fadeOut(3000).text('course-hidden').fadeIn(3000)
+// })
+$('.student').mouseover(function(){
+    $(this).find('.student-course').text('mouse over')
+
+})
+
+$('#btn-slide').click(function(){
+    $('#message-text').slideToggle()
+})
+
+
+
+
+// $('.menu-link').click(function(){
+//     $(this).addClass('bg-blue-600 text-white')
+//     .removeClass('bg-slate-800')
+// $(this).parent().siblings().find('a').removeClass('bg-blue-600 text-white')
+// .addClass('text-slate-400 bg-slate-800')
+
+// })
+
+$('.menu-link').click(function(){
+    $(this).parent().next().find('a').text().slideToggle()
+})
+
+
+
+
+
+
+})
+
+
+    
+
+
+
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
